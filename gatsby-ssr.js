@@ -1,1 +1,1 @@
-export { WrapRootElement } from "./gatsby/wrapRootElement";
+export { wrapRootElement } from "./gatsby/wrapRootElement";
