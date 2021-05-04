@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  TDK Corretora
+  TDK CORRETORA
 </h1>
 
 Repositório para o site da TDK Corretora desenvolvido com Gatsby.
