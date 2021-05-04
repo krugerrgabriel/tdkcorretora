@@ -8,7 +8,7 @@
   TDK Corretora
 </h1>
 
-Repositório para o site da TDK Corretora desenvolvido com Gatsby
+Repositório para o site da TDK Corretora desenvolvido com Gatsby.
 
 
-Site desenvolvido por Gabriel Sabara Krüger, Web Designer do Marketing da Transdesk
+Site desenvolvido por Gabriel Sabara Krüger, Web Designer do Marketing da Transdesk.
