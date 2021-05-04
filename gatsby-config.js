@@ -4,7 +4,7 @@
  * Olhe: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
-const siteMetadata = require("./config/metadata")
+const siteMetadata = require("./config/metadata");
 
 module.exports = {
   siteMetadata,
@@ -21,20 +21,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Roboto`,
-            variants: [`300`, `400`, `500`, `600`, `700`, `800`, , `900`],
-          },
+          `roboto\:300,400,500,600,700,800,900`, // you can also specify font weights and styles
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [`/`],
+        display: "swap",
       },
     },
     {
@@ -65,7 +57,7 @@ module.exports = {
       resolve: `gatsby-plugin-page-creator`,
       options: {
         path: `${__dirname}/src/pages`,
-        ignore: [`**/styles.js`],
+        ignore: [`**/styles.ts`],
       },
     },
     // {
@@ -77,5 +69,11 @@ module.exports = {
     //     pageTransitionDelay: 0,
     //   },
     // },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`],
+      },
+    },
   ],
-}
+};
