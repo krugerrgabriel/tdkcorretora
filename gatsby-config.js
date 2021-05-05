@@ -60,6 +60,14 @@ module.exports = {
         ignore: [`**/styles.ts`],
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/assets/img`,
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {

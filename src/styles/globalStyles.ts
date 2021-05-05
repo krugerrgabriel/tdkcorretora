@@ -8,8 +8,6 @@ const GlobalStyle = createGlobalStyle`
         border: 0;
 
         font-family: 'Roboto', sans-serif;
-
-        -ms-touch-action: none;
     }
 
     html{
@@ -18,6 +16,8 @@ const GlobalStyle = createGlobalStyle`
 
     body{
         position: relative;
+
+        overflow-x: hidden;
 
         width: 100vw;
         height: 100vh;
