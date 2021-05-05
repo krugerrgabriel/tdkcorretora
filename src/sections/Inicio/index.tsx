@@ -16,12 +16,14 @@ const Inicio: React.FC = () => {
         alt="TDK Corretora Element"
         left={true}
         top={true}
+        key={0}
       />
       <Element
         src="tdkcorretora_element-right.svg"
         alt="TDK Corretora Element"
         right={true}
         bottom={true}
+        key={1}
       />
       <NewContainer>
         <span> SOMOS </span>

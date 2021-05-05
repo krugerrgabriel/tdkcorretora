@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="168" height="154" viewBox="0 0 168 154">
+  <g id="Icon_Box" data-name="Icon Box" transform="translate(-480 -267)">
+    <g id="Background" transform="translate(480 267)" fill="#a5a5a5" stroke="#fff" stroke-width="4">
+      <rect width="168" height="154" rx="2" stroke="none"/>
+      <rect x="2" y="2" width="164" height="150" fill="none"/>
+    </g>
+    <path id="Line_2" data-name="Line 2" d="M645.244,2749.727,482.936,2897.614" transform="translate(-0.307 -2479.08)" fill="#a5a5a5" stroke="#fff" stroke-width="4"/>
+    <path id="Line_1" data-name="Line 1" d="M480,2750.647l161.081,147.887" transform="translate(3.856 -2480)" fill="#a5a5a5" stroke="#fff" stroke-width="4"/>
+  </g>
+</svg>

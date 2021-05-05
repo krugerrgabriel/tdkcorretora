@@ -51,3 +51,14 @@
         transform: translateY(32.5px);
     }
 }
+
+.fp-controlArrow{
+    top: unset !important;
+    bottom: 36px !important;
+}
+.fp-controlArrow.fp-prev{
+    left: calc(100vw - 1400px) !important;
+}
+.fp-controlArrow.fp-next{
+    right: calc(100vw - 1400px) !important;
+}

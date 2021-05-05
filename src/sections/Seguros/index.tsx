@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Container, Title, Layer } from "../../styles/elements";
-import { NewBody, Box, Card, ImageIcon } from "./styles";
+import { Container, Layer } from "../../styles/elements";
+import { NewTitle, NewBody, Box, Card, ImageIcon } from "./styles";
 
 const seguros = ["transporte", "vida", "patrimonial"];
 
@@ -10,26 +10,30 @@ const Seguros: React.FC = () => {
     <NewBody>
       <Layer color="yellow" position={0} />
       <Container>
-        <Title> Saiba por quê somos especialistas </Title>
+        <NewTitle> Saiba por quê somos especialistas </NewTitle>
         <Box>
-          {seguros.map(seguro => {
+          {seguros.map((seguro, index) => {
             let imageName = `tdkcorretora_seguro-${seguro}.svg`;
             return (
-              <Card>
+              <Card key={index}>
                 <ImageIcon
                   src={imageName}
                   alt="TDK Corretora Seguro Transporte"
                 />
-                <p> TRANSPORTE </p>
+                <p> {seguro} </p>
                 <span>
                   Nosso seguro de carga é daora cobre uns bagulho ai e dale e
                   também blablablabla só troço maluco.
                 </span>
                 <div>
                   <strong> Ponto 1 </strong>
+                  <hr />
                   <strong> Ponto 2 </strong>
+                  <hr />
                   <strong> Ponto 3 </strong>
+                  <hr />
                   <strong> Ponto 4 </strong>
+                  <hr />
                   <strong> Ponto 5 </strong>
                 </div>
               </Card>
