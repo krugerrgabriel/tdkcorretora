@@ -6,11 +6,12 @@ import Sitemap from "../components/Sitemap";
 
 import Inicio from "../sections/Inicio";
 import Seguros from "../sections/Seguros";
-import Page01 from "../sections/Seguro/Page01";
-import Page02 from "../sections/Seguro/Page02";
-import Page03 from "../sections/Seguro/Page03";
-import Page04 from "../sections/Seguro/Page04";
-import Sobre from "../sections/Sobre";
+import Seguro01 from "../sections/Seguro/Seguro01";
+import Seguro02 from "../sections/Seguro/Seguro02";
+import Seguro03 from "../sections/Seguro/Seguro03";
+import Seguro04 from "../sections/Seguro/Seguro04";
+import Sobre01 from "../sections/Sobre/Sobre01";
+import Sobre02 from "../sections/Sobre/Sobre02";
 import Contato from "../sections/Contato";
 import Noticias from "../sections/Noticias";
 import Parceiros from "../sections/Parceiros";
@@ -19,15 +20,58 @@ import { Element } from "../styles/elements";
 
 const Home: React.FC = () => {
   const [tab, setTab] = useState(0);
+  const [page, setPage] = useState("nothing");
 
   return (
     <>
-      <Navbar />
-      <Sitemap activeTab={tab} />
+      <Navbar handlePage={data => setPage(data)} />
+      <Sitemap activeTab={tab} handlePage={data => setPage(data)} />
       <ReactFullpage
+        anchors={[
+          "inicio",
+          "seguros",
+          "seguro-transporte",
+          "sobre",
+          "contato",
+          "noticias",
+          "parceiros",
+        ]}
         scrollingSpeed={750}
         onLeave={(origin, destination, direction) => setTab(destination.index)}
         render={({ state, fullpageApi }) => {
+          switch (page) {
+            case "inicio":
+              fullpageApi.moveTo("inicio");
+              setPage("nothing");
+              break;
+            case "seguros":
+              fullpageApi.moveTo("seguros");
+              setPage("nothing");
+              break;
+            case "seguro-transporte":
+              fullpageApi.moveTo("seguro-transporte");
+              setPage("nothing");
+              break;
+            case "sobre":
+              fullpageApi.moveTo("sobre");
+              setPage("nothing");
+              break;
+            case "contato":
+              fullpageApi.moveTo("contato");
+              setPage("nothing");
+              break;
+            case "noticias":
+              fullpageApi.moveTo("noticias");
+              setPage("nothing");
+              break;
+            case "parceiros":
+              fullpageApi.moveTo("parceiros");
+              setPage("nothing");
+              break;
+            default:
+              setPage("nothing");
+              break;
+          }
           return (
             <ReactFullpage.Wrapper>
               <div className="section">
@@ -54,21 +98,26 @@ const Home: React.FC = () => {
                   key={1}
                 />
                 <div className="slide">
-                  <Page01 seguroId={2} />
+                  <Seguro01 seguroId={2} />
                 </div>
                 <div className="slide">
-                  <Page02 seguroId={2} />
+                  <Seguro02 seguroId={2} />
                 </div>
                 <div className="slide">
-                  <Page03 seguroId={2} />
+                  <Seguro03 seguroId={2} />
                 </div>
                 <div className="slide">
-                  <Page04 seguroId={2} />
+                  <Seguro04 seguroId={2} />
                 </div>
               </div>
 
               <div className="section">
-                <Sobre />
+                <div className="slide">
+                  <Sobre01 />
+                </div>
+                <div className="slide">
+                  <Sobre02 />
+                </div>
               </div>
 
               <div className="section">

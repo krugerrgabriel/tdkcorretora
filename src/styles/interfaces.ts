@@ -9,3 +9,7 @@ export interface ILayer{
     color: String;
     position: Number;
 }
+
+export interface ITitle{
+    margin: String;
+}

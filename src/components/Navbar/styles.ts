@@ -24,6 +24,8 @@ export const NewContainer = styled(Container)`
 export const NewImage = styled(Image)`
     height: 62px;
     width: auto;
+
+    cursor: pointer;
 `;
 
 export const Links = styled.div`

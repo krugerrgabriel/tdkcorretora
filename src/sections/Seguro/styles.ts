@@ -31,10 +31,6 @@ export const NewContainer = styled(Container)`
     }
 `;
 
-export const NewTitle = styled(Title)`
-    margin: 0 0 12px 28px;
-`;
-
 export const Box = styled.div`
     display: flex;
     align-items: center;
@@ -89,7 +85,7 @@ export const Badge = styled.div`
     display: flex;
     align-items: center;
 
-    flex: 1 0 28%;
+    flex: 1 0 20%;
 
     height: 58px;
 

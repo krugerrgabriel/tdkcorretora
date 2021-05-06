@@ -4,4 +4,5 @@ export interface IOption{
 
 export interface ISitemap{
     activeTab: Number;
+    handlePage: Function;
 }

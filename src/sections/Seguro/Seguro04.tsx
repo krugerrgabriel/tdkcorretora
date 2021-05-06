@@ -1,17 +1,17 @@
 import React from "react";
 
+import { Title } from "../../styles/elements";
 import {
   NewBody,
   NewContainer,
   Question,
   AddIcon,
   QuestionBox,
-  NewTitle,
 } from "./styles";
 
 import { ISeguro } from "./interfaces";
 
-const Page04: React.FC<ISeguro> = ({ seguroId }) => {
+const Seguro04: React.FC<ISeguro> = ({ seguroId }) => {
   let perguntas = [
     {
       question: "Como eu faço pra fazer o bagulho",
@@ -49,7 +49,7 @@ const Page04: React.FC<ISeguro> = ({ seguroId }) => {
   return (
     <NewBody>
       <NewContainer>
-        <NewTitle> Perguntas frequentes </NewTitle>
+        <Title margin="0 0 12px 18px"> Perguntas frequentes </Title>
         <QuestionBox>
           {perguntas.map((pergunta, index) => {
             return (
@@ -68,4 +68,4 @@ const Page04: React.FC<ISeguro> = ({ seguroId }) => {
   );
 };
 
-export default Page04;
+export default Seguro04;

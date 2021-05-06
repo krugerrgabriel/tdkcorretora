@@ -1,17 +1,18 @@
 import React from "react";
 
-import { NewBody, NewContainer, Card, NewImage, Box, NewTitle } from "./styles";
+import { Title } from "../../styles/elements";
+import { NewBody, NewContainer, Card, NewImage, Box } from "./styles";
 
 import { ISeguro } from "./interfaces";
 
-const Page01: React.FC<ISeguro> = ({ seguroId }) => {
+const Seguro01: React.FC<ISeguro> = ({ seguroId }) => {
   let coberturas = ["0", "1", "2"];
   return (
     <NewBody>
       <NewContainer>
         <h1> SEGURO TRANSPORTE </h1>
         <h2> O seguro perfeito para você e para sua carga! </h2>
-        <NewTitle> Nosso seguro cobre </NewTitle>
+        <Title margin="0 0 12px 18px"> Nosso seguro cobre </Title>
         <Box>
           {coberturas.map((cobertura, index) => {
             return (
@@ -29,11 +30,10 @@ const Page01: React.FC<ISeguro> = ({ seguroId }) => {
               </Card>
             );
           })}
-          ;
         </Box>
       </NewContainer>
     </NewBody>
   );
 };
 
-export default Page01;
+export default Seguro01;

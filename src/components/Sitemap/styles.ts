@@ -28,6 +28,8 @@ export const Option = styled.div<IOption>`
 
     margin: 2px 0;
 
+    cursor: pointer;
+
     transition: 0.6s;
 
     div{
@@ -37,5 +39,9 @@ export const Option = styled.div<IOption>`
         height: 12px;
 
         margin: 0 4px 1px 0;
+    }
+
+    &:hover{
+        opacity: ${(props) => props.active ? '1' : '0.6'};
     }
 `;

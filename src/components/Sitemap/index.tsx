@@ -4,50 +4,84 @@ import { ISitemap } from "./interfaces";
 
 import { Corpse, Option } from "./styles";
 
-const Sitemap: React.FC<ISitemap> = ({ activeTab }) => {
+const Sitemap: React.FC<ISitemap> = props => {
+  let { activeTab } = props;
   return (
     <Corpse>
-      <Option active={activeTab == 0 ? true : false}>
+      <Option
+        active={activeTab == 0 ? true : false}
+        onClick={() => props.handlePage("inicio")}
+      >
         <div />
         INICIO
       </Option>
-      <Option active={activeTab == 1 ? true : false}>
+      <Option
+        active={activeTab == 1 ? true : false}
+        onClick={() => props.handlePage("seguros")}
+      >
         <div />
         SEGUROS
       </Option>
-      <Option active={activeTab == 2 ? true : false}>
+      <Option
+        active={activeTab == 2 ? true : false}
+        onClick={() => props.handlePage("seguro-transporte")}
+      >
         <div />
         SEGURO TRANSPORTE
       </Option>
-      <Option active={activeTab == 3 ? true : false}>
+      <Option
+        active={activeTab == 12 ? true : false}
+        onClick={() => props.handlePage("seguro-vida")}
+      >
         <div />
         SEGURO DE VIDA
       </Option>
-      <Option active={activeTab == 4 ? true : false}>
+      <Option
+        active={activeTab == 12 ? true : false}
+        onClick={() => props.handlePage("seguro-residencial")}
+      >
         <div />
         SEGURO RESIDENCIAL
       </Option>
-      <Option active={activeTab == 5 ? true : false}>
+      <Option
+        active={activeTab == 12 ? true : false}
+        onClick={() => props.handlePage("seguro-ambiental")}
+      >
         <div />
         SEGURO AMBIENTAL
       </Option>
-      <Option active={activeTab == 6 ? true : false}>
+      <Option
+        active={activeTab == 12 ? true : false}
+        onClick={() => props.handlePage("seguro-condominal")}
+      >
         <div />
         SEGURO CONDOMINAL
       </Option>
-      <Option active={activeTab == 7 ? true : false}>
+      <Option
+        active={activeTab == 3 ? true : false}
+        onClick={() => props.handlePage("sobre")}
+      >
         <div />
         SOBRE NÓS
       </Option>
-      <Option active={activeTab == 8 ? true : false}>
+      <Option
+        active={activeTab == 4 ? true : false}
+        onClick={() => props.handlePage("contato")}
+      >
         <div />
         CONTATO
       </Option>
-      <Option active={activeTab == 9 ? true : false}>
+      <Option
+        active={activeTab == 5 ? true : false}
+        onClick={() => props.handlePage("noticias")}
+      >
         <div />
         NOTÍCIAS
       </Option>
-      <Option active={activeTab == 10 ? true : false}>
+      <Option
+        active={activeTab == 6 ? true : false}
+        onClick={() => props.handlePage("parceiros")}
+      >
         <div />
         PARCEIROS
       </Option>

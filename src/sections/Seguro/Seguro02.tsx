@@ -1,22 +1,16 @@
 import React from "react";
 
-import {
-  NewBody,
-  NewContainer,
-  Badge,
-  BadgeImage,
-  BadgeBox,
-  NewTitle,
-} from "./styles";
+import { Title } from "../../styles/elements";
+import { NewBody, NewContainer, Badge, BadgeImage, BadgeBox } from "./styles";
 
 import { ISeguro } from "./interfaces";
 
-const Page02: React.FC<ISeguro> = ({ seguroId }) => {
+const Seguro02: React.FC<ISeguro> = ({ seguroId }) => {
   let servicos = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
   return (
     <NewBody>
       <NewContainer>
-        <NewTitle> Nosso seguro cobre </NewTitle>
+        <Title margin="0 0 12px 18px"> Nosso seguro cobre </Title>
         <BadgeBox>
           {servicos.map((servico, index) => {
             return (
@@ -39,4 +33,4 @@ const Page02: React.FC<ISeguro> = ({ seguroId }) => {
   );
 };
 
-export default Page02;
+export default Seguro02;

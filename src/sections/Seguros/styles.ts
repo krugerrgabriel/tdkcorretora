@@ -15,10 +15,6 @@ export const Box = styled.div`
     flex-direction: row;
 `;
 
-export const NewTitle = styled(Title)`
-    margin: 0 0 12px 18px;
-`;
-
 export const Card = styled.div`
     display: flex;
     align-items: center;

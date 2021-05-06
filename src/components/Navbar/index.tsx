@@ -2,14 +2,17 @@ import React from "react";
 
 import { NewContainer, NewImage, Links } from "./styles";
 
+import { INavbar } from "./interfaces";
+
 import Image from "../Image";
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC<INavbar> = props => {
   return (
     <NewContainer>
       <NewImage
         src="tdkcorretora_logo-white.svg"
         alt="TDK Corretora Logo Branca"
+        onClick={() => props.handlePage("inicio")}
       />
 
       <Links>

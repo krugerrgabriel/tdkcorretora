@@ -1,17 +1,11 @@
 import React from "react";
 
-import {
-  NewBody,
-  NewContainer,
-  Item,
-  ItemImage,
-  ItemBox,
-  NewTitle,
-} from "./styles";
+import { Title } from "../../styles/elements";
+import { NewBody, NewContainer, Item, ItemImage, ItemBox } from "./styles";
 
 import { ISeguro } from "./interfaces";
 
-const Page03: React.FC<ISeguro> = ({ seguroId }) => {
+const Seguro03: React.FC<ISeguro> = ({ seguroId }) => {
   let motivos = [
     {
       title: "ASSOCIADOS",
@@ -29,9 +23,7 @@ const Page03: React.FC<ISeguro> = ({ seguroId }) => {
   return (
     <NewBody>
       <NewContainer>
-        <h1> SEGURO TRANSPORTE </h1>
-        <h2> O seguro perfeito para você e para sua carga! </h2>
-        <NewTitle> Nosso seguro cobre </NewTitle>
+        <Title margin="0 0 12px 18px"> Nosso seguro cobre </Title>
         <ItemBox>
           {motivos.map((motivo, index) => {
             let itemImage = `tdkcorretora_motivo-${index}.png`;
@@ -52,4 +44,4 @@ const Page03: React.FC<ISeguro> = ({ seguroId }) => {
   );
 };
 
-export default Page03;
+export default Seguro03;

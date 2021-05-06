@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 import Image from '../components/Image';
 
-import { IElement, ILayer } from './interfaces';
+import { IElement, ILayer, ITitle } from './interfaces';
 
 export const Container = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
 
-    max-width: 1400px;
+    max-width: 1140px;
     width: 100%;
     height: 100vh;
 
@@ -47,11 +47,28 @@ export const Layer = styled.div<ILayer>`
     ${(props) => props.position == 0 ? null : props.position == 1 ? 'transform: rotate(180deg);' : 'transform: scaleX(-1);'}
 `;
 
-export const Title = styled.p`
+export const SecondLayer = styled.div`
+    background-color: ${(props) => props.theme.yellow};
+
+    clip-path: polygon(50% 90%, 100% 60%, 100% 100%, 0 100%, 0 60%);
+
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+`;
+
+export const Title = styled.p<ITitle>`
     color: ${(props) => props.theme.white};
 
     font-size: 38px;
     font-weight: 700;
 
     line-height: 50px;
+
+    text-transform: uppercase;
+
+    ${(props) => props.margin ? `margin: ${props.margin}` : null};
 `;

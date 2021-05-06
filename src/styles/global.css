@@ -55,10 +55,32 @@
 .fp-controlArrow{
     top: unset !important;
     bottom: 36px !important;
+
+    border: unset !important;
+
+    width: 52px !important;
+    height: 52px !important;
+
+    background-size: 50%;
+    background-repeat: no-repeat;
+
+    opacity: 0.65;
+
+    transition: 0.2s;
+}
+.fp-controlArrow:hover{
+    opacity: 1;
+}
+.fp-controlArrow:active{
+    transform: scale(0.95);
 }
 .fp-controlArrow.fp-prev{
     left: calc(100vw - 1400px) !important;
+
+    background-image: url('../assets/img/tdkcorretora_left-icon.svg');
 }
 .fp-controlArrow.fp-next{
     right: calc(100vw - 1400px) !important;
+
+    background-image: url('../assets/img/tdkcorretora_right-icon.svg');
 }
