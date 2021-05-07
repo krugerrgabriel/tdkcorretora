@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Image from '../components/Image';
 
-import { IElement, ILayer, ITitle } from './interfaces';
+import { IBody, IElement, ILayer, ITitle } from './interfaces';
 
 export const Container = styled.div`
     display: flex;
@@ -18,7 +18,9 @@ export const Container = styled.div`
     position: relative;
 `;
 
-export const Body = styled.div`
+export const Body = styled.div<IBody>`
+    ${(props) => props.color ? props.color == 'gray' ? `background-color: ${props.theme.gray};` : `background-color: ${props.theme.yellow};` : null};
+
     width: 100%;
     height: 100%;
 
@@ -71,4 +73,31 @@ export const Title = styled.p<ITitle>`
     text-transform: uppercase;
 
     ${(props) => props.margin ? `margin: ${props.margin}` : null};
+`;
+
+export const Button = styled.div<{ width: Number; }>`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    color: ${(props) => props.theme.white};
+
+    border: 2px solid ${(props) => props.theme.white};
+    border-radius: 3px;
+
+    width: ${(props) => props.width ? `${props.width}%` : `50%`};
+
+    font-size: 20px;
+    font-weight: 500;
+
+    padding: 6px 0;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    &:active{
+        transform: scale(0.985);
+    }
 `;

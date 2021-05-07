@@ -1,14 +1,14 @@
 import React from "react";
 
-import { Title } from "../../styles/elements";
-import { NewBody, NewContainer, Card, NewImage, Box } from "./styles";
+import { Title, Body } from "../../styles/elements";
+import { NewContainer, Card, NewImage, Box } from "./styles";
 
 import { ISeguro } from "./interfaces";
 
 const Seguro01: React.FC<ISeguro> = ({ seguroId }) => {
   let coberturas = ["0", "1", "2"];
   return (
-    <NewBody>
+    <Body color="gray">
       <NewContainer>
         <h1> SEGURO TRANSPORTE </h1>
         <h2> O seguro perfeito para você e para sua carga! </h2>
@@ -32,7 +32,7 @@ const Seguro01: React.FC<ISeguro> = ({ seguroId }) => {
           })}
         </Box>
       </NewContainer>
-    </NewBody>
+    </Body>
   );
 };
 

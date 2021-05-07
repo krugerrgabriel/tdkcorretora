@@ -1,13 +1,7 @@
 import React from "react";
 
-import { Title } from "../../styles/elements";
-import {
-  NewBody,
-  NewContainer,
-  Question,
-  AddIcon,
-  QuestionBox,
-} from "./styles";
+import { Title, Body } from "../../styles/elements";
+import { NewContainer, Question, AddIcon, QuestionBox } from "./styles";
 
 import { ISeguro } from "./interfaces";
 
@@ -47,7 +41,7 @@ const Seguro04: React.FC<ISeguro> = ({ seguroId }) => {
     },
   ];
   return (
-    <NewBody>
+    <Body color="gray">
       <NewContainer>
         <Title margin="0 0 12px 18px"> Perguntas frequentes </Title>
         <QuestionBox>
@@ -64,7 +58,7 @@ const Seguro04: React.FC<ISeguro> = ({ seguroId }) => {
           })}
         </QuestionBox>
       </NewContainer>
-    </NewBody>
+    </Body>
   );
 };
 

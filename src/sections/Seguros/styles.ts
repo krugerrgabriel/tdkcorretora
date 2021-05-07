@@ -4,10 +4,6 @@ import { Body, Title } from '../../styles/elements';
 
 import Image from "../../components/Image";
 
-export const NewBody = styled(Body)`
-    background-color: ${(props) => props.theme.gray};
-`;
-
 export const Box = styled.div`
     display: flex;
     align-items: center;

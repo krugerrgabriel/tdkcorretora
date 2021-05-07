@@ -1,3 +1,7 @@
+export interface IBody{
+    color?: String;
+}
+
 export interface IElement{
     right?: Boolean;
     left?: Boolean;

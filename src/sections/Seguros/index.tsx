@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Container, Layer, Title } from "../../styles/elements";
-import { NewBody, Box, Card, ImageIcon } from "./styles";
+import { Container, Layer, Title, Body } from "../../styles/elements";
+import { Box, Card, ImageIcon } from "./styles";
 
 const seguros = ["transporte", "vida", "patrimonial"];
 
 const Seguros: React.FC = () => {
   return (
-    <NewBody>
+    <Body color="gray">
       <Layer color="yellow" position={0} />
       <Container>
         <Title margin="0 0 12px 18px;">Saiba por quê somos especialistas</Title>
@@ -41,7 +41,7 @@ const Seguros: React.FC = () => {
           })}
         </Box>
       </Container>
-    </NewBody>
+    </Body>
   );
 };
 
