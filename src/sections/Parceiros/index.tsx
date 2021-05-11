@@ -6,11 +6,11 @@ import { Body, Container, Element, Title } from "../../styles/elements";
 const Parceiros: React.FC = () => {
   return (
     <Body color="gray">
-      <Element src="tdkcorretora_element-left.svg" left={true} top={true} />
+      <Element src="tdkcorretora_element-left.svg" left="true" top="true" />
       <Element
         src="tdkcorretora_element-right.svg"
-        right={true}
-        bottom={true}
+        right="true"
+        bottom="true"
       />
       <Container>
         <Title margin="0 0 24px 0"> Nossos parceiros </Title>

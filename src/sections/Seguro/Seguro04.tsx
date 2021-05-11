@@ -1,59 +1,35 @@
 import React from "react";
 
+import Collapsible from "react-collapsible";
+
 import { Title, Body } from "../../styles/elements";
-import { NewContainer, Question, AddIcon, QuestionBox } from "./styles";
+import { NewContainer, QuestionBox } from "./styles";
 
-import { ISeguro } from "./interfaces";
+import { ISeguro } from "../../interfaces";
 
-const Seguro04: React.FC<ISeguro> = ({ seguroId }) => {
-  let perguntas = [
-    {
-      question: "Como eu faço pra fazer o bagulho",
-      answer: "Você pega o negócio e faz umas coisa",
-    },
-    {
-      question: "Como eu faço pra fazer o bagulho",
-      answer: "Você pega o negócio e faz umas coisa",
-    },
-    {
-      question: "Como eu faço pra fazer o bagulho",
-      answer: "Você pega o negócio e faz umas coisa",
-    },
-    {
-      question: "Como eu faço pra fazer o bagulho",
-      answer: "Você pega o negócio e faz umas coisa",
-    },
-    {
-      question: "Como eu faço pra fazer o bagulho",
-      answer: "Você pega o negócio e faz umas coisa",
-    },
-    {
-      question: "Como eu faço pra fazer o bagulho",
-      answer: "Você pega o negócio e faz umas coisa",
-    },
-    {
-      question: "Como eu faço pra fazer o bagulho",
-      answer: "Você pega o negócio e faz umas coisa",
-    },
-    {
-      question: "Como eu faço pra fazer o bagulho",
-      answer: "Você pega o negócio e faz umas coisa",
-    },
-  ];
+const Seguro04: React.FC<ISeguro> = ({ seguro }) => {
   return (
     <Body color="gray">
       <NewContainer>
-        <Title margin="0 0 12px 18px"> Perguntas frequentes </Title>
+        <Title margin="0 0 12px 0px"> Perguntas frequentes </Title>
         <QuestionBox>
-          {perguntas.map((pergunta, index) => {
+          {seguro.questions.map((item, index) => {
             return (
-              <Question key={index}>
-                <AddIcon
-                  src="tdkcorretora_icon-add.svg"
-                  alt="TDK Corretora Adicionar Ícone"
-                />
-                <p> {pergunta.question} </p>
-              </Question>
+              <QuestionBox>
+                <Collapsible
+                  className="faq"
+                  openedClassName="faq active"
+                  triggerClassName="faq-title"
+                  triggerOpenedClassName="faq-title active"
+                  triggerTagName="button"
+                  contentInnerClassName="faq-content"
+                  transitionTime={300}
+                  easing="ease-out"
+                  trigger={item.question}
+                >
+                  {item.answer}
+                </Collapsible>
+              </QuestionBox>
             );
           })}
         </QuestionBox>

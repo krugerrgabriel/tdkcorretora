@@ -3,42 +3,39 @@ import React from "react";
 import { Container, Layer, Title, Body } from "../../styles/elements";
 import { Box, Card, ImageIcon } from "./styles";
 
-const seguros = ["transporte", "vida", "patrimonial"];
+import { ISeguros } from "./interfaces";
 
-const Seguros: React.FC = () => {
+const Seguros: React.FC<ISeguros> = ({ seguros }) => {
   return (
     <Body color="gray">
       <Layer color="yellow" position={0} />
       <Container>
         <Title margin="0 0 12px 18px;">Saiba por quê somos especialistas</Title>
         <Box>
-          {seguros.map((seguro, index) => {
-            let imageName = `tdkcorretora_seguro-${seguro}.svg`;
-            return (
-              <Card key={index}>
-                <ImageIcon
-                  src={imageName}
-                  alt="TDK Corretora Seguro Transporte"
-                />
-                <p> {seguro} </p>
-                <span>
-                  Nosso seguro de carga é daora cobre uns bagulho ai e dale e
-                  também blablablabla só troço maluco.
-                </span>
-                <div>
-                  <strong> Ponto 1 </strong>
-                  <hr />
-                  <strong> Ponto 2 </strong>
-                  <hr />
-                  <strong> Ponto 3 </strong>
-                  <hr />
-                  <strong> Ponto 4 </strong>
-                  <hr />
-                  <strong> Ponto 5 </strong>
-                </div>
-              </Card>
-            );
-          })}
+          {seguros.errorcode == "none"
+            ? seguros.seguros.map((item, index) => {
+                return (
+                  <Card key={index}>
+                    <ImageIcon
+                      src={item.icon}
+                      alt="TDK Corretora Seguro Transporte"
+                    />
+                    <p> {item.title} </p>
+                    <span> {item.information} </span>
+                    <div>
+                      {item.pins.map((pin, index) => {
+                        return (
+                          <strong key={index}>
+                            {pin.name}
+                            <hr />
+                          </strong>
+                        );
+                      })}
+                    </div>
+                  </Card>
+                );
+              })
+            : null}
         </Box>
       </Container>
     </Body>

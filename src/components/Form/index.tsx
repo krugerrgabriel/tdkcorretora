@@ -62,9 +62,13 @@ export const Select: React.FC<ISelect> = props => {
           }
         }}
       >
-        <option value="" selected disabled></option>
-        {props.options.map(option => {
-          return <option value={option}> {option} </option>;
+        <option value="" defaultValue disabled></option>
+        {props.options.map((option, index) => {
+          return (
+            <option value={option} key={index}>
+              {option}
+            </option>
+          );
         })}
       </select>
     </Corpse>

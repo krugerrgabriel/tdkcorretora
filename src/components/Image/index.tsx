@@ -15,7 +15,7 @@ const Image = ({ src, ...rest }) => {
             extension
             publicURL
             childImageSharp {
-              fluid(maxWidth: 1920) {
+              fluid(maxWidth: 2560) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -32,7 +32,6 @@ const Image = ({ src, ...rest }) => {
 
   if (!match) return null;
 
-  /* @ts-ignore */
   const { node: { childImageSharp, publicURL, extension } = {} } = match;
 
   if (extension === "svg" || !childImageSharp) {

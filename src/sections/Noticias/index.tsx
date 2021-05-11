@@ -40,9 +40,9 @@ const Noticias: React.FC = () => {
       <Container>
         <Title margin="0 0 24px 0"> Notícias </Title>
         <Box>
-          {noticias.map(noticia => {
+          {noticias.map((noticia, index) => {
             return (
-              <Card>
+              <Card key={index}>
                 <CardImage
                   src={noticia.image}
                   alt={`TDK Corretora Notícia ${noticia.name}`}

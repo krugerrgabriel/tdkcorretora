@@ -1,0 +1,18 @@
+GET:
+    - Listagem de projetos: '${base_url}/projects/'
+    - Informações do Projeto: '${base_url}/projects/:projectId'
+
+POST:
+    - Cadastro de projetos: '${base_url}/projects':
+        *tittle: String - required - User
+        *description: String - required - User
+        *tasks: [
+            {
+                *title: String - required - User
+                *assignedTo: UserId - System
+            }
+        ]
+
+PUT:
+
+DEL: 

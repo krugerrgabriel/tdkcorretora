@@ -1,3 +1,8 @@
+::selection {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .fullImageWrapper{
     position: absolute !important;
 

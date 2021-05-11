@@ -1,3 +1,10 @@
 export interface ISeguro{
-    seguroId: Number;
+    seguro: {
+        title: String;
+        description: String;
+    };
+}
+
+export interface IAnswer{
+    active: Boolean;
 }

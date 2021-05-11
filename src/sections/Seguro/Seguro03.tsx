@@ -3,9 +3,9 @@ import React from "react";
 import { Title, Body } from "../../styles/elements";
 import { NewContainer, Item, ItemImage, ItemBox } from "./styles";
 
-import { ISeguro } from "./interfaces";
+import { ISeguro } from "../../interfaces";
 
-const Seguro03: React.FC<ISeguro> = ({ seguroId }) => {
+const Seguro03: React.FC<ISeguro> = () => {
   let motivos = [
     {
       title: "ASSOCIADOS",

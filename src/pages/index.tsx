@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 
 import Navbar from "../components/Navbar";
@@ -21,16 +21,32 @@ import { Element } from "../styles/elements";
 const Home: React.FC = () => {
   const [tab, setTab] = useState(0);
   const [page, setPage] = useState("nothing");
+  const [seguros, setSeguros] = useState([]);
+
+  const getData = async () => {
+    let response = await fetch("http://localhost:3001/seguros");
+    setSeguros(await response.json());
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
       <Navbar handlePage={data => setPage(data)} />
-      <Sitemap activeTab={tab} handlePage={data => setPage(data)} />
+      <Sitemap
+        activeTab={tab}
+        handlePage={data => setPage(data)}
+        seguros={seguros}
+      />
       <ReactFullpage
         anchors={[
           "inicio",
           "seguros",
           "seguro-transporte",
+          "seguro-vida",
+          "seguro-patrimonial",
           "sobre",
           "contato",
           "noticias",
@@ -46,6 +62,14 @@ const Home: React.FC = () => {
               break;
             case "seguros":
               fullpageApi.moveTo("seguros");
+              setPage("nothing");
+              break;
+            case "seguro-patrimonial":
+              fullpageApi.moveTo("seguro-patrimonial");
+              setPage("nothing");
+              break;
+            case "seguro-vida":
+              fullpageApi.moveTo("seguro-vida");
               setPage("nothing");
               break;
             case "seguro-transporte":
@@ -79,37 +103,46 @@ const Home: React.FC = () => {
               </div>
 
               <div className="section">
-                <Seguros />
+                {/* @ts-ignore */}
+                <Seguros seguros={seguros} />
               </div>
 
-              <div className="section">
-                <Element
-                  src="tdkcorretora_element-left.svg"
-                  alt="TDK Corretora Element"
-                  left={true}
-                  top={true}
-                  key={0}
-                />
-                <Element
-                  src="tdkcorretora_element-right.svg"
-                  alt="TDK Corretora Element"
-                  right={true}
-                  bottom={true}
-                  key={1}
-                />
-                <div className="slide">
-                  <Seguro01 seguroId={2} />
-                </div>
-                <div className="slide">
-                  <Seguro02 seguroId={2} />
-                </div>
-                <div className="slide">
-                  <Seguro03 seguroId={2} />
-                </div>
-                <div className="slide">
-                  <Seguro04 seguroId={2} />
-                </div>
-              </div>
+              {/* @ts-ignore */}
+              {seguros.errorcode == "none" /* @ts-ignore */
+                ? seguros.seguros.map((seguro, index) => {
+                    return (
+                      <div className="section" key={index}>
+                        <Element
+                          src="tdkcorretora_element-left.svg"
+                          alt="TDK Corretora Element"
+                          left="true"
+                          top="true"
+                          key={0}
+                        />
+                        <Element
+                          src="tdkcorretora_element-right.svg"
+                          alt="TDK Corretora Element"
+                          right="true"
+                          bottom="true"
+                          key={1}
+                        />
+
+                        <div className="slide">
+                          <Seguro01 seguro={seguro} />
+                        </div>
+                        <div className="slide">
+                          <Seguro02 seguro={seguro} />
+                        </div>
+                        <div className="slide">
+                          <Seguro03 />
+                        </div>
+                        <div className="slide">
+                          <Seguro04 seguro={seguro} />
+                        </div>
+                      </div>
+                    );
+                  })
+                : null}
 
               <div className="section">
                 <div className="slide">

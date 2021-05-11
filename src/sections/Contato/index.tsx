@@ -13,8 +13,8 @@ const Contato: React.FC = () => {
   const [mensagem, setMensagem] = useState(null);
   return (
     <Body color="yellow">
-      <Element src="tdkcorretora_element-left.svg" left={true} bottom={true} />
-      <Element src="tdkcorretora_element-right.svg" right={true} top={true} />
+      <Element src="tdkcorretora_element-left.svg" left="true" bottom="true" />
+      <Element src="tdkcorretora_element-right.svg" right="true" top="true" />
 
       <NewContainer>
         <PhoneIcon

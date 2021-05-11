@@ -17,7 +17,7 @@ export const Card = styled.div`
     justify-content: space-between;
     flex-direction: column;
 
-    height: 475px;
+    height: 500px;
 
     background-color: ${(props) => props.theme.white};
 
@@ -34,7 +34,11 @@ export const Card = styled.div`
         font-size: 28px;
         font-weight: 900;
 
+        text-align: center;
+
         margin-bottom: -12px;
+
+        height: 68px;
 
         text-transform: uppercase;
     }
@@ -52,7 +56,7 @@ export const Card = styled.div`
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 3; /* number of lines to show */
+        -webkit-line-clamp: 1; /* number of lines to show */
         -webkit-box-orient: vertical;
 
         height: 54px;
@@ -67,19 +71,24 @@ export const Card = styled.div`
         flex-direction: column;
 
         strong{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
             color: ${(props) => props.theme.gray};
 
             font-size: 22px;
             font-weight: 300;
-        }
 
-        hr{
-            background-color: ${(props) => props.theme.gray};
+            hr{
+                background-color: ${(props) => props.theme.gray};
 
-            width: 250px;
-            height: 1px;
+                width: 250px;
+                height: 1px;
 
-            margin: 8px 0;
+                margin: 8px 0;
+            }
         }
     }
 `;

@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
-import { Body, Container, Title } from '../../styles/elements';
+import { Container } from '../../styles/elements';
 
 import Image from '../../components/Image';
+
+import { IAnswer } from './interfaces';
 
 export const NewContainer = styled(Container)`
 
@@ -13,6 +15,7 @@ export const NewContainer = styled(Container)`
         font-weight: 700;
 
         text-align: center;
+        text-transform: uppercase;
     }
 
     h2{
@@ -157,35 +160,80 @@ export const ItemImage = styled(Image)`
 
     margin-top: -82px;
 `;
-
-export const QuestionBox = styled.div`
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    padding: 0 26px;
-`;
-export const Question = styled.div`
-    display: flex;
-    flex-direction: row;
-
-    border-bottom: 1px solid ${(props) => props.theme.white};
-
-    padding: 12px 0;
-
-    p{
-        color: ${(props) => props.theme.white};
-
-        font-size: 24px;
-        font-weight: 400;
-    }
-
-    &:last-child{
-        border-bottom: 0;
-    }
-`;
 export const AddIcon = styled(Image)`
     margin-right: 24px;
 `;
 
+export const Answer = styled.span<IAnswer>`
+    height: ${(props) => props.active ? '64px' : '0px'};
+    font-size: ${(props) => props.active ? '14px' : '0px'};
+`;
+
 export const NewImage = styled(Image)``;
+
+export const QuestionBox = styled.div`
+    &:hover {
+        cursor: pointer;
+    }
+
+    .faq {
+        border-bottom: 2px solid ${(props) => props.theme.white};
+    }
+
+    .faq-title {
+        background: none;
+        color: ${(props) => props.theme.white};
+
+        width: 100%;
+
+        font-size: 22px;
+        font-weight: 500;
+
+        text-align: left;
+
+        padding: 18px 12px;
+        position: relative;
+
+        transition: 0.2s;
+        
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        &::after {
+            content: '';
+            display: block;
+
+            width: 10px;
+            height: 10px;
+
+            border-left: 2px solid ${(props) => props.theme.white};
+            border-bottom: 2px solid ${(props) => props.theme.white};
+
+            position: absolute;
+            top: 24px;
+            right: 36px;
+
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &.active {
+            &::after {
+                transform: rotate(135deg);
+            }
+        }
+    }
+
+    .faq-content {
+        color: ${(props) => props.theme.white};
+
+        font-size: 14px;
+
+        line-height: 26px;
+
+        padding: 0 24px 24px 24px;
+    }
+`;
