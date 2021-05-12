@@ -5,4 +5,7 @@ export interface ISeguros{
             map?: Function;
         };
     };
+    fullpageApi: {
+        moveTo: Function;
+    };
 }

@@ -30,7 +30,7 @@ const Sobre02: React.FC = () => {
         </Box>
         <Box>
           <NewImage
-            src="tdkcorretora_image-box.svg"
+            src="tdkcorretora_banner-box.svg"
             alt="TDK Corretora Image Box"
             margin="true"
           />

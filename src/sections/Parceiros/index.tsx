@@ -16,22 +16,28 @@ const Parceiros: React.FC = () => {
         <Title margin="0 0 24px 0"> Nossos parceiros </Title>
         <Box>
           <ImageBox>
-            <CompanyImage
-              src="tdkcorretora_libertyseguros-logo.png"
-              alt="TDK Corretora Liberty Seguros Logo"
-            />
+            <a href="https://www.libertyseguros.com.br/" target="_blank">
+              <CompanyImage
+                src="tdkcorretora_libertyseguros-logo.png"
+                alt="TDK Corretora Liberty Seguros Logo"
+              />
+            </a>
           </ImageBox>
           <ImageBox>
-            <CompanyImage
-              src="tdkcorretora_tokiomarine-logo.png"
-              alt="TDK Corretora Tokio Marine Logo"
-            />
+            <a href="https://www.tokiomarine.com.br/" target="_blank">
+              <CompanyImage
+                src="tdkcorretora_tokiomarine-logo.png"
+                alt="TDK Corretora Tokio Marine Logo"
+              />
+            </a>
           </ImageBox>
           <ImageBox>
-            <CompanyImage
-              src="tdkcorretora_somposeguros-logo.png"
-              alt="TDK Corretora Sompo Seguros Logo"
-            />
+            <a href="https://sompo.com.br/" target="_blank">
+              <CompanyImage
+                src="tdkcorretora_somposeguros-logo.png"
+                alt="TDK Corretora Sompo Seguros Logo"
+              />
+            </a>
           </ImageBox>
         </Box>
       </Container>

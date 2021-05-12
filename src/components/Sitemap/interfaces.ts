@@ -5,5 +5,12 @@ export interface IOption{
 export interface ISitemap{
     activeTab: Number;
     handlePage: Function;
-    seguros: {};
+    seguros: {
+        seguros: [
+            {
+                pageName: String;
+                title: String;
+            }
+        ];
+    };
 }

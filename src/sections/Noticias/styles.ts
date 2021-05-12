@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { Link } from 'gatsby';
+
 import Image from '../../components/Image';
 
 export const Box = styled.div`
@@ -10,8 +12,11 @@ export const Box = styled.div`
     width: 100%;
 `;
 
-export const Card = styled.div`
+export const Card = styled(Link)`
     background-color: ${(props) => props.theme.white};
+    color: ${(props) => props.theme.black};
+
+    text-decoration: none;
 
     display: flex;
     align-items: center;

@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import { Body, Title } from '../../styles/elements';
-
 import Image from "../../components/Image";
 
 export const Box = styled.div`
@@ -28,68 +26,112 @@ export const Card = styled.div`
 
     box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1);
 
-    p{
-        color: ${(props) => props.theme.gray};
+    position: relative;
 
-        font-size: 28px;
-        font-weight: 900;
-
-        text-align: center;
-
-        margin-bottom: -12px;
-
-        height: 68px;
-
-        text-transform: uppercase;
-    }
-
-    span{
-        color: ${(props) => props.theme.gray};
-
-        font-size: 16px;
-        font-weight: 400;
-
-        text-align: center;
-
-        line-height: 18px;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 1; /* number of lines to show */
-        -webkit-box-orient: vertical;
-
-        height: 54px;
-
-        margin: -4px 0 12px 0;
-    }
-
-    div{
+    div:nth-child(1){
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         flex-direction: column;
 
-        strong{
+        height: 100%;
+
+        p{
+            color: ${(props) => props.theme.gray};
+
+            font-size: 28px;
+            font-weight: 900;
+
+            text-align: center;
+
+            margin-bottom: -12px;
+
+            height: 68px;
+
+            text-transform: uppercase;
+        }
+
+        span{
+            color: ${(props) => props.theme.gray};
+
+            font-size: 16px;
+            font-weight: 400;
+
+            text-align: center;
+
+            line-height: 18px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1; /* number of lines to show */
+            -webkit-box-orient: vertical;
+
+            height: 54px;
+
+            margin: -4px 0 12px 0;
+        }
+        div{
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
 
-            color: ${(props) => props.theme.gray};
+            strong{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
 
-            font-size: 22px;
-            font-weight: 300;
+                color: ${(props) => props.theme.gray};
 
-            hr{
-                background-color: ${(props) => props.theme.gray};
+                font-size: 22px;
+                font-weight: 300;
 
-                width: 250px;
-                height: 1px;
+                hr{
+                    background-color: ${(props) => props.theme.gray};
 
-                margin: 8px 0;
+                    width: 250px;
+                    height: 1px;
+
+                    margin: 8px 0;
+                }
             }
         }
+    }
+
+    div.back{
+        color: ${(props) => props.theme.gray};
+
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+
+        position: absolute;
+
+        top: 32px;
+        left: 24px;
+
+        height: calc(100% - 64px);
+        width: calc(100% - 48px);
+
+        display: none;
+        opacity: 0;
+
+        font-size: 18px;
+        font-weight: 500;
+
+        text-align: center;
+
+        line-height: 20px;
+    }
+
+    &:hover div:nth-child(1){
+        opacity: 0;
+    }
+    &:hover div.back{
+        display: flex;
+        opacity: 1;
     }
 `;
 

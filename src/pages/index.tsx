@@ -44,9 +44,9 @@ const Home: React.FC = () => {
         anchors={[
           "inicio",
           "seguros",
-          "seguro-transporte",
-          "seguro-vida",
           "seguro-patrimonial",
+          "seguro-vida",
+          "seguro-transporte",
           "sobre",
           "contato",
           "noticias",
@@ -104,7 +104,7 @@ const Home: React.FC = () => {
 
               <div className="section">
                 {/* @ts-ignore */}
-                <Seguros seguros={seguros} />
+                <Seguros seguros={seguros} fullpageApi={fullpageApi} />
               </div>
 
               {/* @ts-ignore */}

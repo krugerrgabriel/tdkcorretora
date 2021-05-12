@@ -3,6 +3,9 @@ export interface IInput{
     name: String;
     icon: String;
     handleChange: Function;
+    value: String;
+    maxChar?: String;
+    color: String;
 }
 
 export interface ISelect{

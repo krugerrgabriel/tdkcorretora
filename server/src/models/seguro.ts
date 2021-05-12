@@ -16,7 +16,11 @@ const SeguroSchema = new mongoose.Schema({ // Criação do Schema do Usuário
         type: String,
         require: true,
     },
-    salePhrase:{
+    salesPhrase: {
+        type: String,
+        require: true,
+    },
+    pageName: {
         type: String,
         require: true,
     },

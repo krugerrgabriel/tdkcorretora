@@ -24,6 +24,8 @@ export const Option = styled.div<IOption>`
     font-size: 16px;
     font-weight: 700;
 
+    text-transform: uppercase;
+
     opacity: ${(props) => props.active ? '1' : '0.3'};
 
     margin: 2px 0;

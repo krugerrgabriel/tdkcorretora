@@ -30,9 +30,9 @@ router.get('/:seguroId', async (req:reqSeguroInterface, res) => {
 
 router.post('/', async (req:reqSeguroInterface, res) => { // Definir a rota POST para criar um novo dado
     try{
-        const { title, information, description, salePhrase, pins, icon, coverage, assistance, questions } = req.body; // Desestruturar a body da requisição
+        const { title, information, description, salesPhrase, pageName, pins, icon, coverage, assistance, questions } = req.body; // Desestruturar a body da requisição
         
-        const seguro:seguroInterface = await Seguro.create({ title, information, description, salePhrase, pins, coverage, assistance, questions, icon }); // Irá criar um novo dado com o body da requisição e também com o 'userId' informado na requisição também
+        const seguro:seguroInterface = await Seguro.create({ title, information, description, salesPhrase, pageName, pins, coverage, assistance, questions, icon }); // Irá criar um novo dado com o body da requisição e também com o 'userId' informado na requisição também
 
         await seguro.save(); // '.save()' para as alterações do project serem salvas no DB
 

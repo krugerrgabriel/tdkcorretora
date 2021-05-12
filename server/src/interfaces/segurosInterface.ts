@@ -3,7 +3,8 @@ export interface seguroInterface {
     title: String;
     information: String;
     description: String;
-    salePhrase: String;
+    salesPhrase: String;
+    pageName: String;
     pins: [
         {
             name: String;
@@ -40,7 +41,8 @@ export interface reqSeguroInterface {
         title: String;
         information: String;
         description: String;
-        salePhrase: String;
+        salesPhrase: String;
+        pageName: String;
         pins: [
             {
                 name: String;

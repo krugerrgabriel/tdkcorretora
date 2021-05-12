@@ -5,7 +5,7 @@ import { NewContainer, Item, ItemImage, ItemBox } from "./styles";
 
 import { ISeguro } from "../../interfaces";
 
-const Seguro03: React.FC<ISeguro> = () => {
+const Seguro03: React.FC = () => {
   let motivos = [
     {
       title: "ASSOCIADOS",

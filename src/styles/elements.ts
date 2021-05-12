@@ -75,15 +75,15 @@ export const Title = styled.p<ITitle>`
     ${(props) => props.margin ? `margin: ${props.margin}` : null};
 `;
 
-export const Button = styled.div<{ width: Number; }>`
+export const Button = styled.div<{ width: Number; color: String; onClick?: Function; }>`
     display: flex;
     align-items: center;
     justify-content: center;
 
     background-color: transparent;
-    color: ${(props) => props.theme.white};
+    color: ${(props) => props.color == 'yellow' ? props.theme.yellow : props.color == 'gray' ? props.theme.gray : props.theme.white};
 
-    border: 2px solid ${(props) => props.theme.white};
+    border: 2px solid ${(props) => props.color == 'yellow' ? props.theme.yellow : props.color == 'gray' ? props.theme.gray : props.theme.white};
     border-radius: 3px;
 
     width: ${(props) => props.width ? `${props.width}%` : `50%`};
@@ -99,5 +99,9 @@ export const Button = styled.div<{ width: Number; }>`
 
     &:active{
         transform: scale(0.985);
+    }
+    &:hover{
+        color: ${(props) => props.color == 'yellow' ? props.theme.white : props.theme.yellow};
+        background-color: ${(props) => props.color == 'yellow' ? props.theme.yellow : props.theme.white};
     }
 `;

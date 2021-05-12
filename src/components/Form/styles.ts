@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 import Image from '../../components/Image';
 
-export const Corpse = styled.div`
+export const Corpse = styled.div<{ color?: String; }>`
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    border: 2px solid ${(props) => props.theme.white};
+    border: 2px solid ${(props) => props.theme.color == 'white' ? props.theme.white : props.theme.gray};
     border-radius: 3px;
 
     width: 100%;
@@ -21,7 +21,7 @@ export const Corpse = styled.div`
     input, select, textarea{
         background-color: transparent;
 
-        color: ${(props) => props.theme.white};
+        color: ${(props) => props.theme.color == 'white' ? props.theme.white : props.theme.gray};
 
         font-size: 16px;
 
@@ -53,6 +53,9 @@ export const Corpse = styled.div`
         background-position-y: 5px;
         background-size: 20px 20px;
     }
+    select *{
+        background-color: ${(props) => props.theme.yellow};
+    }
 
     textarea{
         resize: vertical;
@@ -76,10 +79,10 @@ export const Corpse = styled.div`
     }
 `;
 
-export const InputText = styled.span<{ active: boolean }>`
-    background-color: ${(props) => props.theme.yellow};
+export const InputText = styled.span<{ active: boolean; color?: String; }>`
+    background-color: ${(props) => props.color ? props.color == 'white' ? props.theme.yellow : props.theme.white : props.theme.yellow};
 
-    color: ${(props) => props.theme.white};
+    color: ${(props) => props.color ? props.color == 'white' ? props.theme.white : props.theme.gray : props.theme.white};
 
     font-size: ${(props) => props.active ? '14px' : '16px'};
     font-weight: 500;

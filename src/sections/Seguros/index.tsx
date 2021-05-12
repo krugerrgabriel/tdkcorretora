@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Container, Layer, Title, Body } from "../../styles/elements";
+import { Container, Layer, Title, Body, Button } from "../../styles/elements";
 import { Box, Card, ImageIcon } from "./styles";
 
 import { ISeguros } from "./interfaces";
 
-const Seguros: React.FC<ISeguros> = ({ seguros }) => {
+const Seguros: React.FC<ISeguros> = ({ seguros, fullpageApi }) => {
   return (
     <Body color="gray">
       <Layer color="yellow" position={0} />
@@ -15,22 +15,36 @@ const Seguros: React.FC<ISeguros> = ({ seguros }) => {
           {seguros.errorcode == "none"
             ? seguros.seguros.map((item, index) => {
                 return (
-                  <Card key={index}>
-                    <ImageIcon
-                      src={item.icon}
-                      alt="TDK Corretora Seguro Transporte"
-                    />
-                    <p> {item.title} </p>
-                    <span> {item.information} </span>
+                  <Card key={index} className="card">
                     <div>
-                      {item.pins.map((pin, index) => {
-                        return (
-                          <strong key={index}>
-                            {pin.name}
-                            <hr />
-                          </strong>
-                        );
-                      })}
+                      <ImageIcon
+                        src={item.icon}
+                        alt="TDK Corretora Seguro Transporte"
+                      />
+                      <p> {item.title} </p>
+                      <span> {item.information} </span>
+                      <div>
+                        {item.pins.map((pin, index) => {
+                          return (
+                            <strong key={index}>
+                              {pin.name}
+                              <hr />
+                            </strong>
+                          );
+                        })}
+                      </div>
+                    </div>
+                    <div className="back">
+                      <span>{item.description}</span>
+                      <Button
+                        width={100}
+                        color="yellow"
+                        onClick={() => {
+                          fullpageApi.moveTo(item.pageName);
+                        }}
+                      >
+                        VER MAIS
+                      </Button>
                     </div>
                   </Card>
                 );

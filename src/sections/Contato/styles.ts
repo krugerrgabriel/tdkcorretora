@@ -25,7 +25,7 @@ export const NewContainer = styled(Container)`
     flex-direction: row;
 `;
 
-export const Form = styled.div`
+export const Form = styled.form`
     margin-left: 10%;
     
     width: 90%;
