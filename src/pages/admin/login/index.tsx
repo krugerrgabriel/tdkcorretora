@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import { Body, Container } from "../../styles/elements";
-import { Box, MiniIcon, InputBox, ButtonEdited } from "./styles/login";
+import { Body, Container } from "../../../styles/elements";
+import { Box, MiniIcon, InputBox, ButtonEdited } from "./styles";
 
-import Image from "../../components/Image";
-import { Input } from "../../components/Form";
+import Image from "../../../components/Image";
+import { Input } from "../../../components/Form";
 
 const login: React.FC = () => {
   const [email, setEmail] = useState("");

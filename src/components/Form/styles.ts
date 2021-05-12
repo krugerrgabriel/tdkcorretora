@@ -7,7 +7,7 @@ export const Corpse = styled.div<{ color?: String; }>`
     align-items: center;
     justify-content: space-between;
 
-    border: 2px solid ${(props) => props.theme.color == 'white' ? props.theme.white : props.theme.gray};
+    border: 2px solid ${(props) => props.color ? props.color == 'white' ? props.theme.white : props.theme.gray : props.theme.white};
     border-radius: 3px;
 
     width: 100%;
@@ -21,7 +21,7 @@ export const Corpse = styled.div<{ color?: String; }>`
     input, select, textarea{
         background-color: transparent;
 
-        color: ${(props) => props.theme.color == 'white' ? props.theme.white : props.theme.gray};
+        color: ${(props) => props.color == 'white' ? props.theme.white : props.theme.gray};
 
         font-size: 16px;
 

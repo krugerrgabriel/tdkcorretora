@@ -31,6 +31,13 @@ export const Box = styled.div`
 
         width: 525px;
         height: 400px;
+
+        p{
+            color: ${(props) => props.theme.gray};
+            
+            font-size: 24px;
+            font-weight: 700;
+        }
     }
 `;
 
