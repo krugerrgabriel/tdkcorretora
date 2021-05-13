@@ -11,7 +11,7 @@ var transporter = nodemailer.createTransport({
     secure: false,
     auth: {
       user: 'no-reply@tdkcorretora.com.br',
-      pass: '49Unus38'
+      pass: '-----'
     },
     tls: { rejectUnauthorized: false }
 });
