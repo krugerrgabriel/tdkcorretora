@@ -5,6 +5,7 @@ export interface ISeguro{
         information: String;
         description: String;
         salePhrase: String;
+        pageName: String;
         pins: [
             {
                 _id: String;

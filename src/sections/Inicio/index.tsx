@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Element } from "../../styles/elements";
-import { NewContainer, NewBody, FullImage } from "./styles";
+import { Element, FullImage } from "../../styles/elements";
+import { NewContainer, NewBody } from "./styles";
 
 const Inicio: React.FC = () => {
   return (

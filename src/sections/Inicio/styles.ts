@@ -28,10 +28,3 @@ export const NewBody = styled(Body)`
 export const NewContainer = styled(Container)`
     align-items: center;
 `;
-
-export const FullImage = styled(Image)`
-    position: absolute;
-
-    top: 0;
-    left: 0;
-`;

@@ -7,6 +7,9 @@ import Image from '../../components/Image';
 import { IAnswer } from './interfaces';
 
 export const NewContainer = styled(Container)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     h1{
         color: ${(props) => props.theme.white};
@@ -21,12 +24,16 @@ export const NewContainer = styled(Container)`
     h2{
         color: ${(props) => props.theme.white};
 
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 500;
+
+        line-height: 32px;
 
         text-align: center;
 
-        margin-bottom: 36px;
+        margin-top: 56px;
+
+        max-width: 700px;
     }
 `;
 
@@ -172,6 +179,8 @@ export const Answer = styled.span<IAnswer>`
 export const NewImage = styled(Image)``;
 
 export const QuestionBox = styled.div`
+    width: 100%;
+    
     &:hover {
         cursor: pointer;
     }

@@ -27,6 +27,18 @@ export const Body = styled.div<IBody>`
     position: relative;
 `;
 
+export const FullImage = styled(Image)`
+    position: absolute !important;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: auto;
+
+    z-index: 1;
+`;
+
 export const Element = styled(Image)<IElement>`
     position: absolute;
 
@@ -101,7 +113,7 @@ export const Button = styled.div<{ width: Number; color: String; onClick?: Funct
         transform: scale(0.985);
     }
     &:hover{
-        color: ${(props) => props.color == 'yellow' ? props.theme.white : props.theme.yellow};
-        background-color: ${(props) => props.color == 'yellow' ? props.theme.yellow : props.theme.white};
+        color: ${(props) => props.color == 'yellow' || props.color == 'gray' ? props.theme.white : props.theme.yellow};
+        background-color: ${(props) => props.color == 'yellow' ? props.theme.yellow : props.color == 'gray' ? props.theme.gray : props.theme.white};
     }
 `;

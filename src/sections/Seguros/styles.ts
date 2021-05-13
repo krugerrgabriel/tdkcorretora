@@ -140,4 +140,10 @@ export const ImageIcon = styled(Image)`
     width: auto;
 
     margin-bottom: 6px;
+
+    &.seguro-transporte{
+        height: 72px;
+
+        padding: 12px 0;
+    }
 `;

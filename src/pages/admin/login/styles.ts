@@ -32,20 +32,55 @@ export const Box = styled.div`
         width: 525px;
         height: 400px;
 
+        position: relative;
+
         p{
             color: ${(props) => props.theme.gray};
             
             font-size: 24px;
             font-weight: 700;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 32px;
         }
     }
 `;
 
 export const InputBox = styled.div`
     width: 70%;
-    height: 48px;
+    height: 32px;
+
+    margin-bottom: 22px;
 `;
 
-export const MiniIcon = styled(Image)``;
+export const MiniIcon = styled(Image)`
+    margin-right: 12px;
+`;
 
-export const ButtonEdited = styled(Button)``;
+export const ButtonEdited = styled(Button)`
+    margin: 18px 0 8px 0;
+`;
+
+export const SocialLink = styled.a`
+    position: absolute;
+
+    bottom: 18px;
+
+    cursor: pointer;
+
+    &:nth-of-type(1){
+        right: 20px;
+    }
+
+    &:nth-of-type(2){
+        right: 76px;
+    }
+`;
+
+export const SocialImage = styled(Image)`
+    width: 32px;
+    height: 32px;
+`;

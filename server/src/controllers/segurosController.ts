@@ -30,15 +30,35 @@ router.get('/:seguroId', async (req:reqSeguroInterface, res) => {
 
 router.post('/', async (req:reqSeguroInterface, res) => { // Definir a rota POST para criar um novo dado
     try{
-        const { title, information, description, salesPhrase, pageName, pins, icon, coverage, assistance, questions } = req.body; // Desestruturar a body da requisição
+        const { title, description, salesPhrase, pageName, pins, icon, coverage, assistance, questions } = req.body; // Desestruturar a body da requisição
         
-        const seguro:seguroInterface = await Seguro.create({ title, information, description, salesPhrase, pageName, pins, coverage, assistance, questions, icon }); // Irá criar um novo dado com o body da requisição e também com o 'userId' informado na requisição também
+        const seguro:seguroInterface = await Seguro.create({ title, description, salesPhrase, pageName, pins, coverage, assistance, questions, icon }); // Irá criar um novo dado com o body da requisição e também com o 'userId' informado na requisição também
 
         await seguro.save(); // '.save()' para as alterações do project serem salvas no DB
 
         return res.send({ errorcode: 'none', seguro });
     } catch(error){
         return res.status(400).send({ error, errorcode: 'seguro_create_error' });
+    }
+});
+
+// Rota para alterar dados
+router.put('/:seguroId', async (req, res) => {
+    try{
+        if(!req.body.title){
+            return res.send({ errorcode: 'seguro_edit_null-fields' });
+        }
+        const { title, description, salesPhrase, pageName, pins, icon, coverage, assistance, questions } = req.body;
+
+        const seguro = await Seguro.findByIdAndUpdate(req.params.seguroId, {
+            title, description, salesPhrase, pageName, pins, coverage, assistance, questions, icon
+        }, { new: true });
+
+        await seguro.save();
+
+        return res.send({ errorcode: 'none', seguro: seguro });
+    } catch(error){
+        return res.status(400).send({ error: error, errorcode: 'seguro_edit_error' });
     }
 });
 

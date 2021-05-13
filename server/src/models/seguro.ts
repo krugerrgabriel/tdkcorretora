@@ -8,10 +8,6 @@ const SeguroSchema = new mongoose.Schema({ // Criação do Schema do Usuário
         type: String, // Tipo do Campo
         require: true, // Se é preciso ser preenchido
     },
-    information: {
-        type: String,
-        required: true, 
-    },
     description: {
         type: String,
         require: true,

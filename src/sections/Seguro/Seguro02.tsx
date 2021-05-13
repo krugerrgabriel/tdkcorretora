@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Title, Body } from "../../styles/elements";
+import { Title, Body, FullImage } from "../../styles/elements";
 import { NewContainer, Badge, BadgeImage, BadgeBox } from "./styles";
 
 import { ISeguro } from "../../interfaces";
 
 const Seguro02: React.FC<ISeguro> = ({ seguro }) => {
   return (
-    <Body color="gray">
+    <Body>
       <NewContainer>
         <Title margin="0 0 12px 18px"> Nosso seguro cobre </Title>
         <BadgeBox>

@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Title, Body } from "../../styles/elements";
+import { Title, Body, FullImage } from "../../styles/elements";
 import { NewContainer, Item, ItemImage, ItemBox } from "./styles";
 
 import { ISeguro } from "../../interfaces";
 
-const Seguro03: React.FC = () => {
+const Seguro03: React.FC<ISeguro> = ({ seguro }) => {
   let motivos = [
     {
       title: "ASSOCIADOS",
@@ -21,7 +21,7 @@ const Seguro03: React.FC = () => {
     },
   ];
   return (
-    <Body color="gray">
+    <Body>
       <NewContainer>
         <Title margin="0 0 12px 18px"> Nosso seguro cobre </Title>
         <ItemBox>

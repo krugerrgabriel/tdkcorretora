@@ -16,7 +16,7 @@ import Contato from "../sections/Contato";
 import Noticias from "../sections/Noticias";
 import Parceiros from "../sections/Parceiros";
 
-import { Element } from "../styles/elements";
+import { Element, FullImage } from "../styles/elements";
 
 const Home: React.FC = () => {
   const [tab, setTab] = useState(0);
@@ -38,6 +38,7 @@ const Home: React.FC = () => {
       <Sitemap
         activeTab={tab}
         handlePage={data => setPage(data)}
+        // @ts-ignore
         seguros={seguros}
       />
       <ReactFullpage
@@ -127,6 +128,10 @@ const Home: React.FC = () => {
                           key={1}
                         />
 
+                        <FullImage
+                          src={`tdkcorretora_${seguro.pageName}-background.png`}
+                          alt={`TDK Corretora ${seguro.title} Background`}
+                        />
                         <div className="slide">
                           <Seguro01 seguro={seguro} />
                         </div>
@@ -134,7 +139,7 @@ const Home: React.FC = () => {
                           <Seguro02 seguro={seguro} />
                         </div>
                         <div className="slide">
-                          <Seguro03 />
+                          <Seguro03 seguro={seguro} />
                         </div>
                         <div className="slide">
                           <Seguro04 seguro={seguro} />

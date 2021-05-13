@@ -2,16 +2,16 @@ import React from "react";
 
 import Collapsible from "react-collapsible";
 
-import { Title, Body } from "../../styles/elements";
+import { Title, Body, FullImage } from "../../styles/elements";
 import { NewContainer, QuestionBox } from "./styles";
 
 import { ISeguro } from "../../interfaces";
 
 const Seguro04: React.FC<ISeguro> = ({ seguro }) => {
   return (
-    <Body color="gray">
+    <Body>
       <NewContainer>
-        <Title margin="0 0 12px 0px"> Perguntas frequentes </Title>
+        <Title margin="0 0 12px 0px"> O QUE É O NOSSO {seguro.title}? </Title>
         <QuestionBox>
           {seguro.questions.map((item, index) => {
             return (
@@ -25,6 +25,7 @@ const Seguro04: React.FC<ISeguro> = ({ seguro }) => {
                   contentInnerClassName="faq-content"
                   transitionTime={300}
                   easing="ease-out"
+                  // @ts-ignore
                   trigger={item.question}
                 >
                   {item.answer}

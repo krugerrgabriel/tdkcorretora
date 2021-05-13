@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 
 import { Body, Container } from "../../../styles/elements";
-import { Box, MiniIcon, InputBox, ButtonEdited } from "./styles";
+import {
+  Box,
+  MiniIcon,
+  InputBox,
+  ButtonEdited,
+  SocialLink,
+  SocialImage,
+} from "./styles";
 
 import Image from "../../../components/Image";
 import { Input } from "../../../components/Form";
@@ -47,9 +54,28 @@ const login: React.FC = () => {
                 value={password}
               />
             </InputBox>
-            <ButtonEdited color="gray" width={75}>
+            <ButtonEdited color="gray" width={70}>
               ENVIAR
             </ButtonEdited>
+
+            <SocialLink
+              href="https://www.instagram.com/tdkcorretora/"
+              target="_blank"
+            >
+              <SocialImage
+                src="tdkcorretora_icon-facebook-gray.svg"
+                alt="TDK Corretora Facebook Icon"
+              />
+            </SocialLink>
+            <SocialLink
+              href="https://www.facebook.com/tdkcorretora/"
+              target="_blank"
+            >
+              <SocialImage
+                src="tdkcorretora_icon-instagram-gray.svg"
+                alt="TDK Corretora Facebook Icon"
+              />
+            </SocialLink>
           </div>
         </Box>
       </Container>

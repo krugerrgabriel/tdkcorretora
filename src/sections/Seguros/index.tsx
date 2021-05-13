@@ -19,6 +19,7 @@ const Seguros: React.FC<ISeguros> = ({ seguros, fullpageApi }) => {
                     <div>
                       <ImageIcon
                         src={item.icon}
+                        className={`${item.pageName}`}
                         alt="TDK Corretora Seguro Transporte"
                       />
                       <p> {item.title} </p>
