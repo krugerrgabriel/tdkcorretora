@@ -11,8 +11,10 @@ export const Corpse = styled.div<{ color?: String; }>`
     border-radius: 3px;
 
     width: 100%;
-    min-height: 32px;
-    height: 100%;
+    min-height: 38px;
+    height: auto;
+
+    resize: vertical;
 
     margin-bottom: 24px;
 
@@ -58,10 +60,8 @@ export const Corpse = styled.div<{ color?: String; }>`
     }
 
     textarea{
-        resize: vertical;
-
-        height: 20px;
-        min-height: 20px;
+        height: 100%;
+        min-height: 32px;
         max-height: 400px;
     }
 
@@ -79,8 +79,8 @@ export const Corpse = styled.div<{ color?: String; }>`
     }
 `;
 
-export const InputText = styled.span<{ active: boolean; color?: String; }>`
-    background-color: ${(props) => props.color ? props.color == 'white' ? props.theme.yellow : props.theme.white : props.theme.yellow};
+export const InputText = styled.span<{ active: boolean; color?: String; layer?: Boolean; }>`
+    background-color: ${(props) => props.layer ? props.color ? props.color == 'white' ? props.theme.yellow : props.theme.white : props.theme.yellow : props.theme.gray};
 
     color: ${(props) => props.color ? props.color == 'white' ? props.theme.white : props.theme.gray : props.theme.white};
 
@@ -109,3 +109,51 @@ export const InputIcon = styled(Image)`
     top: 6px;
     left: 12px;
 `;
+
+export const Box = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    ${Corpse}{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-left: 12px;
+
+        color: ${(props) => props.theme.white};
+
+        font-size: 18px;
+        font-weight: 500;
+
+        opacity: 0.75;
+    }
+
+    input{
+        display: none;
+    }
+`;
+
+export const Layer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: ${(props) => props.theme.white};
+    color: ${(props) => props.theme.gray};
+
+    border-radius: 3px;
+
+    width: 50%;
+    height: 38px;
+
+    margin-bottom: 24px;
+
+    font-size: 20px;
+    font-weight: 500;
+`;
+
+export const Placeholder = styled.span``;

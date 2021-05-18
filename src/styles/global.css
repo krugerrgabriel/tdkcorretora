@@ -10,6 +10,11 @@
     width: 100%;
 }
 
+a{
+    color: unset;
+    text-decoration: unset;
+}
+
 .icon-scroll,
 .icon-scroll:before{
     position: absolute;

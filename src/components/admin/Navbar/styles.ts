@@ -1,8 +1,15 @@
 import styled from 'styled-components';
+import { Container } from "react-bootstrap";
 
-import Image from '../../../../components/Image';
+import Image from '../../Image';
 
-import { Container } from "../../../../styles/elements";
+export const NewContainer = styled(Container)`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%;
+`;
 
 export const Body = styled.div`
     background-color: ${(props) => props.theme.yellow};
@@ -15,17 +22,6 @@ export const Body = styled.div`
     right: 0;
 `;
 
-export const NewContainer = styled(Container)`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-
-    height: 92px;
-
-    z-index: 500;
-`;
-
 export const NewImage = styled(Image)``;
 
 export const Links = styled.div`
@@ -35,10 +31,12 @@ export const Links = styled.div`
 `;
 
 export const Icon = styled(Image)`
-    margin: 0 12px;
-
     height: 24px;
     width: auto;
 
     cursor: pointer;
+
+    &:last-child{
+        margin-left: 24px;
+    }
 `;
