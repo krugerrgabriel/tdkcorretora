@@ -1,6 +1,12 @@
 import React from "react";
 
-import { Container, Layer, Title, Body, Button } from "../../styles/elements";
+import {
+  Container,
+  FullImage,
+  Title,
+  Body,
+  Button,
+} from "../../styles/elements";
 import { Box, Card, ImageIcon } from "./styles";
 
 import { ISeguros } from "./interfaces";
@@ -8,7 +14,11 @@ import { ISeguros } from "./interfaces";
 const Seguros: React.FC<ISeguros> = ({ seguros, fullpageApi }) => {
   return (
     <Body color="gray">
-      <Layer color="yellow" position={0} />
+      <FullImage
+        className="fullImageWrapper"
+        src="tdkcorretora_seguros-wallpaper.png"
+        alt="TDK Corretora Seguros Background Image"
+      />
       <Container>
         <Title margin="0 0 12px 18px;">Saiba por quê somos especialistas</Title>
         <Box>

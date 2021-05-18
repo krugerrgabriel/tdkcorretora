@@ -19,6 +19,8 @@ export const Box = styled.div`
 
         width: 500px;
         height: 500px;
+
+        box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     div.second{
@@ -33,6 +35,8 @@ export const Box = styled.div`
         height: 400px;
 
         position: relative;
+
+        box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
 
         p{
             color: ${(props) => props.theme.gray};

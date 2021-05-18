@@ -12,14 +12,14 @@ const Inicio: React.FC = () => {
         alt="TDK Corretora Background Image"
       />
       <Element
-        src="tdkcorretora_element-left.svg"
+        src="tdkcorretora_element-left-white.svg"
         alt="TDK Corretora Element"
         left="true"
         top="true"
         key={0}
       />
       <Element
-        src="tdkcorretora_element-right.svg"
+        src="tdkcorretora_element-right-white.svg"
         alt="TDK Corretora Element"
         right="true"
         bottom="true"

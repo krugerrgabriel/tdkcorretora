@@ -18,10 +18,6 @@ const Noticias: React.FC = () => {
     getData();
   }, []);
 
-  useEffect(() => {
-    console.log(noticias);
-  }, [noticias]);
-
   if (noticias.errorcode == "none") {
     return (
       <Body color="gray">

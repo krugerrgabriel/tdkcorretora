@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { navigate } from "gatsby";
 
 import { Body, Container } from "../../../styles/elements";
 import {
@@ -16,6 +17,11 @@ import { Input } from "../../../components/Form";
 const login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const handleLogin = () => {
+    navigate("../");
+  };
+
   return (
     <Body color="gray">
       <Container>
@@ -54,7 +60,7 @@ const login: React.FC = () => {
                 value={password}
               />
             </InputBox>
-            <ButtonEdited color="gray" width={70}>
+            <ButtonEdited color="gray" width={70} onClick={() => handleLogin()}>
               ENVIAR
             </ButtonEdited>
 

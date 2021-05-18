@@ -10,13 +10,15 @@ import Seguro01 from "../sections/Seguro/Seguro01";
 import Seguro02 from "../sections/Seguro/Seguro02";
 import Seguro03 from "../sections/Seguro/Seguro03";
 import Seguro04 from "../sections/Seguro/Seguro04";
-import Sobre01 from "../sections/Sobre/Sobre01";
-import Sobre02 from "../sections/Sobre/Sobre02";
+import Sobre01 from "../sections/Sobre/Sobre01/";
+import Sobre02 from "../sections/Sobre/Sobre02/";
+import Sobre03 from "../sections/Sobre/Sobre03/";
+import Sobre04 from "../sections/Sobre/Sobre04/";
 import Contato from "../sections/Contato";
 import Noticias from "../sections/Noticias";
 import Parceiros from "../sections/Parceiros";
 
-import { Element, FullImage } from "../styles/elements";
+import { SecondLayer, Element, FullImage } from "../styles/elements";
 
 const Home: React.FC = () => {
   const [tab, setTab] = useState(0);
@@ -45,9 +47,11 @@ const Home: React.FC = () => {
         anchors={[
           "inicio",
           "seguros",
-          "seguro-patrimonial",
-          "seguro-vida",
           "seguro-transporte",
+          "seguro-vida",
+          "seguro-residencial",
+          "seguro-ambiental",
+          "seguro-patrimonial",
           "sobre",
           "contato",
           "noticias",
@@ -65,16 +69,24 @@ const Home: React.FC = () => {
               fullpageApi.moveTo("seguros");
               setPage("nothing");
               break;
-            case "seguro-patrimonial":
-              fullpageApi.moveTo("seguro-patrimonial");
+            case "seguro-transporte":
+              fullpageApi.moveTo("seguro-transporte");
               setPage("nothing");
               break;
             case "seguro-vida":
               fullpageApi.moveTo("seguro-vida");
               setPage("nothing");
               break;
-            case "seguro-transporte":
-              fullpageApi.moveTo("seguro-transporte");
+            case "seguro-residencial":
+              fullpageApi.moveTo("seguro-residencial");
+              setPage("nothing");
+              break;
+            case "seguro-ambiental":
+              fullpageApi.moveTo("seguro-ambiental");
+              setPage("nothing");
+              break;
+            case "seguro-patrimonial":
+              fullpageApi.moveTo("seguro-patrimonial");
               setPage("nothing");
               break;
             case "sobre":
@@ -114,14 +126,22 @@ const Home: React.FC = () => {
                     return (
                       <div className="section" key={index}>
                         <Element
-                          src="tdkcorretora_element-left.svg"
+                          src={
+                            index % 2
+                              ? "tdkcorretora_element-left-white.svg"
+                              : "tdkcorretora_element-left-yellow.svg"
+                          }
                           alt="TDK Corretora Element"
                           left="true"
                           top="true"
                           key={0}
                         />
                         <Element
-                          src="tdkcorretora_element-right.svg"
+                          src={
+                            index % 2
+                              ? "tdkcorretora_element-right-white.svg"
+                              : "tdkcorretora_element-right-yellow.svg"
+                          }
                           alt="TDK Corretora Element"
                           right="true"
                           bottom="true"
@@ -149,12 +169,19 @@ const Home: React.FC = () => {
                   })
                 : null}
 
-              <div className="section">
+              <div className="section sobre">
+                <SecondLayer />
                 <div className="slide">
                   <Sobre01 />
                 </div>
                 <div className="slide">
                   <Sobre02 />
+                </div>
+                <div className="slide">
+                  <Sobre03 />
+                </div>
+                <div className="slide">
+                  <Sobre04 />
                 </div>
               </div>
 

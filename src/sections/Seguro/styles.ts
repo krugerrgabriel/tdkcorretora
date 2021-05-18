@@ -133,7 +133,7 @@ export const ItemBox = styled.div`
     padding: 0 12px;
 `;
 export const Item = styled.div`
-    background-color: ${(props) => props.theme.white};
+    background-color: ${(props) => props.theme.yellow};
 
     display: flex;
     align-items: center;
@@ -145,11 +145,10 @@ export const Item = styled.div`
 
     width: 350px;
 
-    border-radius: 3px;
-
     box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1);
 
     p{
+        color: ${(props) => props.theme.gray};
         font-size: 28px;
         font-weight: 700;
 
@@ -157,15 +156,17 @@ export const Item = styled.div`
     }
 
     span{
+        color: ${(props) => props.theme.gray};
+        
         font-size: 22px;
         font-weight: 900;
     }
 `;
 export const ItemImage = styled(Image)`
-    width: 275px;
+    width: 350px;
     height: auto;
 
-    margin-top: -82px;
+    margin-top: -12px;
 `;
 export const AddIcon = styled(Image)`
     margin-right: 24px;

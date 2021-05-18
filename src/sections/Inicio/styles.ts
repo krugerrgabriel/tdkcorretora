@@ -26,5 +26,7 @@ export const NewBody = styled(Body)`
 `;
 
 export const NewContainer = styled(Container)`
+    z-index: 2;
+    
     align-items: center;
 `;

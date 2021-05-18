@@ -1,26 +1,31 @@
 import styled from 'styled-components';
 
-import Image from '../../components/Image';
+import Image from '../../../components/Image';
 
-import { INewImage } from './interfaces';
+import { INewImage } from '../interfaces';
 
-import { Body, Title } from '../../styles/elements';
-
-export const NewBody = styled(Body)`
-    background-color: ${(props) => props.theme.gray};
+export const Corpse = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 `;
 
 export const Box = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
 
+    &:nth-child(1){
+        padding-right: 12px;
+
+        margin-right: 24px;
+        margin: 36px 36px 0 0;
+    }
     &:nth-child(2){
         padding-right: 12px;
-    }
-    &:nth-child(3){
-        margin-top: 24px;
-        padding-right: 12px;
+
+        margin-left: 48px;
     }
     
     div{
@@ -36,6 +41,11 @@ export const Box = styled.div`
             font-weight: 800;
 
             margin-bottom: 8px;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
         }
 
         span{
@@ -43,7 +53,26 @@ export const Box = styled.div`
 
             font-size: 20px;
             font-weight: 400;
+
+            line-height: 30px;
         }
+
+        &.space{
+            margin-top: 36px;
+        }
+    }
+`;
+
+export const TextIcon = styled(Image)`
+    height: 32px;
+    width: auto;
+
+    position: absolute;
+    left: -48px;
+    bottom: 2px;
+
+    &.valores{
+        bottom: 3px;
     }
 `;
 

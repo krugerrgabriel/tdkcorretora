@@ -16,4 +16,5 @@ export interface ILayer{
 
 export interface ITitle{
     margin: String;
+    color?: String;
 }

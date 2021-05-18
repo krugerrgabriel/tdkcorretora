@@ -16,6 +16,8 @@ export const Container = styled.div`
     margin: auto;
 
     position: relative;
+
+    z-index: 2;
 `;
 
 export const Body = styled.div<IBody>`
@@ -75,7 +77,7 @@ export const SecondLayer = styled.div`
 `;
 
 export const Title = styled.p<ITitle>`
-    color: ${(props) => props.theme.white};
+    color: ${(props) => props.color ? props.color == 'gray' ? props.theme.gray : props.color == 'yellow' ? props.theme.yellow : props.theme.white : props.theme.white};
 
     font-size: 38px;
     font-weight: 700;
