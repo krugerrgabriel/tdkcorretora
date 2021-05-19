@@ -15,7 +15,7 @@ const noticias: React.FC = () => {
     <>
       <Navbar />
       <Body>
-        <BreadcrumbBox map={breadcrumbMap} />
+        <BreadcrumbBox map={breadcrumbMap} register />
       </Body>
     </>
   );

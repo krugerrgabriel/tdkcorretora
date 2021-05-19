@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Breadcrumb } from "react-bootstrap";
 
+import Image from '../../Image';
+
 export const NewBreadcrumb = styled(Breadcrumb)``;
 
 export const Body = styled.div`
@@ -30,4 +32,13 @@ export const Body = styled.div`
             height: 100%;
         }
     }
+`;
+
+export const AddIcon = styled(Image)`
+    position: absolute;
+    right: 24px;
+    top: 6px;
+    
+    width: 22px;
+    height: auto;
 `;

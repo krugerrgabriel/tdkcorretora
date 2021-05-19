@@ -39,11 +39,17 @@ export const Input: React.FC<IInput> = props => {
     }
   };
 
+  let contactSection = props.contact ? true : false;
+
   return (
     // @ts-ignore
     <Corpse color={props.color}>
-      {/* @ts-ignore */}
-      <InputText color={props.color} active={active} layer={layer}>
+      <InputText /* @ts-ignore */
+        color={props.color}
+        active={active}
+        layer={layer}
+        contact={contactSection}
+      >
         {props.name}
       </InputText>
       <InputIcon src={props.icon} alt={`TDK Corretora ${props.type} Icon`} />
@@ -73,9 +79,13 @@ export const Input: React.FC<IInput> = props => {
 
 export const Select: React.FC<ISelect> = props => {
   const [active, setActive] = useState(false);
+
+  let contactSection = props.contact ? true : false;
   return (
     <Corpse>
-      <InputText active={active}>{props.name}</InputText>
+      <InputText active={active} contact={contactSection}>
+        {props.name}
+      </InputText>
       <InputIcon src={props.icon} />
       <select
         onChange={event => props.handleChange(event.target.value)}
@@ -112,9 +122,12 @@ export const Textarea: React.FC<ITextarea> = props => {
   const [active, setActive] = useState(false);
 
   let color = props.color ? props.color : "white";
+  let contactSection = props.contact ? true : false;
   return (
     <Corpse color={`${color}`}>
-      <InputText active={active}>{props.name}</InputText>
+      <InputText active={active} contact={contactSection}>
+        {props.name}
+      </InputText>
       <InputIcon src={props.icon} />
       <textarea // @ts-ignore
         onKeyUp={event => props.handleChange(event.target.value)}
@@ -137,20 +150,18 @@ export const Textarea: React.FC<ITextarea> = props => {
   );
 };
 
-export const FileInput: React.FC = props => {
+export const FileInput: React.FC<{ fileChange: Function }> = props => {
   const fileElement = useRef(null);
   const placeholderElement = useRef(null);
   const onChange = event => {
     placeholderElement.current.innerHTML = event.target.files[0].name;
+    props.fileChange(event.target.files[0]);
   };
-  setTimeout(() => {
-    console.log(placeholderElement);
-  }, 1000);
   return (
     <>
       <Box onClick={() => fileElement.current.click()}>
         <Layer>IMAGEM</Layer>
-        <Corpse>
+        <Corpse halfWidth>
           <Placeholder ref={placeholderElement}>
             Selecione uma imagem
           </Placeholder>

@@ -8,7 +8,7 @@ const Sobre03: React.FC = () => {
     <>
       <Body>
         <Container>
-          <Title margin="0 0 24px 0"> NOSSA CARTEIRA </Title>
+          <Title margin="-20% 0 24px 0"> NOSSA CARTEIRA </Title>
           <Box>
             <div>
               <p> + 300 </p>

@@ -8,16 +8,18 @@ const UserSchema = new mongoose.Schema({ // Criação do Schema do Usuário
         type: String, // Tipo do Campo
         require: true, // Se é preciso ser preenchido
     },
-    email: {
+    phone: {
         type: String,
         unique: true, // Se é único
         required: true, 
-        lowercase: true, // Forçar para ser letra minúscula
     },
-    password: {
+    role: {
         type: String,
         required: true,
-        select: false, // Quando o usuário for consultado, esse campo não irá junto
+    },
+    image: {
+        type: String,
+        required: true,
     },
     createdAt: {
         type: Date,

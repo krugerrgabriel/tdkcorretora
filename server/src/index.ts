@@ -24,5 +24,6 @@ app.get('/', (req, res) => {
 require('./controllers/segurosController.ts')(app); // o 'app' foi repassado pois é uma instância única na aplicação
 require('./controllers/noticiasController.ts')(app); // o 'app' foi repassado pois é uma instância única na aplicação
 require('./controllers/mailController.ts')(app); // o 'app' foi repassado pois é uma instância única na aplicação
+require('./controllers/userController.ts')(app); // o 'app' foi repassado pois é uma instância única na aplicação
 
 app.listen(3001); // Utilizar a porta 3001 para as requisições

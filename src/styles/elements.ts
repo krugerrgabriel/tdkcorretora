@@ -29,7 +29,7 @@ export const Body = styled.div<IBody>`
     position: relative;
 `;
 
-export const FullImage = styled(Image)`
+export const FullImage = styled(Image)<{ zIndex?: Boolean; }>`
     position: absolute !important;
 
     top: 0;
@@ -38,7 +38,7 @@ export const FullImage = styled(Image)`
     width: 100vw;
     height: auto;
 
-    z-index: 1;
+    z-index: ${(props) => props.zIndex ? '-1' : '1'};
 `;
 
 export const Element = styled(Image)<IElement>`
@@ -89,7 +89,7 @@ export const Title = styled.p<ITitle>`
     ${(props) => props.margin ? `margin: ${props.margin}` : null};
 `;
 
-export const Button = styled.div<{ width: Number; color: String; onClick?: Function; }>`
+export const Button = styled.div<{ width: Number; color: String; onClick?: Function; fontColor?: String; }>`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,7 +115,7 @@ export const Button = styled.div<{ width: Number; color: String; onClick?: Funct
         transform: scale(0.985);
     }
     &:hover{
-        color: ${(props) => props.color == 'yellow' || props.color == 'gray' ? props.theme.white : props.theme.yellow};
+        color: ${(props) => props.fontColor ? props.fontColor == 'white' ? props.theme.white : props.theme.gray : props.color == 'yellow' || props.color == 'gray' ? props.theme.white : props.theme.yellow};
         background-color: ${(props) => props.color == 'yellow' ? props.theme.yellow : props.color == 'gray' ? props.theme.gray : props.theme.white};
     }
 `;

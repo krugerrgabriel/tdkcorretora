@@ -7,6 +7,7 @@ export interface IInput{
     maxChar?: String;
     color: String;
     layer?: Boolean;
+    contact?: Boolean;
 }
 
 export interface ISelect{
@@ -14,6 +15,7 @@ export interface ISelect{
     icon: String;
     options: [];
     handleChange: Function;
+    contact?: Boolean;
 }
 
 export interface ITextarea{
@@ -21,4 +23,5 @@ export interface ITextarea{
     icon: String;
     color?: String;
     handleChange: Function;
+    contact?: Boolean;
 }

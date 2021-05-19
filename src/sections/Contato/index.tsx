@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
-import { Body, Container, Element, Title, Button } from "../../styles/elements";
-import { Inputs, PhoneIcon, NewContainer, Form } from "./styles";
+import { Body, Element, Title, Button, FullImage } from "../../styles/elements";
+import { Inputs, NewContainer, Form } from "./styles";
 
 import { Input, Select, Textarea } from "../../components/Form";
 
@@ -59,72 +60,105 @@ const Contato: React.FC = () => {
   }, [status]);
 
   return (
-    <Body color="yellow">
-      <Element src="tdkcorretora_element-left.svg" left="true" bottom="true" />
-      <Element src="tdkcorretora_element-right.svg" right="true" top="true" />
+    <Body>
+      <FullImage
+        src="tdkcorretora_contato-background.png"
+        alt="TDK Corretora Sobre Nós Background"
+      />
+      <Element
+        src="tdkcorretora_element-left-white.svg"
+        left="true"
+        bottom="true"
+      />
+      <Element
+        src="tdkcorretora_element-right-white.svg"
+        right="true"
+        top="true"
+      />
 
       <NewContainer>
-        <PhoneIcon
-          src="tdkcorretora_phone-image.png"
-          alt="TDK Corretora Imagem de Telefone"
-        />
-        <Form>
-          <Title margin="0 0 22px 0"> CONTATO </Title>
-          <Inputs>
-            <Input
-              type="text"
-              name="NOME"
-              color="white"
-              icon="tdkcorretora_user-icon.svg"
-              handleChange={data => setNome(data)}
-              value={nome}
-              maxChar="100"
-            />
-            <Input
-              type="email"
-              name="E-MAIL"
-              color="white"
-              icon="tdkcorretora_email-icon.svg"
-              handleChange={data => setEmail(data)}
-              value={email}
-              maxChar="100"
-            />
-          </Inputs>
-          <Inputs>
-            <Input
-              type="phone"
-              name="TELEFONE"
-              color="white"
-              icon="tdkcorretora_phone-icon.svg"
-              handleChange={data => setTelefone(data)}
-              value={telefone}
-            />
-            <Select
-              name="MOTIVO"
-              icon="tdkcorretora_info-icon.svg" // @ts-ignore
-              options={["contato", "associar"]}
-              handleChange={data => setMotivo(data)}
-            />
-          </Inputs>
-          <Inputs>
-            <Textarea
-              name="MENSAGEM"
-              icon="tdkcorretora_message-icon.svg"
-              handleChange={data => setMensagem(data)}
-            />
-          </Inputs>
-          <Inputs align="right">
-            <Button
-              width={47.5}
-              color="white"
-              onClick={() => {
-                handleValidate();
-              }}
-            >
-              ENVIAR
-            </Button>
-          </Inputs>
-        </Form>
+        <Container>
+          <Form>
+            <Row>
+              <Col>
+                <Title margin="0 0 22px 0"> CONTATO </Title>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Input
+                  type="text"
+                  name="NOME"
+                  color="white"
+                  icon="tdkcorretora_user-icon.svg"
+                  handleChange={data => setNome(data)}
+                  value={nome}
+                  maxChar="100"
+                  contact
+                />
+              </Col>
+              <Col>
+                <Input
+                  type="email"
+                  name="E-MAIL"
+                  color="white"
+                  icon="tdkcorretora_email-icon.svg"
+                  handleChange={data => setEmail(data)}
+                  value={email}
+                  maxChar="100"
+                  contact
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Input
+                  type="phone"
+                  name="TELEFONE"
+                  color="white"
+                  icon="tdkcorretora_phone-icon.svg"
+                  handleChange={data => setTelefone(data)}
+                  value={telefone}
+                  contact
+                />
+              </Col>
+              <Col>
+                <Select
+                  name="MOTIVO"
+                  icon="tdkcorretora_info-icon.svg" // @ts-ignore
+                  options={["contato", "associar"]}
+                  handleChange={data => setMotivo(data)}
+                  contact
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Textarea
+                  name="MENSAGEM"
+                  icon="tdkcorretora_message-icon.svg"
+                  handleChange={data => setMensagem(data)}
+                  contact
+                />
+              </Col>
+            </Row>
+
+            <Row className="justify-content-end">
+              <Col lg={6}>
+                <Button
+                  width={100}
+                  color="white"
+                  fontColor="gray"
+                  onClick={() => {
+                    handleValidate();
+                  }}
+                >
+                  ENVIAR
+                </Button>
+              </Col>
+            </Row>
+          </Form>
+        </Container>
       </NewContainer>
     </Body>
   );

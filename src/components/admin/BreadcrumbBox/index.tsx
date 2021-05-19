@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import { Body, NewBreadcrumb } from "./styles";
+import { Body, NewBreadcrumb, AddIcon } from "./styles";
 
 const BreadcrumbBox: React.FC<{
   map: any;
+  register?: Boolean;
 }> = props => {
   return (
     <Body>
@@ -17,6 +18,14 @@ const BreadcrumbBox: React.FC<{
           );
         })}
       </NewBreadcrumb>
+      {props.register ? (
+        <Link to="cadastro/">
+          <AddIcon
+            src="tdkcorretora_plus-circle-icon.svg"
+            alt="TDK Corretora Add Icon"
+          />
+        </Link>
+      ) : null}
     </Body>
   );
 };

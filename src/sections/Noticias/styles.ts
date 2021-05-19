@@ -1,15 +1,23 @@
 import styled from 'styled-components';
+import { Row } from 'react-bootstrap';
 
 import { Link } from 'gatsby';
 
 import Image from '../../components/Image';
 
+export const NewRow = styled(Row)``;
+
 export const Box = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
 
     width: 100%;
+    height: 100vh;
+
+    ${NewRow}{
+        z-index: 4;
+    }
 `;
 
 export const Card = styled(Link)`
@@ -24,15 +32,25 @@ export const Card = styled(Link)`
 
     flex-direction: column;
 
-    width: 25%;
+    width: 100%;
 
     margin: 0 18px;
 
     border-radius: 7px 7px 4px 4px;
 
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+
+    transition: 0.2s;
+
     &:first-child,
     &:last-child{
         margin: 0;
+    }
+
+    &:hover{
+        box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+
+        color: ${(props) => props.theme.gray};
     }
 `;
 
@@ -49,15 +67,15 @@ export const CardInfo = styled.div`
     justify-content: space-between;
     flex-direction: column;
 
-    height: 150px;
+    height: auto;
 
     padding: 24px 18px;
 
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
-
     p{
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 700;
+
+        line-height: 24px;
 
         text-align: center;
 

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Image from '../../components/Image';
 
-export const Corpse = styled.div<{ color?: String; }>`
+export const Corpse = styled.div<{ color?: String; halfWidth?: Boolean; }>`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,7 +10,7 @@ export const Corpse = styled.div<{ color?: String; }>`
     border: 2px solid ${(props) => props.color ? props.color == 'white' ? props.theme.white : props.theme.gray : props.theme.white};
     border-radius: 3px;
 
-    width: 100%;
+    width: ${(props) => props.halfWidth ? '75%' : '100%'};
     min-height: 38px;
     height: auto;
 
@@ -54,6 +54,10 @@ export const Corpse = styled.div<{ color?: String; }>`
         background-position-x: 95%;
         background-position-y: 5px;
         background-size: 20px 20px;
+
+        color: ${(props) => props.theme.white};
+
+        font-weight: 400;
     }
     select *{
         background-color: ${(props) => props.theme.yellow};
@@ -79,8 +83,8 @@ export const Corpse = styled.div<{ color?: String; }>`
     }
 `;
 
-export const InputText = styled.span<{ active: boolean; color?: String; layer?: Boolean; }>`
-    background-color: ${(props) => props.layer ? props.color ? props.color == 'white' ? props.theme.yellow : props.theme.white : props.theme.yellow : props.theme.gray};
+export const InputText = styled.span<{ active: boolean; color?: String; layer?: Boolean; contact?: Boolean; }>`
+    background-color: ${(props) => props.contact ? 'transparent' : props.layer ? props.color ? props.color == 'white' ? props.theme.yellow : props.theme.white : props.theme.yellow : props.theme.gray};
 
     color: ${(props) => props.color ? props.color == 'white' ? props.theme.white : props.theme.gray : props.theme.white};
 
@@ -90,7 +94,7 @@ export const InputText = styled.span<{ active: boolean; color?: String; layer?: 
     position: absolute;
 
     left: 42px;
-    top: ${(props) => props.active ? '-18px' : '-8px'};
+    top: ${(props) => props.contact ? props.active ? '-26px' : '0' : props.active ? '-18px' : '-8px'};
 
     padding: 2px 4px;
 
@@ -156,4 +160,12 @@ export const Layer = styled.div`
     font-weight: 500;
 `;
 
-export const Placeholder = styled.span``;
+export const Placeholder = styled.span`
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    width: 325px;
+`;

@@ -18,7 +18,7 @@ import Contato from "../sections/Contato";
 import Noticias from "../sections/Noticias";
 import Parceiros from "../sections/Parceiros";
 
-import { SecondLayer, Element, FullImage } from "../styles/elements";
+import { Element, FullImage } from "../styles/elements";
 
 const Home: React.FC = () => {
   const [tab, setTab] = useState(0);
@@ -170,7 +170,10 @@ const Home: React.FC = () => {
                 : null}
 
               <div className="section sobre">
-                <SecondLayer />
+                <FullImage
+                  src="tdkcorretora_sobrenos-background.png"
+                  alt="TDK Corretora Sobre Nós Background"
+                />
                 <div className="slide">
                   <Sobre01 />
                 </div>

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
 import { Link } from "gatsby";
 
-import { Body, Layer, Container, Title } from "../../styles/elements";
-import { Box, Card, CardImage, CardInfo } from "./styles";
+import { Body, FullImage, Title } from "../../styles/elements";
+import { NewRow, Box, Card, CardImage, CardInfo } from "./styles";
 
 const Noticias: React.FC = () => {
   const [noticias, setNoticias] = useState([]);
@@ -18,33 +19,48 @@ const Noticias: React.FC = () => {
     getData();
   }, []);
 
+  /* @ts-ignore */
   if (noticias.errorcode == "none") {
     return (
-      <Body color="gray">
-        <Layer color="yellow" position={2} />
+      <Body>
+        <FullImage
+          src="tdkcorretora_noticias-background.png"
+          alt="TDK Corretora Notícias Background"
+        />
         <Container>
-          <Title margin="0 0 24px 0"> Notícias </Title>
           <Box>
-            {noticias.noticias.map((noticia, index) => {
-              let data = noticia.createdAt.split("T")[0].split("-");
-              let dia = data[2];
-              let mes = data[1];
-              let ano = data[0];
-              let finalDate = dia + "/" + mes + "/" + ano;
-              return (
-                <Card to={`noticia?id=${noticia._id}`}>
-                  <CardImage
-                    src={noticia.image}
-                    alt={`TDK Corretora Notícia ${noticia.name}`}
-                  />
-                  <CardInfo>
-                    <p>{noticia.title}</p>
-                    <span>{noticia.descriptionMinimized}</span>
-                    <strong>{finalDate}</strong>
-                  </CardInfo>
-                </Card>
-              );
-            })}
+            <NewRow>
+              <Col>
+                <Title color="yellow" margin="0 0 24px 0">
+                  Notícias
+                </Title>
+              </Col>
+            </NewRow>
+            <NewRow>
+              {/* @ts-ignore */}
+              {noticias.noticias.map((noticia, index) => {
+                let data = noticia.createdAt.split("T")[0].split("-");
+                let dia = data[2];
+                let mes = data[1];
+                let ano = data[0];
+                let finalDate = dia + "/" + mes + "/" + ano;
+                return (
+                  <Col>
+                    <Card to={`noticia?id=${noticia._id}`}>
+                      <CardImage
+                        src={noticia.image}
+                        alt={`TDK Corretora Notícia ${noticia.name}`}
+                      />
+                      <CardInfo>
+                        <p>{noticia.title}</p>
+                        <span>{noticia.descriptionMinimized}</span>
+                        <strong>{finalDate}</strong>
+                      </CardInfo>
+                    </Card>
+                  </Col>
+                );
+              })}
+            </NewRow>
           </Box>
         </Container>
       </Body>

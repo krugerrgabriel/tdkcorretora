@@ -1,12 +1,14 @@
 import styled from 'styled-components';
+import { Container } from 'react-bootstrap';
 
 import Image from "../../components/Image";
 
-export const Box = styled.div`
+export const NewContainer = styled(Container)`
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100vh;
 `;
 
 export const ImageBox = styled.div`
@@ -14,12 +16,12 @@ export const ImageBox = styled.div`
     align-items: center;
     justify-content: center;
 
-    width: 25%;
+    width: 100%;
     height: 100%;
 
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.9);
 
-    padding: 8px 12px;
+    padding: 24px 0;
 
     border-radius: 3px;
 

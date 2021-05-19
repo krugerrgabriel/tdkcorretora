@@ -12,6 +12,27 @@ const cadastro: React.FC = () => {
   const [nome, setNome] = useState("");
   const [telefone, setTelefone] = useState("");
   const [cargo, setCargo] = useState("");
+  const [file, setFile] = useState();
+
+  const handleValidate = async () => {
+    const res = await fetch("http://localhost:3001/user", {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify({
+        name: nome,
+        phone: telefone,
+        role: cargo,
+        file,
+      }),
+    });
+    const data = await res.json();
+    console.log(await data);
+  };
+
   return (
     <>
       <Navbar />
@@ -61,12 +82,17 @@ const cadastro: React.FC = () => {
               />
             </Col>
             <Col>
-              <FileInput />
+              <FileInput fileChange={file => setFile(file)} />
             </Col>
           </Row>
           <Row>
             <Col>
-              <Button width={100} color="white">
+              <Button
+                width={100}
+                color="white"
+                fontColor="gray"
+                onClick={() => handleValidate()}
+              >
                 CADASTRAR
               </Button>
             </Col>

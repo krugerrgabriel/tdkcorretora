@@ -26,7 +26,9 @@ export const NewContainer = styled(Container)`
 `;
 
 export const Form = styled.form`
-    margin-left: 10%;
-    
-    width: 90%;
+    background-color: rgba(0, 0, 0, 0.35);
+
+    padding: 64px;
+
+    border-radius: 14px;
 `;

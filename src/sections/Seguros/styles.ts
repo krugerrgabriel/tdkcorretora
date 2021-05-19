@@ -1,6 +1,20 @@
 import styled from 'styled-components';
+import { Container, Row } from 'react-bootstrap';
 
 import Image from "../../components/Image";
+
+export const NewRow = styled(Row)`
+    z-index: 4;
+`;
+
+export const NewContainer = styled(Container)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100vh;
+`;
 
 export const Box = styled.div`
     display: flex;
