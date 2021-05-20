@@ -59,6 +59,9 @@ const Home: React.FC = () => {
         ]}
         scrollingSpeed={750}
         onLeave={(origin, destination, direction) => setTab(destination.index)}
+        afterLoad={(origin, destination, direction) => {
+          console.log({ origin, destination, direction });
+        }}
         render={({ state, fullpageApi }) => {
           switch (page) {
             case "inicio":
@@ -115,9 +118,26 @@ const Home: React.FC = () => {
                 <Inicio />
               </div>
 
-              <div className="section">
-                {/* @ts-ignore */}
-                <Seguros seguros={seguros} fullpageApi={fullpageApi} />
+              <div className="section" id="absolute">
+                <FullImage
+                  className="fullImageWrapper"
+                  src="tdkcorretora_seguros-wallpaper.png"
+                  alt="TDK Corretora Seguros Background Image"
+                />
+                <div className="slide">
+                  <Seguros /* @ts-ignore */
+                    seguros={seguros}
+                    page="one"
+                    fullpageApi={fullpageApi}
+                  />
+                </div>
+                <div className="slide">
+                  <Seguros /* @ts-ignore */
+                    seguros={seguros}
+                    page="two"
+                    fullpageApi={fullpageApi}
+                  />
+                </div>
               </div>
 
               {/* @ts-ignore */}
@@ -159,7 +179,7 @@ const Home: React.FC = () => {
                           <Seguro02 seguro={seguro} />
                         </div>
                         <div className="slide">
-                          <Seguro03 seguro={seguro} />
+                          <Seguro03 seguro={seguro} fullpageApi={fullpageApi} />
                         </div>
                         <div className="slide">
                           <Seguro04 seguro={seguro} />

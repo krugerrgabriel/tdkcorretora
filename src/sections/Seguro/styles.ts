@@ -1,15 +1,17 @@
 import styled from 'styled-components';
-
-import { Container } from '../../styles/elements';
+import { Container } from 'react-bootstrap';
 
 import Image from '../../components/Image';
 
 import { IAnswer } from './interfaces';
 
-export const NewContainer = styled(Container)`
+export const NewContainer = styled(Container)<{ alignItems?: Boolean; }>`
     display: flex;
-    align-items: center;
+    ${(props) => props.alignItems ? 'align-items: center;' : null};
     justify-content: center;
+    flex-direction: column;
+
+    height: 100vh;
 
     h1{
         color: ${(props) => props.theme.white};
@@ -93,7 +95,7 @@ export const Badge = styled.div`
 
     flex: 1 0 20%;
 
-    height: 58px;
+    height: 64px;
 
     margin: 12px 16px;
     padding: 10px 16px;
@@ -110,6 +112,8 @@ export const Badge = styled.div`
             font-weight: 500;
 
             text-transform: uppercase;
+
+            margin: 0;
         }
 
         span{
@@ -119,19 +123,12 @@ export const Badge = styled.div`
     }
 `;
 export const BadgeImage = styled(Image)`
-    height: 52px;
+    height: 42px;
     width: auto;
 
     border-radius: 2px;
 `;
 
-export const ItemBox = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 12px;
-`;
 export const Item = styled.div`
     background-color: ${(props) => props.theme.yellow};
 

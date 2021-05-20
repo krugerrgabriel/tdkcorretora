@@ -1,4 +1,5 @@
 export interface ISeguros{
+    page: String;
     seguros: {
         errorcode: String;
         seguros: {

@@ -53,6 +53,8 @@ export const Employee = styled.div`
 
                 font-size: 20px;
                 font-weight: 900;
+
+                line-height: 20px;
             }
 
             span{
@@ -60,6 +62,8 @@ export const Employee = styled.div`
                 
                 font-size: 14px;
                 font-weight: 500;
+
+                line-height: 16px;
 
                 letter-spacing: 0.1px;
 

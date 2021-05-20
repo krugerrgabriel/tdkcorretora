@@ -1,63 +1,99 @@
 import React from "react";
-import { Col, Carousel } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 
-import { FullImage, Title, Body, Button } from "../../styles/elements";
+import { Body, Button } from "../../styles/elements";
 import { NewContainer, NewRow, Card, ImageIcon } from "./styles";
 
 import { ISeguros } from "./interfaces";
 
-const Seguros: React.FC<ISeguros> = ({ seguros, fullpageApi }) => {
+const Seguros: React.FC<ISeguros> = ({ page, seguros, fullpageApi }) => {
   return (
-    <Body color="gray">
-      <FullImage
-        className="fullImageWrapper"
-        src="tdkcorretora_seguros-wallpaper.png"
-        alt="TDK Corretora Seguros Background Image"
-      />
+    <Body>
       <NewContainer>
-        <Title margin="0 0 12px 18px;">Saiba por quê somos especialistas</Title>
         <NewRow>
           {seguros.errorcode == "none"
             ? seguros.seguros.map((item, index) => {
-                return (
-                  <Carousel.Item>
-                    <Col lg={4}>
-                      <Card key={index} className="card">
-                        <div>
-                          <ImageIcon
-                            src={item.icon}
-                            className={`${item.pageName}`}
-                            alt="TDK Corretora Seguro Transporte"
-                          />
-                          <p> {item.title} </p>
-                          <span> {item.information} </span>
+                if (page == "one") {
+                  if (index < 3) {
+                    return (
+                      <Col>
+                        <Card className="card">
                           <div>
-                            {item.pins.map((pin, index) => {
-                              return (
-                                <strong key={index}>
-                                  {pin.name}
-                                  <hr />
-                                </strong>
-                              );
-                            })}
+                            <ImageIcon
+                              src={item.icon}
+                              className={`${item.pageName}`}
+                              alt="TDK Corretora Seguro Transporte"
+                            />
+                            <p> {item.title} </p>
+                            <span> {item.information} </span>
+                            <div>
+                              {item.pins.map((pin, index) => {
+                                return (
+                                  <strong key={index}>
+                                    {pin.name}
+                                    <hr />
+                                  </strong>
+                                );
+                              })}
+                            </div>
                           </div>
-                        </div>
-                        <div className="back">
-                          <span>{item.description}</span>
-                          <Button
-                            width={100}
-                            color="yellow"
-                            onClick={() => {
-                              fullpageApi.moveTo(item.pageName);
-                            }}
-                          >
-                            VER MAIS
-                          </Button>
-                        </div>
-                      </Card>
-                    </Col>
-                  </Carousel.Item>
-                );
+                          <div className="back">
+                            <span>{item.description}</span>
+                            <Button
+                              width={100}
+                              color="yellow"
+                              onClick={() => {
+                                fullpageApi.moveTo(item.pageName);
+                              }}
+                            >
+                              VER MAIS
+                            </Button>
+                          </div>
+                        </Card>
+                      </Col>
+                    );
+                  }
+                } else {
+                  if (index >= 3) {
+                    return (
+                      <Col>
+                        <Card className="card">
+                          <div>
+                            <ImageIcon
+                              src={item.icon}
+                              className={`${item.pageName}`}
+                              alt="TDK Corretora Seguro Transporte"
+                            />
+                            <p> {item.title} </p>
+                            <span> {item.information} </span>
+                            <div>
+                              {item.pins.map((pin, index) => {
+                                return (
+                                  <strong key={index}>
+                                    {pin.name}
+                                    <hr />
+                                  </strong>
+                                );
+                              })}
+                            </div>
+                          </div>
+                          <div className="back">
+                            <span>{item.description}</span>
+                            <Button
+                              width={100}
+                              color="yellow"
+                              onClick={() => {
+                                fullpageApi.moveTo(item.pageName);
+                              }}
+                            >
+                              VER MAIS
+                            </Button>
+                          </div>
+                        </Card>
+                      </Col>
+                    );
+                  }
+                }
               })
             : null}
         </NewRow>

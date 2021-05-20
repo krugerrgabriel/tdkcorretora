@@ -1,4 +1,5 @@
 export interface ISeguro{
+    fullpageApi?: Function;
     seguro: {
         _id: String;
         title: String;

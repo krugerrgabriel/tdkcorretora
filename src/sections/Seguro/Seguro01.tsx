@@ -8,7 +8,7 @@ import { ISeguro } from "../../interfaces";
 const Seguro01: React.FC<ISeguro> = ({ seguro }) => {
   return (
     <Body>
-      <NewContainer>
+      <NewContainer alignItems>
         <h1> {seguro.title} </h1>
         <h2> {seguro.description} </h2>
       </NewContainer>

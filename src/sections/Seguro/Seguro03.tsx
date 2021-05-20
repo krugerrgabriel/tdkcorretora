@@ -1,7 +1,8 @@
 import React from "react";
+import { Row, Col } from "react-bootstrap";
 
-import { Title, Body, FullImage } from "../../styles/elements";
-import { NewContainer, Item, ItemImage, ItemBox } from "./styles";
+import { Title, Body } from "../../styles/elements";
+import { NewContainer, Item, ItemImage } from "./styles";
 
 import { ISeguro } from "../../interfaces";
 
@@ -24,21 +25,23 @@ const Seguro03: React.FC<ISeguro> = ({ seguro }) => {
     <Body>
       <NewContainer>
         <Title margin="0 0 12px 18px"> Nosso seguro cobre </Title>
-        <ItemBox>
+        <Row>
           {motivos.map((motivo, index) => {
             let itemImage = `tdkcorretora_motivo-${index}.png`;
             return (
-              <Item key={index}>
-                <ItemImage
-                  src={itemImage}
-                  alt="TDK Corretora Motivo Seguro Transporte"
-                />
-                <p> {motivo.description} </p>
-                <span> {motivo.title} </span>
-              </Item>
+              <Col lg={4} key={index}>
+                <Item>
+                  <ItemImage
+                    src={itemImage}
+                    alt="TDK Corretora Motivo Seguro Transporte"
+                  />
+                  <p> {motivo.description} </p>
+                  <span> {motivo.title} </span>
+                </Item>
+              </Col>
             );
           })}
-        </ItemBox>
+        </Row>
       </NewContainer>
     </Body>
   );

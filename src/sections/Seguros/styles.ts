@@ -14,6 +14,10 @@ export const NewContainer = styled(Container)`
     flex-direction: column;
 
     height: 100vh;
+
+    *{
+        z-index: 4;
+    }
 `;
 
 export const Box = styled.div`
@@ -41,6 +45,8 @@ export const Card = styled.div`
     box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1);
 
     position: relative;
+
+    z-index: 4;
 
     div:nth-child(1){
         display: flex;

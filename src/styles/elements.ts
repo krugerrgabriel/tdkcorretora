@@ -36,7 +36,7 @@ export const FullImage = styled(Image)<{ zIndex?: Boolean; }>`
     left: 0;
 
     width: 100vw;
-    height: auto;
+    height: 100vh;
 
     z-index: ${(props) => props.zIndex ? '-1' : '1'};
 `;

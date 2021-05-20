@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Body, Container, Title } from "../../../styles/elements";
 import { Box } from "./styles";
