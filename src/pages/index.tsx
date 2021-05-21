@@ -24,6 +24,7 @@ const Home: React.FC = () => {
   const [tab, setTab] = useState(0);
   const [page, setPage] = useState("nothing");
   const [seguros, setSeguros] = useState([]);
+  const [logo, setLogo] = useState("white");
 
   const getData = async () => {
     let response = await fetch("http://localhost:3001/seguros");
@@ -36,7 +37,7 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <Navbar handlePage={data => setPage(data)} />
+      <Navbar handlePage={data => setPage(data)} logo={logo} />
       <Sitemap
         activeTab={tab}
         handlePage={data => setPage(data)}
@@ -58,9 +59,43 @@ const Home: React.FC = () => {
           "parceiros",
         ]}
         scrollingSpeed={750}
-        onLeave={(origin, destination, direction) => setTab(destination.index)}
-        afterLoad={(origin, destination, direction) => {
-          console.log({ origin, destination, direction });
+        onLeave={(origin, destination, direction) => {
+          setTab(destination.index);
+          switch (destination.index) {
+            case 0:
+              setLogo("white");
+              break;
+            case 1:
+              setLogo("white");
+              break;
+            case 2:
+              setLogo("colorized");
+              break;
+            case 3:
+              setLogo("white");
+              break;
+            case 4:
+              setLogo("colorized");
+              break;
+            case 5:
+              setLogo("white");
+              break;
+            case 6:
+              setLogo("colorized");
+              break;
+            case 7:
+              setLogo("colorized");
+              break;
+            case 8:
+              setLogo("white");
+              break;
+            case 9:
+              setLogo("colorized");
+              break;
+            case 10:
+              setLogo("white");
+              break;
+          }
         }}
         render={({ state, fullpageApi }) => {
           switch (page) {

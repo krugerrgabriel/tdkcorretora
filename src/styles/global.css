@@ -63,8 +63,8 @@ a{
 }
 
 .fp-controlArrow{
-    top: unset !important;
-    bottom: 36px !important;
+    top: 50% !important;
+    bottom: unset !important;
 
     border: unset !important;
 
@@ -85,12 +85,12 @@ a{
     transform: scale(0.95);
 }
 .fp-controlArrow.fp-prev{
-    left: calc(100vw - 1400px) !important;
+    left: 12% !important;
 
     background-image: url('../assets/img/tdkcorretora_left-icon.svg');
 }
 .fp-controlArrow.fp-next{
-    right: calc(100vw - 1400px) !important;
+    right: 11% !important;
 
     background-image: url('../assets/img/tdkcorretora_right-icon.svg');
 }

@@ -25,7 +25,15 @@ export const ImageBox = styled.div`
 
     border-radius: 3px;
 
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    &:hover{
+        box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+    }
 `;
 
 export const CompanyImage = styled(Image)`

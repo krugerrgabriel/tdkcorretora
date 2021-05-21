@@ -21,6 +21,7 @@ export const NewContainer = styled(Container)<{ alignItems?: Boolean; }>`
 
         text-align: center;
         text-transform: uppercase;
+        text-shadow: 0 4px 6px rgba(0, 0, 0, 0.10);
     }
 
     h2{
@@ -33,9 +34,17 @@ export const NewContainer = styled(Container)<{ alignItems?: Boolean; }>`
 
         text-align: center;
 
-        margin-top: 56px;
+        margin-top: 24px;
 
         max-width: 700px;
+    }
+
+    div.seguro-ambiental{
+        background-color: rgba(0, 0, 0, 0.35);
+
+        padding: 42px;
+
+        border-radius: 14px;
     }
 `;
 
@@ -149,6 +158,7 @@ export const Item = styled.div`
         font-size: 28px;
         font-weight: 700;
 
+        margin: 0;
         margin-top: 12px;
     }
 
@@ -237,7 +247,7 @@ export const QuestionBox = styled.div`
     .faq-content {
         color: ${(props) => props.theme.white};
 
-        font-size: 14px;
+        font-size: 18px;
 
         line-height: 26px;
 

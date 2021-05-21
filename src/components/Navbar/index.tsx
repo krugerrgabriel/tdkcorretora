@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { NewContainer, NewImage, Links } from "./styles";
 
@@ -10,7 +10,7 @@ const Navbar: React.FC<INavbar> = props => {
   return (
     <NewContainer>
       <NewImage
-        src="tdkcorretora_logo-white.svg"
+        src={`tdkcorretora_logo-${props.logo}.svg`}
         alt="TDK Corretora Logo Branca"
         onClick={() => props.handlePage("inicio")}
       />

@@ -26,34 +26,34 @@ const Parceiros: React.FC = () => {
         </Row>
         <Row>
           <Col>
-            <ImageBox>
-              <a href="https://www.libertyseguros.com.br/" target="_blank">
+            <a href="https://www.libertyseguros.com.br/" target="_blank">
+              <ImageBox>
                 <CompanyImage
                   src="tdkcorretora_libertyseguros-logo.png"
                   alt="TDK Corretora Liberty Seguros Logo"
                 />
-              </a>
-            </ImageBox>
+              </ImageBox>
+            </a>
           </Col>
           <Col>
-            <ImageBox>
-              <a href="https://www.tokiomarine.com.br/" target="_blank">
+            <a href="https://www.tokiomarine.com.br/" target="_blank">
+              <ImageBox>
                 <CompanyImage
                   src="tdkcorretora_tokiomarine-logo.png"
                   alt="TDK Corretora Tokio Marine Logo"
                 />
-              </a>
-            </ImageBox>
+              </ImageBox>
+            </a>
           </Col>
           <Col>
-            <ImageBox>
-              <a href="https://sompo.com.br/" target="_blank">
+            <a href="https://sompo.com.br/" target="_blank">
+              <ImageBox>
                 <CompanyImage
                   src="tdkcorretora_somposeguros-logo.png"
                   alt="TDK Corretora Sompo Seguros Logo"
                 />
-              </a>
-            </ImageBox>
+              </ImageBox>
+            </a>
           </Col>
         </Row>
       </NewContainer>

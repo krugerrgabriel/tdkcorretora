@@ -9,8 +9,12 @@ const Seguro01: React.FC<ISeguro> = ({ seguro }) => {
   return (
     <Body>
       <NewContainer alignItems>
-        <h1> {seguro.title} </h1>
-        <h2> {seguro.description} </h2>
+        <div className={`${seguro.pageName}`}>
+          <h1> {seguro.title} </h1>
+          {seguro.description.split("<br>").map(paragraph => {
+            return <h2>{paragraph}</h2>;
+          })}
+        </div>
       </NewContainer>
     </Body>
   );

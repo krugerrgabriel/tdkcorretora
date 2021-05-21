@@ -63,12 +63,13 @@ export const Card = styled.div`
             font-weight: 900;
 
             text-align: center;
+            text-transform: uppercase;
 
-            margin-bottom: -12px;
+            line-height: 28px;
+
+            margin-top: 6px;
 
             height: 68px;
-
-            text-transform: uppercase;
         }
 
         span{
@@ -162,7 +163,7 @@ export const ImageIcon = styled(Image)`
     margin-bottom: 6px;
 
     &.seguro-transporte{
-        height: 72px;
+        height: 88px;
 
         padding: 12px 0;
     }

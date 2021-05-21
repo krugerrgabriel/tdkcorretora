@@ -1,13 +1,21 @@
 import styled from 'styled-components';
 
+import { Container, Col } from 'react-bootstrap';
 import Image from '../../../components/Image';
 
-export const Box = styled.div`
+export const NewCol = styled(Col)``;
+
+export const NewContainer = styled(Container)`
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
 
     width: 100%;
+    height: 100%;
+
+    ${NewCol}{
+        margin: 12px 0;
+    }
 `;
 
 export const Employee = styled.div`

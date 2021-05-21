@@ -10,7 +10,7 @@ export const NewBody = styled(Body)`
 
     span{
         font-size: 71px;
-        font-weight: 700;
+        font-weight: 400;
         
         line-height: 85px;
     }
