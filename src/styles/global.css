@@ -98,3 +98,7 @@ a{
 div.section.sobre{
     background-color: #7C7C7B;
 }
+
+div.top64px{
+    margin-top: 64px;
+}

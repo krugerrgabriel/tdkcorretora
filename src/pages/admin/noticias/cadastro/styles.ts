@@ -10,6 +10,8 @@ export const Title = styled.p`
     font-weight: 700;
 
     text-align: center;
+
+    margin: 36px 0 0 0;
 `;
 
 export const Description = styled.span`

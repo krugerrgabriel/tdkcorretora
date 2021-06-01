@@ -169,6 +169,7 @@ export const FileInput: React.FC<{ fileChange: Function }> = props => {
         <input
           type="file"
           ref={fileElement}
+          name="file"
           onChange={event => onChange(event)}
         />
       </Box>

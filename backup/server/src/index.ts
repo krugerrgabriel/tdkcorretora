@@ -7,16 +7,14 @@ const cors = require("cors"); // Liberar acesso ao servidor
 const app = express(); // Definindo a constante app para utilizar o express
 
 app.use(cors()); // Servidor usar o CORS
+app.use(fileupload()); // Servidor aceitar upload de arquivos
+app.use(express.static("public/tdkcorretora_landing/images")); // Setando pasta PUBLIC
 app.use(bodyParser.json()); // Utilizar o bodyParser para a aplicação entender as requisições em json
 app.use(bodyParser.urlencoded({ extended: false })); // Entender quando passar parâmetros via URL
-app.use(express.static(__dirname + '/public'));
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:8000');
-  res.header('Access-Control-Allow-Credentials', true);
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-next();
-});
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  });
 
 /* app.get('/', (req, res) => {}); - Sintaxe para a criação de uma rota {
     '/' - Rota para o acesso

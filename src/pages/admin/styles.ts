@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const Body = styled.div`
+export const Body = styled.div<{ auto?: Boolean; }>`
     background-color: ${(props) => props.theme.gray};
 
     width: 100vw;
-    height: 100vh;
+    height: ${(props) => props.auto ? 'auto' : '100vh'};
 
-    padding-top: 172px;
+    padding-top: 128px;
 `;

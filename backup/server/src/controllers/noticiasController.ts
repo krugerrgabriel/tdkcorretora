@@ -6,22 +6,9 @@ import { reqNoticiaInterface, noticiaInterface } from '../interfaces/noticiasInt
 // @ts-ignore
 const Noticia = require('../models/noticia.ts'); // Importação do model de 'Project'
 
-const path = require("path"); // Liberar acesso ao servidor
-const multer = require("multer"); // Liberar acesso ao servidor
-const helpers = require('../helpers');
+const multer = require('../middlewares/multer');
 
 const router = express.Router(); // Utiliza-se para definir as rotas de usuário
-
-const storage = multer.diskStorage({
-        destination: function(req, file, cb) {
-            cb(null, 'uploads/');
-        },
-        
-        // By default, multer removes file extensions so let's add them back
-        filename: function(req, file, cb) {
-            cb(null, Date.now() + path.extname(file.originalname));
-        }
-    });
 
 router.get('/', async (req:reqNoticiaInterface, res) => { // Definir a rota GET para verificar o login
     try{
@@ -43,34 +30,24 @@ router.get('/:noticiaId', async (req:reqNoticiaInterface, res) => {
     }
 });
 
-router.post('/', async (req:reqNoticiaInterface, res) => { // Definir a rota POST para criar um novo dado
-    return res.send(req.body);
+router.post('/', multer.single('image'), async (req:reqNoticiaInterface, res) => { // Definir a rota POST para criar um novo dado
     try{
         const { title, description, descriptionMinimized } = req.body; // Desestruturar a body da requisição
-        
-        let upload = multer({ storage: storage, fileFilter: helpers.imageFilter }).single('file');
 
-        upload(req, res, (err) => {
-            if (req.fileValidationError) {
-                console.log(err);
-                return res.status(400).send({ error: null, errorcode: 'image_upload_error' });
-            } else if (!req.file) {
-                console.log(err);
-                return res.status(400).send({ error: null, errorcode: 'image_upload_error' });
-            } else if (err instanceof multer.MulterError) {
-                console.log(err);
-                return res.status(400).send({ error: null, errorcode: 'image_upload_error' });
-            } else if (err) {
-                console.log(err);
-                return res.status(400).send({ error: null, errorcode: 'image_upload_error' });
+        console.log(req.files.file);
+
+        const newpath = __dirname + "../public/tdkcorretora_landing/images";
+        const file = req.files.file;
+        const filename = file.title;
+
+        file.mv(`${newpath}${filename}`, async (err) => {
+            if (err) {
+            res.status(500).send({ message: "File upload failed", code: 200 });
             }
+            const noticia:noticiaInterface = await Noticia.create({ title, description, descriptionMinimized, image }); // Irá criar um novo dado com o body da requisição e também com o 'userId' informado na requisição também
+            await noticia.save(); // '.save()' para as alterações do project serem salvas no DB
+            return res.send({ errorcode: 'none', noticia });
         });
-
-        const noticia:noticiaInterface = await Noticia.create({ title, description, descriptionMinimized }); // Irá criar um novo dado com o body da requisição e também com o 'userId' informado na requisição também
-
-        await noticia.save(); // '.save()' para as alterações do project serem salvas no DB
-
-        return res.send({ errorcode: 'none', noticia });
         
     } catch(error){
         return res.status(400).send({ error, errorcode: 'noticia_create_error' });

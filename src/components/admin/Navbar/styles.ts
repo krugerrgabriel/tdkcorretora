@@ -20,6 +20,8 @@ export const Body = styled.div`
     position: fixed;
     left: 0;
     right: 0;
+
+    z-index: 500;
 `;
 
 export const NewImage = styled(Image)``;

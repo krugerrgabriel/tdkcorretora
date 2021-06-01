@@ -1,0 +1,9 @@
+div.noticiasBox{
+    background-image: url('../assets/img/tdkcorretora_noticias-background.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    overflow-y: scroll; 
+}

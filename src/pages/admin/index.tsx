@@ -16,7 +16,7 @@ const admin: React.FC = () => {
       <Body>
         <BreadcrumbBox map={breadcrumbMap} />
         <Container>
-          <Row>
+          <Row className="top64px">
             <Col lg={4}>
               <Card type="impressoes" />
             </Col>

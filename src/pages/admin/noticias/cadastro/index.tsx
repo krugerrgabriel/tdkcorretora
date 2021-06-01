@@ -1,4 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import axios from "axios";
 import { Row, Col } from "react-bootstrap";
 import JoditEditor from "jodit-react";
 
@@ -10,6 +11,8 @@ import { Body } from "../../styles";
 import { NewContainer, Title, Description, Margin } from "./styles";
 import { Button } from "../../../../styles/elements";
 
+import "./style.css";
+
 const cadastro: React.FC = () => {
   const breadcrumbMap = [
     { name: "Home", url: "/admin/" },
@@ -17,18 +20,46 @@ const cadastro: React.FC = () => {
     { name: "Cadastro", url: "/admin/noticias/cadastro" },
   ];
 
-  const [nome, setNome] = useState("");
+  const [title, setTitle] = useState("");
   const [descMini, setDescMini] = useState("");
-  const [desc, setDesc] = useState("");
+  const [file, setFile] = useState({});
+  const [content, setContent] = useState("");
+  const [status, setStatus] = useState({});
 
   const editor = useRef(null);
-  const [content, setContent] = useState("");
+
+  const handleRegister = async () => {
+    const formData = new FormData();
+    formData.append("title", title);
+    formData.append("descriptionMinimized", descMini);
+    formData.append("description", content);
+    formData.append("file", file);
+
+    fetch("http://localhost:3001/noticias", {
+      method: "POST",
+      body: formData,
+      headers: new Headers({
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      }),
+    })
+      .then(async response => {
+        console.log(await response.json());
+      })
+      .catch(async response => {
+        console.log(await response.json());
+      });
+  };
+
+  useEffect(() => {
+    console.log(status);
+  }, [status]);
 
   return (
     <>
       <Navbar />
-      <Body>
-        <BreadcrumbBox map={breadcrumbMap} />
+      <Body auto>
+        <BreadcrumbBox map={breadcrumbMap} fixed />
         <NewContainer>
           <Title> CADASTRO DE NOTÍCIA</Title>
           <Description>
@@ -41,16 +72,16 @@ const cadastro: React.FC = () => {
             <Col>
               <Input
                 type="text"
-                name="NOME"
+                name="TÍTULO"
                 color="white"
                 icon="tdkcorretora_user-icon.svg"
-                handleChange={data => setNome(data)}
-                value={nome}
+                handleChange={data => setTitle(data)}
+                value={title}
                 layer
               />
             </Col>
             <Col>
-              <FileInput />
+              <FileInput fileChange={item => setFile(item)} />
             </Col>
           </Row>
           <Row>
@@ -68,7 +99,7 @@ const cadastro: React.FC = () => {
               <JoditEditor
                 ref={editor}
                 value={content}
-                onBlur={newContent => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
+                onBlur={newContent => setContent(newContent)}
                 onChange={newContent => {}}
               />
             </Col>
@@ -76,7 +107,11 @@ const cadastro: React.FC = () => {
           <Margin />
           <Row>
             <Col>
-              <Button width={100} color="white">
+              <Button
+                width={100}
+                color="white"
+                onClick={() => handleRegister()}
+              >
                 CADASTRAR
               </Button>
             </Col>

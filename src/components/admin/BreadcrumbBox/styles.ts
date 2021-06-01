@@ -5,14 +5,16 @@ import Image from '../../Image';
 
 export const NewBreadcrumb = styled(Breadcrumb)``;
 
-export const Body = styled.div`
-    position: absolute;
+export const Body = styled.div<{ fixed?: Boolean; }>`
+    position: ${(props) => props.fixed ? 'fixed' : 'absolute'};
 
     top: 92px;
     left: 0;
 
     width: 100vw;
     height: 36px;
+
+    z-index: 500;
 
     ${NewBreadcrumb}{
         background-color: ${(props) => props.theme.white};

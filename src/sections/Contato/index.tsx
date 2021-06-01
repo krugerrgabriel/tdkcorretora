@@ -35,7 +35,6 @@ const Contato: React.FC = () => {
       alert("mensagem error");
       return null;
     }
-    alert("all ok");
     let response = await fetch("http://localhost:3001/mail", {
       method: "POST",
       headers: new Headers({

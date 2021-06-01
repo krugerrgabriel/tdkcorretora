@@ -6,13 +6,15 @@ import { Body, NewBreadcrumb, AddIcon } from "./styles";
 const BreadcrumbBox: React.FC<{
   map: any;
   register?: Boolean;
+  fixed?: Boolean;
 }> = props => {
+  let fixedActive = props.fixed ? true : false;
   return (
-    <Body>
+    <Body fixed={fixedActive}>
       <NewBreadcrumb>
-        {props.map.map(item => {
+        {props.map.map((item, index) => {
           return (
-            <NewBreadcrumb.Item>
+            <NewBreadcrumb.Item key={index}>
               <Link to={item.url}> {item.name} </Link>
             </NewBreadcrumb.Item>
           );
