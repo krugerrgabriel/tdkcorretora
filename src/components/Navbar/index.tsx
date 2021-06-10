@@ -7,8 +7,9 @@ import { INavbar } from "./interfaces";
 import Image from "../Image";
 
 const Navbar: React.FC<INavbar> = props => {
+  const positionRelative = props.positionRelative ? true : false;
   return (
-    <NewContainer>
+    <NewContainer positionRelative={positionRelative}>
       <NewImage
         src={`tdkcorretora_logo-${props.logo}.svg`}
         alt="TDK Corretora Logo Branca"

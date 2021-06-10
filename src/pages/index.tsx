@@ -11,6 +11,7 @@ import Seguro02 from "../sections/Seguro/Seguro02";
 import Seguro03 from "../sections/Seguro/Seguro03";
 import Seguro04 from "../sections/Seguro/Seguro04";
 import Sobre01 from "../sections/Sobre/Sobre01/";
+import Part02 from "../sections/Sobre/Sobre01/Part02";
 import Sobre02 from "../sections/Sobre/Sobre02/";
 import Sobre03 from "../sections/Sobre/Sobre03/";
 import Sobre04 from "../sections/Sobre/Sobre04/";
@@ -35,15 +36,17 @@ const Home: React.FC = () => {
     getData();
   }, []);
 
+  const isBrowser = typeof window !== "undefined";
+
   return (
     <>
       <Navbar handlePage={data => setPage(data)} logo={logo} />
-      <Sitemap
+      {/* <Sitemap
         activeTab={tab}
         handlePage={data => setPage(data)}
         // @ts-ignore
         seguros={seguros}
-      />
+      /> */}
       <ReactFullpage
         anchors={[
           "inicio",
@@ -231,6 +234,9 @@ const Home: React.FC = () => {
                 />
                 <div className="slide">
                   <Sobre01 />
+                </div>
+                <div className="slide">
+                  <Part02 />
                 </div>
                 <div className="slide">
                   <Sobre02 />

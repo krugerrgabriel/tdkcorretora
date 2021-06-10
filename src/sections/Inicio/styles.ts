@@ -10,14 +10,16 @@ export const NewBody = styled(Body)`
 
     span{
         font-size: 71px;
-        font-weight: 400;
+        font-weight: 300;
         
-        line-height: 85px;
+        line-height: 94px;
+
+        letter-spacing: 10px;
     }
 
     p{
-        font-size: 155px;
-        font-weight: 700;
+        font-size: 148px;
+        font-weight: 800;
 
         line-height: 155px;
 

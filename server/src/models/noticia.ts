@@ -18,7 +18,7 @@ const NoticiaSchema = new mongoose.Schema({ // Criação do Schema do Usuário
     },
     image: {
         type: String,
-        required: false,
+        required: true,
     },
     createdAt: {
         type: Date,

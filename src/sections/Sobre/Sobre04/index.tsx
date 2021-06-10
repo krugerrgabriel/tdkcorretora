@@ -1,7 +1,14 @@
 import React from "react";
 
 import { Body, Title } from "../../../styles/elements";
-import { Box, NewContainer, LayerMap, MapPin, BubbleImage } from "./styles";
+import {
+  Box,
+  Info,
+  NewContainer,
+  LayerMap,
+  MapPin,
+  BubbleImage,
+} from "./styles";
 
 const Sobre04: React.FC = () => {
   const MapPins = [
@@ -40,21 +47,7 @@ const Sobre04: React.FC = () => {
   return (
     <>
       <Body>
-        <NewContainer>
-          <Box left>
-            <Title margin="0 0 24px 0" color="yellow">
-              ÁREA DE ATUAÇÃO
-            </Title>
-            <span>
-              Nossos atendimentos, acompanhamentos e prospecções são realizadas
-              pelos consultores das{" "}
-              <strong>Unidades Transdesk do Brasil</strong>.
-              <br />
-              <br />A <strong>TDK</strong> realiza as cotações e a
-              comercialização dos seguros, em todas as companhias, buscando o
-              melhor custo-benefício para os nossos clientes.
-            </span>
-          </Box>
+        <NewContainer className="seguro">
           <Box>
             <div className="layer">
               <LayerMap
@@ -63,14 +56,7 @@ const Sobre04: React.FC = () => {
               />
               {MapPins.map((pin, index) => {
                 return (
-                  <a
-                    href={`https://www.google.com.br/maps/search/${pin.name
-                      .split(" ")
-                      .join("+")}/`}
-                    target="_blank"
-                    className={pin.identify}
-                    key={index}
-                  >
+                  <a href="#!" className={pin.identify} key={index}>
                     <MapPin
                       src="tdkcorretora_map-pin.svg"
                       alt={`TDK Corretora Pin ${pin.name}`}
@@ -86,6 +72,20 @@ const Sobre04: React.FC = () => {
                 );
               })}
             </div>
+            <Info>
+              <Title margin="0 0 12px 0" color="yellow">
+                ÁREA DE ATUAÇÃO
+              </Title>
+              <span>
+                Nossos atendimentos, acompanhamentos e prospecções são
+                realizadas pelos consultores das{" "}
+                <strong>Unidades Transdesk do Brasil</strong>.
+                <br />
+                <br />A <strong>TDK</strong> realiza as cotações e a
+                comercialização dos seguros, em todas as companhias, buscando o
+                melhor custo-benefício para os nossos clientes.
+              </span>
+            </Info>
           </Box>
         </NewContainer>
       </Body>

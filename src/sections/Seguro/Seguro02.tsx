@@ -1,18 +1,31 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 
-import { Title, Body } from "../../styles/elements";
-import { NewContainer, Badge, BadgeImage, BadgeBox } from "./styles";
+import {
+  Title,
+  Body,
+  PageTitle,
+  PageSubtitle,
+  Line,
+} from "../../styles/elements";
+import { NewContainer, Badge, BadgeImage } from "./styles";
 
 import { ISeguro } from "../../interfaces";
 
 const Seguro02: React.FC<ISeguro> = ({ seguro }) => {
   return (
     <Body>
-      <NewContainer>
+      <NewContainer className="seguro">
         <Row>
           <Col>
-            <Title margin="0 0 12px 18px"> Nosso seguro cobre </Title>
+            <PageTitle>SEGURO TRANSPORTE</PageTitle>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <PageSubtitle>
+              <Line>/</Line> COBERTURAS
+            </PageSubtitle>
           </Col>
         </Row>
         <Row>
@@ -25,7 +38,7 @@ const Seguro02: React.FC<ISeguro> = ({ seguro }) => {
                     alt={`TDK Corretora Cobertura ${seguro.title}`}
                   />
                   <div>
-                    <p>{item.title}</p>
+                    <p> TITULO SERVIÇO </p>
                     <span>{item.description}</span>
                   </div>
                 </Badge>

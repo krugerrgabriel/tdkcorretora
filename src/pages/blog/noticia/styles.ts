@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
-import Image from '../../../components/Image';
-
-export const NoticiaImage = styled(Image)``;
+export const NoticiaImage = styled.img`
+    width: 100%;
+    height: auto;
+`;
 
 export const NoticiaDate = styled.span`
     color: ${(props) => props.theme.white};
@@ -37,9 +38,12 @@ export const NoticiaMiniDescription = styled.span`
     line-height: 20px;
 `;
 
-export const NoticiaDescription = styled.span`
+export const NoticiaDescription = styled.div`
     color: ${(props) => props.theme.white};
 
     font-size: 14px;
     font-weight: 500;
+
+    margin-top: 24px;
+    padding-bottom: 96px;
 `;

@@ -16,23 +16,15 @@ export const Box = styled.div`
     justify-content: space-between;
     flex-direction: column;
 
-    &:nth-child(1){
-        padding-right: 12px;
-
-        margin-right: 24px;
-        margin: 36px 36px 0 0;
-    }
     &:nth-child(2){
-        padding-right: 12px;
-
-        margin-left: 48px;
+        margin-left: 64px;
     }
     
     div{
         display: flex;
         flex-direction: column;
 
-        max-width: 600px;
+        width: 100%;
 
         p{
             color: ${(props) => props.theme.yellow};

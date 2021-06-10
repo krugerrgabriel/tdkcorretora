@@ -1,7 +1,13 @@
 import React from "react";
 
 import { Row, Col } from "react-bootstrap";
-import { Body, Title } from "../../../styles/elements";
+import {
+  Body,
+  Title,
+  PageTitle,
+  PageSubtitle,
+  Line,
+} from "../../../styles/elements";
 import { NewContainer, NewCol, Employee, EmployeeImage } from "./styles";
 
 const Sobre02: React.FC = () => {
@@ -37,43 +43,26 @@ const Sobre02: React.FC = () => {
       phone: "",
       role: "Analista Comercial",
     },
-    {
-      id: 6,
-      name: "Adriana Bortolotto Teixeira",
-      phone: "",
-      role: "Corretora de Seguros",
-    },
-    {
-      id: 7,
-      name: "Francieli Moretti",
-      phone: "",
-      role: "Supervisora Comercial",
-    },
-    {
-      id: 8,
-      name: "Giselle de Lourdes da Silva Rezende",
-      phone: "",
-      role: "Supervisora Administrativa",
-    },
-    {
-      id: 9,
-      name: "Priscila Rodrigues da Silva Marcondes",
-      phone: "",
-      role: "Auxiliar Comercial de Seguros",
-    },
   ];
   return (
     <Body>
-      <NewContainer>
+      <NewContainer className="seguro">
         <Row>
           <Col>
-            <Title margin="0 0 24px 0"> NOSSA EQUIPE </Title>
+            <PageTitle> NOSSA EQUIPE </PageTitle>
           </Col>
         </Row>
         <Row>
-          {funcionarios.map(item => {
+          <Col>
+            <PageSubtitle>
+              <Line>/</Line> A CORRETORA
+            </PageSubtitle>
+          </Col>
+        </Row>
+        <Row>
+          {funcionarios.map((item, index) => {
             return (
-              <NewCol lg={2}>
+              <NewCol lg={3} key={index}>
                 <a
                   href={`https://wa.me/${
                     item.phone ? item.phone : "554588088752"

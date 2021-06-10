@@ -13,6 +13,12 @@ export const NewTable = styled(Table)`
         text-transform: uppercase;
         text-align: center;
     }
+
+    tr.heightLimit,
+    td.heightLimit{
+        height: 64px;
+        max-height: 64px;
+    }
     
     td{
         vertical-align: middle;
@@ -26,6 +32,8 @@ export const NewTable = styled(Table)`
     td.actions{
         align-items: center;
         justify-content: center;
+
+        width: 82px;
     }
 `;
 
@@ -34,5 +42,5 @@ export const Icon = styled(Image)`
     height: 16px;
 
     cursor: pointer;
-    margin: 0 2px;
+    margin: 0 4px;
 `;

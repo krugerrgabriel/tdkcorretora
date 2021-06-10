@@ -1,7 +1,13 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 
-import { Title, Body } from "../../styles/elements";
+import {
+  Title,
+  Body,
+  PageTitle,
+  PageSubtitle,
+  Line,
+} from "../../styles/elements";
 import { NewContainer, Item, ItemImage } from "./styles";
 
 import { ISeguro } from "../../interfaces";
@@ -23,8 +29,19 @@ const Seguro03: React.FC<ISeguro> = ({ seguro }) => {
   ];
   return (
     <Body>
-      <NewContainer>
-        <Title margin="0 0 12px 18px"> Nosso seguro cobre </Title>
+      <NewContainer className="seguro">
+        <Row>
+          <Col>
+            <PageTitle>SEGURO TRANSPORTE</PageTitle>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <PageSubtitle>
+              <Line>/</Line> POR QUÊ A TDK?
+            </PageSubtitle>
+          </Col>
+        </Row>
         <Row>
           {motivos.map((motivo, index) => {
             let itemImage = `tdkcorretora_motivo-${index}.png`;

@@ -1,14 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { Body, Container, Title } from "../../../styles/elements";
+import { Row, Col } from "react-bootstrap";
+
+import { Body, PageTitle, PageSubtitle, Line } from "../../../styles/elements";
 import { Box } from "./styles";
+import { NewContainer } from "../styles";
 
 const Sobre03: React.FC = () => {
   return (
     <>
       <Body>
-        <Container>
-          <Title margin="-20% 0 24px 0"> NOSSA CARTEIRA </Title>
+        <NewContainer className="seguro">
+          <Row>
+            <Col>
+              <PageTitle> NOSSA CARTEIRA </PageTitle>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <PageSubtitle>
+                <Line>/</Line> A CORRETORA
+              </PageSubtitle>
+            </Col>
+          </Row>
           <Box>
             <div>
               <p> + 300 </p>
@@ -23,7 +37,7 @@ const Sobre03: React.FC = () => {
               <span> UNIDADES </span>
             </div>
           </Box>
-        </Container>
+        </NewContainer>
       </Body>
     </>
   );

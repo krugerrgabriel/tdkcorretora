@@ -30,21 +30,9 @@ export const NewContainer = styled(Container)<{ alignItems?: Boolean; }>`
         font-size: 22px;
         font-weight: 500;
 
-        line-height: 32px;
+        line-height: 38px;
 
         text-align: center;
-
-        margin-top: 24px;
-
-        max-width: 700px;
-    }
-
-    div.seguro-ambiental{
-        background-color: rgba(0, 0, 0, 0.35);
-
-        padding: 42px;
-
-        border-radius: 14px;
     }
 `;
 
@@ -104,9 +92,10 @@ export const Badge = styled.div`
 
     flex: 1 0 20%;
 
-    height: 64px;
+    height: 102px;
 
-    margin: 12px 16px;
+    margin: 12px 0;
+
     padding: 10px 16px;
 
     border-radius: 2px;
@@ -139,38 +128,46 @@ export const BadgeImage = styled(Image)`
 `;
 
 export const Item = styled.div`
-    background-color: ${(props) => props.theme.yellow};
+    background-color: rgba(0, 0, 0, 0.5);
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-    margin: 78px 16px 0 16px;
+    margin: 0 16px 0 16px;
     padding: 12px 0;
 
-    width: 350px;
+    width: 100%;
+
+    border-bottom: 3px solid ${(props) => props.theme.yellow};
 
     box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1);
 
     p{
-        color: ${(props) => props.theme.gray};
-        font-size: 28px;
-        font-weight: 700;
+        color: ${(props) => props.theme.white};
+        font-size: 22px;
+        font-weight: 500;
 
         margin: 0;
-        margin-top: 12px;
+        margin-top: 24px;
+
+        text-transform: uppercase;
     }
 
     span{
-        color: ${(props) => props.theme.gray};
+        color: ${(props) => props.theme.white};
         
         font-size: 22px;
-        font-weight: 900;
+        font-weight: 500;
+
+        text-transform: uppercase;
+
+        margin-bottom: 18px;
     }
 `;
 export const ItemImage = styled(Image)`
-    width: 350px;
+    width: 100%;
     height: auto;
 
     margin-top: -12px;

@@ -34,12 +34,12 @@ export const Card = styled.div`
     flex-direction: column;
 
     height: 500px;
+    width: 100%;
 
-    background-color: ${(props) => props.theme.white};
+    background-color: rgba(0, 0, 0, 0.7);
 
-    border: 4px solid ${(props) => props.theme.yellow};
+    border-radius: 0;
 
-    margin: 0 18px;
     padding: 36px 42px;
 
     box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1);
@@ -57,7 +57,7 @@ export const Card = styled.div`
         height: 100%;
 
         p{
-            color: ${(props) => props.theme.gray};
+            color: ${(props) => props.theme.white};
 
             font-size: 28px;
             font-weight: 900;
@@ -73,7 +73,7 @@ export const Card = styled.div`
         }
 
         span{
-            color: ${(props) => props.theme.gray};
+            color: ${(props) => props.theme.white};
 
             font-size: 16px;
             font-weight: 400;
@@ -104,7 +104,7 @@ export const Card = styled.div`
                 justify-content: center;
                 flex-direction: column;
 
-                color: ${(props) => props.theme.gray};
+                color: ${(props) => props.theme.white};
 
                 font-size: 22px;
                 font-weight: 300;
@@ -122,7 +122,7 @@ export const Card = styled.div`
     }
 
     div.back{
-        color: ${(props) => props.theme.gray};
+        color: ${(props) => props.theme.white};
 
         align-items: center;
         justify-content: space-between;

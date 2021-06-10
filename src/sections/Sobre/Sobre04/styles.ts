@@ -26,9 +26,15 @@ export const BubbleImage = styled(Image)`
     z-index: 10;
 `;
 
+export const Info = styled.div`
+    position: absolute;
+`;
+
 export const Box = styled.div<{ left?: Boolean; }>`
     ${(props) => props.left ? 'height: 50%' : null};
     ${(props) => props.left ? 'margin-right: 24px;' : null};
+
+    position: relative;
 
     span{
         color: ${(props) => props.theme.white};
@@ -47,8 +53,10 @@ export const Box = styled.div<{ left?: Boolean; }>`
 
             color: ${(props) => props.theme.black};
 
+            cursor: default;
+
             ${MapPin}{
-                cursor: pointer;
+                cursor: default;
 
                 transition: 0.2s;
 

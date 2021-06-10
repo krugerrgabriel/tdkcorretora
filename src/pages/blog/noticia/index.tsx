@@ -39,8 +39,12 @@ const noticia: React.FC = ({ location }) => {
     let finalDate = dia + "/" + mes + "/" + ano;
     return (
       <>
-        <Navbar handlePage={() => navigate("../#noticias")} logo="white" />
         <Body className="noticiasBox">
+          <Navbar
+            handlePage={() => navigate("../#noticias")}
+            logo="white"
+            positionRelative
+          />
           <Container>
             <Box>
               <NewRow>
@@ -48,7 +52,7 @@ const noticia: React.FC = ({ location }) => {
                   <NewRow>
                     <Col lg={12}>
                       <NoticiaImage
-                        src={noticia.noticias.image}
+                        src={`http://localhost:3001/landing/images/${noticia.noticias.image}`}
                         alt={`TDK Corretora ${noticia.noticias.title}`}
                       />
                     </Col>
@@ -77,7 +81,11 @@ const noticia: React.FC = ({ location }) => {
               <NewRow flexRow margin>
                 <Col lg={12}>
                   <NoticiaDescription>
-                    {noticia.noticias.description}
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: noticia.noticias.description,
+                      }}
+                    />
                   </NoticiaDescription>
                 </Col>
               </NewRow>

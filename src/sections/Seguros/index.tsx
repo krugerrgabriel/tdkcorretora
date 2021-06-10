@@ -16,7 +16,7 @@ const Seguros: React.FC<ISeguros> = ({ page, seguros, fullpageApi }) => {
                 if (page == "one") {
                   if (index < 3) {
                     return (
-                      <Col>
+                      <Col key={index}>
                         <Card className="card">
                           <div>
                             <ImageIcon
@@ -56,7 +56,7 @@ const Seguros: React.FC<ISeguros> = ({ page, seguros, fullpageApi }) => {
                 } else {
                   if (index >= 3) {
                     return (
-                      <Col>
+                      <Col key={index}>
                         <Card className="card">
                           <div>
                             <ImageIcon

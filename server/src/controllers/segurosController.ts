@@ -21,7 +21,7 @@ router.get('/', async (req:reqSeguroInterface, res) => { // Definir a rota GET p
 router.get('/:seguroId', async (req:reqSeguroInterface, res) => {
     try{
         const seguros = await Seguro.findById(req.params.seguroId); // 'findById()' é utilizado para pesquisar um dado com o Id fornecido, que no caso é o 'red.params.projectId' que é o ':projectId' fornecido na URL
-
+        
         return res.send({ errorcode: 'none', seguros });
     } catch(error){
         return res.status(400).send({ error, errorcode: 'seguro_list_error' });

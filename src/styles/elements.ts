@@ -47,7 +47,7 @@ export const Element = styled(Image)<IElement>`
     ${(props) => props.top ? 'top: 0;' : 'bottom: 0;'}
     ${(props) => props.left ? 'left: 0;' : 'right: 0;'}
 
-    width: calc((100vw - 1400px)/2);
+    width: calc((100vw - 1285px)/2);
 
     z-index: 2;
 `;
@@ -61,6 +61,34 @@ export const Layer = styled.div<ILayer>`
     left: 0;
 
     ${(props) => props.position == 0 ? null : props.position == 1 ? 'transform: rotate(180deg);' : 'transform: scaleX(-1);'}
+`;
+
+export const Line = styled.strong`
+    color: ${(props) => props.theme.yellow};
+
+    margin: 0 -12px 0 0;
+`;
+export const PageTitle = styled.p`
+    color: ${(props) => props.theme.white};
+
+    font-size: 64px;
+    font-weight: 800;
+
+    text-align: center;
+    text-transform: uppercase;
+`;
+export const PageSubtitle = styled.p`
+    color: ${(props) => props.theme.white};
+
+    font-size: 48px;
+    font-weight: 300;
+
+    letter-spacing: 10px;
+
+    margin: -24px 0 52px 0;
+
+    text-align: center;
+    text-transform: uppercase;
 `;
 
 export const SecondLayer = styled.div`
@@ -85,6 +113,7 @@ export const Title = styled.p<ITitle>`
     line-height: 50px;
 
     text-transform: uppercase;
+    ${(props) => props.center ? 'text-align: center;' : null};
 
     ${(props) => props.margin ? `margin: ${props.margin}` : null};
 `;

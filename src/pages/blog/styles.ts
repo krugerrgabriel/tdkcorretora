@@ -41,8 +41,8 @@ export const Box = styled.div`
     }
 `;
 
-export const ItemImage = styled(Image)`
-    height: 165px;
+export const ItemImage = styled.img`
+    height: auto;
     width: 245px;
 
     margin-right: 24px;
@@ -77,6 +77,8 @@ export const Item = styled.div`
             color: ${(props) => props.theme.yellow};
 
             font-weight: 500;
+            font-size: 12px;
+
             letter-spacing: 0.5px;
 
             transition: 0.2s;

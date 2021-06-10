@@ -1,16 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 import { Link } from "gatsby";
 
 import { Body, FullImage, Title } from "../../styles/elements";
-import { NewRow, Box, Card, CardImage, CardInfo } from "./styles";
+import {
+  NewContainer,
+  NewRow,
+  Box,
+  Card,
+  CardImage,
+  CardInfo,
+  MoreLink,
+} from "./styles";
 
 const Noticias: React.FC = () => {
   const [noticias, setNoticias] = useState([]);
 
   const getData = async () => {
-    let response = await fetch("http://localhost:3001/noticias");
+    let response = await fetch("http://localhost:3001/noticias/all/4");
     let data = await response.json();
     setNoticias(data);
   };
@@ -27,7 +35,7 @@ const Noticias: React.FC = () => {
           src="tdkcorretora_noticias-background.png"
           alt="TDK Corretora Notícias Background"
         />
-        <Container>
+        <NewContainer>
           <Box>
             <NewRow>
               <Col>
@@ -45,10 +53,10 @@ const Noticias: React.FC = () => {
                 let ano = data[0];
                 let finalDate = dia + "/" + mes + "/" + ano;
                 return (
-                  <Col>
+                  <Col key={index}>
                     <Card to={`noticia?id=${noticia._id}`}>
                       <CardImage
-                        src={noticia.image}
+                        src={`http://localhost:3001/landing/images/${noticia.image}`}
                         alt={`TDK Corretora Notícia ${noticia.name}`}
                       />
                       <CardInfo>
@@ -61,8 +69,13 @@ const Noticias: React.FC = () => {
                 );
               })}
             </NewRow>
+            <NewRow>
+              <Col lg={12}>
+                <MoreLink to="/blog"> VER MAIS </MoreLink>
+              </Col>
+            </NewRow>
           </Box>
-        </Container>
+        </NewContainer>
       </Body>
     );
   } else {

@@ -13,7 +13,7 @@ const blog: React.FC = () => {
   const [noticias, setNoticias] = useState({});
 
   const getData = async () => {
-    let response = await fetch("http://localhost:3001/noticias");
+    let response = await fetch("http://localhost:3001/noticias/all");
     setNoticias(await response.json());
   };
 
@@ -22,18 +22,22 @@ const blog: React.FC = () => {
   }, []);
   return (
     <>
-      <Navbar handlePage={() => navigate("../#noticias")} logo="white" />
       <Body className="noticiasBox">
+        <Navbar
+          handlePage={() => navigate("../#noticias")}
+          logo="white"
+          positionRelative
+        />
         <Container>
           <Box>
             <NewRow>
               <Col>
-                <Title margin="0 0 24px 0" color="yellow">
+                <Title margin="0 0 12px 0" color="yellow">
                   Notícias
                 </Title>
               </Col>
             </NewRow>
-            <NewRow flexRow>
+            <NewRow>
               {noticias.errorcode == "none"
                 ? noticias.noticias.map((noticia, index) => {
                     let data = noticia.createdAt.split("T")[0].split("-");
@@ -42,23 +46,19 @@ const blog: React.FC = () => {
                     let ano = data[0];
                     let finalDate = dia + "/" + mes + "/" + ano;
                     return (
-                      <>
-                        <Item key={index}>
-                          <NewLink to={`noticia/?id=${noticia._id}`}>
-                            <ItemImage
-                              src={noticia.image}
-                              alt={`TDK Corretora Notícia ${noticia.name}`}
-                            />
-                            <div className="info">
-                              <span>
-                                {noticia.type ? noticia.type : "NOTÍCIA"}
-                              </span>
-                              <p> {noticia.title} </p>
-                              <strong> {finalDate} </strong>
-                            </div>
-                          </NewLink>
-                        </Item>
-                      </>
+                      <Item key={index}>
+                        <NewLink to={`noticia/?id=${noticia._id}`}>
+                          <ItemImage
+                            src={`http://localhost:3001/landing/images/${noticia.image}`}
+                            alt={`TDK Corretora Notícia ${noticia.name}`}
+                          />
+                          <div className="info">
+                            <span>{noticia.type ? noticia.type : "TAG"}</span>
+                            <p> {noticia.title} </p>
+                            <strong> {finalDate} </strong>
+                          </div>
+                        </NewLink>
+                      </Item>
                     );
                   })
                 : null}

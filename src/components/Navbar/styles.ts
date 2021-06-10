@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 
 import Image from '../Image';
-import { Container } from "../../styles/elements";
 
-export const NewContainer = styled(Container)`
+import { Container } from 'react-bootstrap';
+// import { Container } from "../../styles/elements";
+
+export const NewContainer = styled(Container)<{ positionRelative: Boolean; }>`
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
 
-    position: fixed;
+    position: ${(props) => props.positionRelative ? 'relative' : 'fixed'};
     top: 24px;
     left: 0;
     right: 0;

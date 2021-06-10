@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
-import axios from "axios";
+import { navigate } from "gatsby";
 import { Row, Col } from "react-bootstrap";
-import JoditEditor from "jodit-react";
+// import JoditEditor from "jodit-react";
 
 import BreadcrumbBox from "../../../../components/admin/BreadcrumbBox";
 import Navbar from "../../../../components/admin/Navbar";
+import Alert from "../../../../components/Alert";
 import { Input, FileInput, Textarea } from "../../../../components/Form";
 
 import { Body } from "../../styles";
@@ -26,6 +27,9 @@ const cadastro: React.FC = () => {
   const [content, setContent] = useState("");
   const [status, setStatus] = useState({});
 
+  const [alertMessage, setAlertMessage] = useState("");
+  const [alertActive, setAlertActive] = useState(false);
+
   const editor = useRef(null);
 
   const handleRegister = async () => {
@@ -44,10 +48,27 @@ const cadastro: React.FC = () => {
       }),
     })
       .then(async response => {
-        console.log(await response.json());
+        response.json().then(data => {
+          if (data.errorcode == "none") {
+            setAlertMessage("Notícia cadastrada com êxito :D");
+            setTimeout(() => {
+              setAlertActive(true);
+            }, 500);
+          } else {
+            setAlertMessage("Erro ao cadastrar notícia :(");
+            setTimeout(() => {
+              setAlertActive(true);
+            }, 500);
+          }
+        });
       })
-      .catch(async response => {
-        console.log(await response.json());
+      .catch(async error => {
+        error.json().then(data => {
+          setAlertMessage("Erro ao cadastrar notícia :(");
+          setTimeout(() => {
+            setAlertActive(true);
+          }, 500);
+        });
       });
   };
 
@@ -58,6 +79,13 @@ const cadastro: React.FC = () => {
   return (
     <>
       <Navbar />
+      <Alert
+        message={alertMessage}
+        active={alertActive}
+        handleCallback={() => navigate("../")}
+        handleClose={() => navigate("../")}
+        options={false}
+      />
       <Body auto>
         <BreadcrumbBox map={breadcrumbMap} fixed />
         <NewContainer>
@@ -96,12 +124,12 @@ const cadastro: React.FC = () => {
           </Row>
           <Row>
             <Col>
-              <JoditEditor
+              {/* <JoditEditor
                 ref={editor}
                 value={content}
                 onBlur={newContent => setContent(newContent)}
                 onChange={newContent => {}}
-              />
+              /> */}
             </Col>
           </Row>
           <Margin />

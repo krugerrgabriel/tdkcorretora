@@ -1,9 +1,16 @@
 import styled from 'styled-components';
-import { Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 
 import { Link } from 'gatsby';
 
-import Image from '../../components/Image';
+export const NewContainer = styled(Container)<{ alignItems?: Boolean; }>`
+    display: flex;
+    ${(props) => props.alignItems ? 'align-items: center;' : null};
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100vh;
+`;
 
 export const NewRow = styled(Row)``;
 
@@ -54,7 +61,7 @@ export const Card = styled(Link)`
     }
 `;
 
-export const CardImage = styled(Image)`
+export const CardImage = styled.img`
     width: 100%;
     height: auto;
 
@@ -100,5 +107,27 @@ export const CardInfo = styled.div`
         font-weight: 500;
 
         text-align: center;
+    }
+`;
+
+export const MoreLink = styled(Link)`
+    color: ${(props) => props.theme.yellow};
+
+    display: flex;
+    justify-content: flex-end;
+
+    font-size: 22px;
+    font-weight: 400;
+
+    margin-top: 24px;
+
+    transition: 0.2s;
+
+    &:hover{
+        color: ${(props) => props.theme.yellow};
+
+        filter: brightness(85%);
+
+        text-decoration: underline;
     }
 `;

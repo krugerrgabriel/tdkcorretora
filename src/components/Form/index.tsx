@@ -59,6 +59,7 @@ export const Input: React.FC<IInput> = props => {
         mask={maskType} // @ts-ignore
         onChange={event => handleKey(event.target.value)}
         onFocus={() => setActive(true)}
+        name={props.name}
         onBlur={event => {
           if (
             event.target.value == null ||

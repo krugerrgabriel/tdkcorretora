@@ -8,12 +8,10 @@ export const Box = styled.div`
 
     div{
 
-        margin-top: 96px;
-
         p{
             color: ${(props) => props.theme.yellow};
 
-            font-size: 96px;
+            font-size: 86px;
             font-weight: 900;
 
             text-align: center;
@@ -24,7 +22,7 @@ export const Box = styled.div`
         span{
             color: ${(props) => props.theme.white};
 
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 800;
 
             letter-spacing: 6px;
