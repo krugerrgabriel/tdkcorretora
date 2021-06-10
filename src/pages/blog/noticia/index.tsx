@@ -14,8 +14,8 @@ import {
   NoticiaMiniDescription,
   NoticiaDescription,
 } from "./styles";
-import { NewRow, Box } from "../styles";
-import { Body, Container, Title } from "../../../styles/elements";
+import { NewRow, Box, NewContainer } from "../styles";
+import { Body, Container } from "../../../styles/elements";
 
 const noticia: React.FC = ({ location }) => {
   const [noticia, setNoticia] = useState({});
@@ -45,7 +45,7 @@ const noticia: React.FC = ({ location }) => {
             logo="white"
             positionRelative
           />
-          <Container>
+          <NewContainer className="seguro">
             <Box>
               <NewRow>
                 <Col lg={5}>
@@ -90,7 +90,7 @@ const noticia: React.FC = ({ location }) => {
                 </Col>
               </NewRow>
             </Box>
-          </Container>
+          </NewContainer>
         </Body>
       </>
     );

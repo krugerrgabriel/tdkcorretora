@@ -37,6 +37,6 @@ export const ImageBox = styled.div`
 `;
 
 export const CompanyImage = styled(Image)`
-    width: 225px;
+    width: 200px;
     height: auto;
 `;

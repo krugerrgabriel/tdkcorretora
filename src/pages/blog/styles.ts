@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { Row } from 'react-bootstrap';
+import { Row, Container } from 'react-bootstrap';
 import Image from '../../components/Image';
 
 export const NewLink = styled(Link)`
@@ -9,6 +9,15 @@ export const NewLink = styled(Link)`
     &:hover{
         color: unset;
     }
+`;
+
+export const NewContainer = styled(Container)<{ alignItems?: Boolean; }>`
+    display: flex;
+    ${(props) => props.alignItems ? 'align-items: center;' : null};
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100vh;
 `;
 
 export const NewRow = styled(Row)`

@@ -74,7 +74,7 @@ a{
     background-size: 50%;
     background-repeat: no-repeat;
 
-    opacity: 0.65;
+    opacity: 0.8;
 
     transition: 0.2s;
 }
@@ -87,12 +87,24 @@ a{
 .fp-controlArrow.fp-prev{
     left: 12% !important;
 
-    background-image: url('../assets/img/tdkcorretora_left-icon.svg');
+    background-image: url('../assets/img/tdkcorretora_left-arrow-yellow.svg');
 }
 .fp-controlArrow.fp-next{
     right: 11% !important;
 
-    background-image: url('../assets/img/tdkcorretora_right-icon.svg');
+    background-image: url('../assets/img/tdkcorretora_right-arrow-yellow.svg');
+}
+div.section.yellow .fp-controlArrow.fp-prev{
+    background-image: url('../assets/img/tdkcorretora_left-arrow-yellow.svg');
+}
+div.section.yellow .fp-controlArrow.fp-next{
+    background-image: url('../assets/img/tdkcorretora_right-arrow-yellow.svg');
+}
+div.section.white .fp-controlArrow.fp-prev{
+    background-image: url('../assets/img/tdkcorretora_left-arrow-white.svg');
+}
+div.section.white .fp-controlArrow.fp-next{
+    background-image: url('../assets/img/tdkcorretora_right-arrow-white.svg');
 }
 
 div.section.sobre{

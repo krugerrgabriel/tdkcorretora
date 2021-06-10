@@ -49,13 +49,13 @@ const Sobre02: React.FC = () => {
       <NewContainer className="seguro">
         <Row>
           <Col>
-            <PageTitle> NOSSA EQUIPE </PageTitle>
+            <PageTitle> QUEM SOMOS </PageTitle>
           </Col>
         </Row>
         <Row>
           <Col>
             <PageSubtitle>
-              <Line>/</Line> A CORRETORA
+              <Line>/</Line> NOSSA EQUIPE
             </PageSubtitle>
           </Col>
         </Row>

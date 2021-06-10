@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
 
-import { Link } from "gatsby";
-
-import { Body, FullImage, Title } from "../../styles/elements";
+import {
+  Body,
+  FullImage,
+  PageTitle,
+  PageSubtitle,
+  Line,
+} from "../../styles/elements";
 import {
   NewContainer,
   NewRow,
@@ -18,7 +22,7 @@ const Noticias: React.FC = () => {
   const [noticias, setNoticias] = useState([]);
 
   const getData = async () => {
-    let response = await fetch("http://localhost:3001/noticias/all/4");
+    let response = await fetch("http://localhost:3001/noticias/all/3");
     let data = await response.json();
     setNoticias(data);
   };
@@ -35,13 +39,18 @@ const Noticias: React.FC = () => {
           src="tdkcorretora_noticias-background.png"
           alt="TDK Corretora Notícias Background"
         />
-        <NewContainer>
+        <NewContainer className="seguro">
           <Box>
             <NewRow>
               <Col>
-                <Title color="yellow" margin="0 0 24px 0">
-                  Notícias
-                </Title>
+                <PageTitle> NOTÍCIAS </PageTitle>
+              </Col>
+            </NewRow>
+            <NewRow>
+              <Col>
+                <PageSubtitle>
+                  <Line>/</Line> #####
+                </PageSubtitle>
               </Col>
             </NewRow>
             <NewRow>

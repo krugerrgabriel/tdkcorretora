@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-import { Body, Element, Title, Button, FullImage } from "../../styles/elements";
+import {
+  Body,
+  Element,
+  Title,
+  Button,
+  FullImage,
+  PageTitle,
+  PageSubtitle,
+  Line,
+} from "../../styles/elements";
 import { Inputs, NewContainer, Form } from "./styles";
 
 import { Input, Select, Textarea } from "../../components/Form";
@@ -76,11 +85,18 @@ const Contato: React.FC = () => {
       />
 
       <NewContainer>
-        <Container>
+        <Container className="seguro">
           <Form>
             <Row>
               <Col>
-                <Title margin="0 0 22px 0"> CONTATO </Title>
+                <PageTitle> CONTATO </PageTitle>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <PageSubtitle>
+                  <Line>/</Line> FALE CONOSCO
+                </PageSubtitle>
               </Col>
             </Row>
             <Row>

@@ -41,12 +41,12 @@ const Home: React.FC = () => {
   return (
     <>
       <Navbar handlePage={data => setPage(data)} logo={logo} />
-      {/* <Sitemap
+      <Sitemap
         activeTab={tab}
         handlePage={data => setPage(data)}
         // @ts-ignore
         seguros={seguros}
-      /> */}
+      />
       <ReactFullpage
         anchors={[
           "inicio",
@@ -165,14 +165,6 @@ const Home: React.FC = () => {
                 <div className="slide">
                   <Seguros /* @ts-ignore */
                     seguros={seguros}
-                    page="one"
-                    fullpageApi={fullpageApi}
-                  />
-                </div>
-                <div className="slide">
-                  <Seguros /* @ts-ignore */
-                    seguros={seguros}
-                    page="two"
                     fullpageApi={fullpageApi}
                   />
                 </div>
@@ -182,7 +174,10 @@ const Home: React.FC = () => {
               {seguros.errorcode == "none" /* @ts-ignore */
                 ? seguros.seguros.map((seguro, index) => {
                     return (
-                      <div className="section" key={index}>
+                      <div
+                        className={`section ${index % 2 ? "white" : "yellow"}`}
+                        key={index}
+                      >
                         <Element
                           src={
                             index % 2

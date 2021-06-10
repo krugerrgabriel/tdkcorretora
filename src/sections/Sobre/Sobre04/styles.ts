@@ -28,6 +28,11 @@ export const BubbleImage = styled(Image)`
 
 export const Info = styled.div`
     position: absolute;
+
+    left: 0;
+    bottom: 10%;
+    
+    width: 464px;
 `;
 
 export const Box = styled.div<{ left?: Boolean; }>`
@@ -47,6 +52,8 @@ export const Box = styled.div<{ left?: Boolean; }>`
 
     div.layer{
         position: relative;
+
+        margin-left: 236px;
 
         a{
             position: absolute;

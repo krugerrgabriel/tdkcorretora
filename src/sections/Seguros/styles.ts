@@ -33,14 +33,15 @@ export const Card = styled.div`
     justify-content: space-between;
     flex-direction: column;
 
-    height: 500px;
+    height: 300px;
     width: 100%;
 
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
 
     border-radius: 0;
 
-    padding: 36px 42px;
+    padding: 18px;
+    margin: 12px 0;
 
     box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1);
 
@@ -48,10 +49,10 @@ export const Card = styled.div`
 
     z-index: 4;
 
-    div:nth-child(1){
+    div.front{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         flex-direction: column;
 
         height: 100%;
@@ -67,57 +68,8 @@ export const Card = styled.div`
 
             line-height: 28px;
 
-            margin-top: 6px;
-
-            height: 68px;
-        }
-
-        span{
-            color: ${(props) => props.theme.white};
-
-            font-size: 16px;
-            font-weight: 400;
-
-            text-align: center;
-
-            line-height: 18px;
-
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 1; /* number of lines to show */
-            -webkit-box-orient: vertical;
-
-            height: 54px;
-
-            margin: -4px 0 12px 0;
-        }
-        div{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-
-            strong{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-
-                color: ${(props) => props.theme.white};
-
-                font-size: 22px;
-                font-weight: 300;
-
-                hr{
-                    background-color: ${(props) => props.theme.gray};
-
-                    width: 250px;
-                    height: 1px;
-
-                    margin: 8px 0;
-                }
-            }
+            margin: 0;
+            margin-top: 36px;
         }
     }
 
@@ -145,13 +97,40 @@ export const Card = styled.div`
         text-align: center;
 
         line-height: 20px;
+
+        div.point{
+            strong{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+    
+                color: ${(props) => props.theme.white};
+    
+                font-size: 22px;
+                font-weight: 300;
+    
+                hr{
+                    background-color: ${(props) => props.theme.gray};
+    
+                    width: 250px;
+                    height: 1px;
+    
+                    margin: 4px 0;
+                }
+            }
+        }
+
     }
 
-    &:hover div:nth-child(1){
+    &:hover div.front{
         opacity: 0;
     }
     &:hover div.back{
         display: flex;
+        opacity: 1;
+    }
+    &:hover div.back div.reveal{
         opacity: 1;
     }
 `;

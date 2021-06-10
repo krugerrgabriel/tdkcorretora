@@ -23,7 +23,7 @@ const Part02: React.FC = () => {
         <Row>
           <Col>
             <PageSubtitle>
-              <Line>/</Line> A CORRETORA
+              <Line>/</Line> NOSSO CONCEITO
             </PageSubtitle>
           </Col>
         </Row>

@@ -38,7 +38,7 @@ const Seguro03: React.FC<ISeguro> = ({ seguro }) => {
         <Row>
           <Col>
             <PageSubtitle>
-              <Line>/</Line> POR QUÊ A TDK?
+              <Line>/</Line> POR QUÊ A TDK
             </PageSubtitle>
           </Col>
         </Row>

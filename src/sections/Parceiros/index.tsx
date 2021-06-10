@@ -2,7 +2,14 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 
 import { NewContainer, ImageBox, CompanyImage } from "./styles";
-import { Body, Element, Title, FullImage } from "../../styles/elements";
+import {
+  Body,
+  Element,
+  FullImage,
+  PageTitle,
+  PageSubtitle,
+  Line,
+} from "../../styles/elements";
 
 const Parceiros: React.FC = () => {
   return (
@@ -18,10 +25,17 @@ const Parceiros: React.FC = () => {
         right="true"
         bottom="true"
       />
-      <NewContainer>
+      <NewContainer className="seguro">
         <Row>
           <Col>
-            <Title margin="0 0 24px 0"> Nossos parceiros </Title>
+            <PageTitle> NOSSOS PARCEIROS </PageTitle>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <PageSubtitle>
+              <Line>/</Line> #####
+            </PageSubtitle>
           </Col>
         </Row>
         <Row>

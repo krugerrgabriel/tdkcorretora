@@ -128,7 +128,7 @@ export const BadgeImage = styled(Image)`
 `;
 
 export const Item = styled.div`
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
 
     display: flex;
     align-items: center;

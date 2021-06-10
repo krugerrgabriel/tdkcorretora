@@ -6,8 +6,8 @@ import "../../styles/blog.css";
 
 import Navbar from "../../components/Navbar";
 
-import { NewRow, Box, Item, ItemImage, NewLink } from "./styles";
-import { Body, Container, Title } from "../../styles/elements";
+import { NewRow, Box, Item, ItemImage, NewLink, NewContainer } from "./styles";
+import { Body, Title } from "../../styles/elements";
 
 const blog: React.FC = () => {
   const [noticias, setNoticias] = useState({});
@@ -28,7 +28,7 @@ const blog: React.FC = () => {
           logo="white"
           positionRelative
         />
-        <Container>
+        <NewContainer className="seguro">
           <Box>
             <NewRow>
               <Col>
@@ -64,7 +64,7 @@ const blog: React.FC = () => {
                 : null}
             </NewRow>
           </Box>
-        </Container>
+        </NewContainer>
       </Body>
     </>
   );
