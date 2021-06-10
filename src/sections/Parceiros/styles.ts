@@ -19,11 +19,9 @@ export const ImageBox = styled.div`
     width: 100%;
     height: 100%;
 
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255);
 
     padding: 24px 0;
-
-    border-radius: 3px;
 
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
 

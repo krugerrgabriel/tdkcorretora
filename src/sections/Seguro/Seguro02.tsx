@@ -18,7 +18,7 @@ const Seguro02: React.FC<ISeguro> = ({ seguro }) => {
       <NewContainer className="seguro">
         <Row>
           <Col>
-            <PageTitle>SEGURO TRANSPORTE</PageTitle>
+            <PageTitle>{seguro.title}</PageTitle>
           </Col>
         </Row>
         <Row>

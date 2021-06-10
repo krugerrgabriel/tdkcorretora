@@ -36,17 +36,15 @@ const Home: React.FC = () => {
     getData();
   }, []);
 
-  const isBrowser = typeof window !== "undefined";
-
   return (
     <>
       <Navbar handlePage={data => setPage(data)} logo={logo} />
-      <Sitemap
+      {/* <Sitemap
         activeTab={tab}
         handlePage={data => setPage(data)}
         // @ts-ignore
         seguros={seguros}
-      />
+      /> */}
       <ReactFullpage
         anchors={[
           "inicio",

@@ -85,12 +85,12 @@ a{
     transform: scale(0.95);
 }
 .fp-controlArrow.fp-prev{
-    left: 12% !important;
+    left: 20% !important;
 
     background-image: url('../assets/img/tdkcorretora_left-arrow-yellow.svg');
 }
 .fp-controlArrow.fp-next{
-    right: 11% !important;
+    right: 19% !important;
 
     background-image: url('../assets/img/tdkcorretora_right-arrow-yellow.svg');
 }

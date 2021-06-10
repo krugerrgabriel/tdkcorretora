@@ -28,13 +28,13 @@ const Parceiros: React.FC = () => {
       <NewContainer className="seguro">
         <Row>
           <Col>
-            <PageTitle> NOSSOS PARCEIROS </PageTitle>
+            <PageTitle> PARCEIROS TDK </PageTitle>
           </Col>
         </Row>
         <Row>
           <Col>
             <PageSubtitle>
-              <Line>/</Line> #####
+              <Line>/</Line> SEGURO É CONFIANÇA
             </PageSubtitle>
           </Col>
         </Row>

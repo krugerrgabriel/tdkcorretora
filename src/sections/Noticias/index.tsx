@@ -10,6 +10,7 @@ import {
 } from "../../styles/elements";
 import {
   NewContainer,
+  NewCol,
   NewRow,
   Box,
   Card,
@@ -43,13 +44,13 @@ const Noticias: React.FC = () => {
           <Box>
             <NewRow>
               <Col>
-                <PageTitle> NOTÍCIAS </PageTitle>
+                <PageTitle> NOTÍCIAS TDK </PageTitle>
               </Col>
             </NewRow>
             <NewRow>
               <Col>
                 <PageSubtitle>
-                  <Line>/</Line> #####
+                  <Line>/</Line> FIQUE POR DENTRO
                 </PageSubtitle>
               </Col>
             </NewRow>
@@ -78,10 +79,10 @@ const Noticias: React.FC = () => {
                 );
               })}
             </NewRow>
-            <NewRow>
-              <Col lg={12}>
+            <NewRow className="justify-content-center">
+              <NewCol lg={2}>
                 <MoreLink to="/blog"> VER MAIS </MoreLink>
-              </Col>
+              </NewCol>
             </NewRow>
           </Box>
         </NewContainer>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import { Link } from 'gatsby';
 
@@ -13,6 +13,12 @@ export const NewContainer = styled(Container)<{ alignItems?: Boolean; }>`
 `;
 
 export const NewRow = styled(Row)``;
+
+export const NewCol = styled(Col)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
 
 export const Box = styled.div`
     display: flex;
@@ -119,7 +125,9 @@ export const MoreLink = styled(Link)`
     font-size: 22px;
     font-weight: 400;
 
-    margin-top: 24px;
+    text-align: center;
+
+    margin-top: 48px;
 
     transition: 0.2s;
 
