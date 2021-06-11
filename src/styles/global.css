@@ -87,24 +87,24 @@ a{
 .fp-controlArrow.fp-prev{
     left: 20% !important;
 
-    background-image: url('../assets/img/tdkcorretora_left-arrow-yellow.svg');
+    background-image: url('https://transdesk.com.br/assets/img/icons/tdkcorretora_left-arrow-yellow.svg');
 }
 .fp-controlArrow.fp-next{
     right: 19% !important;
 
-    background-image: url('../assets/img/tdkcorretora_right-arrow-yellow.svg');
+    background-image: url('https://transdesk.com.br/assets/img/icons/tdkcorretora_right-arrow-yellow.svg');
 }
 div.section.yellow .fp-controlArrow.fp-prev{
-    background-image: url('../assets/img/tdkcorretora_left-arrow-yellow.svg');
+    background-image: url('https://transdesk.com.br/assets/img/icons/tdkcorretora_left-arrow-yellow.svg');
 }
 div.section.yellow .fp-controlArrow.fp-next{
-    background-image: url('../assets/img/tdkcorretora_right-arrow-yellow.svg');
+    background-image: url('https://transdesk.com.br/assets/img/icons/tdkcorretora_right-arrow-yellow.svg');
 }
 div.section.white .fp-controlArrow.fp-prev{
-    background-image: url('../assets/img/tdkcorretora_left-arrow-white.svg');
+    background-image: url('https://transdesk.com.br/assets/img/icons/tdkcorretora_left-arrow-white.svg');
 }
 div.section.white .fp-controlArrow.fp-next{
-    background-image: url('../assets/img/tdkcorretora_right-arrow-white.svg');
+    background-image: url('https://transdesk.com.br/assets/img/icons/tdkcorretora_left-arrow-white.svg');
 }
 
 div.section.sobre{
