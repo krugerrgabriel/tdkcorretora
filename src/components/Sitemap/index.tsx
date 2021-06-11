@@ -50,7 +50,7 @@ const Sitemap: React.FC<ISitemap> = props => {
                   className="image"
                   alt={`TDK Corretora Ícone ${item.title}`}
                 />
-                <span>{item.title}</span>
+                <span>{item.title.replaceAll("Seguro", "")}</span>
               </Option>
             );
           })}
