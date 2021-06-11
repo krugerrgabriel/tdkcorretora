@@ -1,0 +1,17 @@
+<svg id="Item_Caixa" data-name="Item Caixa" xmlns="http://www.w3.org/2000/svg" width="37.772" height="40.296" viewBox="0 0 37.772 40.296">
+  <g id="Grupo_2" data-name="Grupo 2" transform="translate(0 0)">
+    <g id="Grupo_1" data-name="Grupo 1">
+      <path id="Caminho_7" data-name="Caminho 7" d="M53.471,8.891,35.175.058a.59.59,0,0,0-.513,0l-18.3,8.833a.59.59,0,0,0-.334.532v21.45a.59.59,0,0,0,.334.532l18.3,8.833a.59.59,0,0,0,.513,0l18.3-8.833a.59.59,0,0,0,.334-.532V9.422A.59.59,0,0,0,53.471,8.891ZM34.918,1.245,51.856,9.422l-4.91,2.37a.585.585,0,0,0-.1-.063L30.023,3.608ZM28.69,4.276,45.6,12.441,42.14,14.113,25.233,5.951ZM46,13.561v6.182L42.764,21.3V15.123ZM52.624,30.5,35.508,38.765V18.625l4.083-1.971a.59.59,0,0,0-.513-1.063L34.918,17.6l-1.637-.79a.59.59,0,1,0-.513,1.063l1.56.753V38.765L17.213,30.5V10.363l13.033,6.292a.59.59,0,0,0,.513-1.063L17.98,9.422l5.864-2.831,17.731,8.56.008.01v7.083a.59.59,0,0,0,.847.532l4.416-2.132a.59.59,0,0,0,.334-.532V12.991l5.444-2.628V30.5Z" transform="translate(-16.032 0.001)" fill="#fff"/>
+    </g>
+  </g>
+  <g id="Grupo_4" data-name="Grupo 4" transform="translate(2.511 26.864)">
+    <g id="Grupo_3" data-name="Grupo 3" transform="translate(0)">
+      <path id="Caminho_8" data-name="Caminho 8" d="M51.568,342.612l-2.676-1.292a.588.588,0,0,0-.512,1.06l2.676,1.292a.588.588,0,0,0,.512-1.06Z" transform="translate(-48.048 -341.261)" fill="#fff"/>
+    </g>
+  </g>
+  <g id="Grupo_6" data-name="Grupo 6" transform="translate(2.515 24.067)">
+    <g id="Grupo_5" data-name="Grupo 5" transform="translate(0)">
+      <path id="Caminho_9" data-name="Caminho 9" d="M54.075,308.228l-5.135-2.479a.588.588,0,0,0-.511,1.06l5.135,2.479a.588.588,0,0,0,.511-1.06Z" transform="translate(-48.096 -305.69)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

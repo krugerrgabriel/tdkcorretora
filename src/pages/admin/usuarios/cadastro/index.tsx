@@ -15,7 +15,7 @@ const cadastro: React.FC = () => {
   const [file, setFile] = useState();
 
   const handleValidate = async () => {
-    const res = await fetch("http://localhost:3001/user", {
+    const res = await fetch("https://morning-meadow-26583.herokuapp.com/user", {
       headers: {
         "Access-Control-Allow-Origin": "*",
         Accept: "application/json",

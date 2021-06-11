@@ -39,7 +39,7 @@ const cadastro: React.FC = () => {
     formData.append("description", content);
     formData.append("file", file);
 
-    fetch("http://localhost:3001/noticias", {
+    fetch("https://morning-meadow-26583.herokuapp.com/noticias", {
       method: "POST",
       body: formData,
       headers: new Headers({

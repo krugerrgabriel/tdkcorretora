@@ -23,7 +23,9 @@ const noticia: React.FC = ({ location }) => {
   const { id } = queryString.parse(location.search);
 
   const getData = async id => {
-    let response = await fetch(`http://localhost:3001/noticias/${id}`);
+    let response = await fetch(
+      `https://morning-meadow-26583.herokuapp.com/noticias/${id}`
+    );
     setNoticia(await response.json());
   };
 

@@ -44,19 +44,22 @@ const Contato: React.FC = () => {
       alert("mensagem error");
       return null;
     }
-    let response = await fetch("http://localhost:3001/mail", {
-      method: "POST",
-      headers: new Headers({
-        "Content-Type": "application/x-www-form-urlencoded", // <-- Specifying the Content-Type
-      }),
-      body: JSON.stringify({
-        nome,
-        email,
-        telefone,
-        motivo,
-        mensagem,
-      }),
-    });
+    let response = await fetch(
+      "https://morning-meadow-26583.herokuapp.com/mail",
+      {
+        method: "POST",
+        headers: new Headers({
+          "Content-Type": "application/x-www-form-urlencoded", // <-- Specifying the Content-Type
+        }),
+        body: JSON.stringify({
+          nome,
+          email,
+          telefone,
+          motivo,
+          mensagem,
+        }),
+      }
+    );
     setStatus(await response.json());
   };
 

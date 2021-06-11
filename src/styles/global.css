@@ -115,6 +115,9 @@ div.top64px{
     margin-top: 64px;
 }
 
+.relative{
+    position: relative;
+}
 .container{
     max-width: 1140px;
 }

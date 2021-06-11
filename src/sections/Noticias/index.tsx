@@ -23,7 +23,9 @@ const Noticias: React.FC = () => {
   const [noticias, setNoticias] = useState([]);
 
   const getData = async () => {
-    let response = await fetch("http://localhost:3001/noticias/all/3");
+    let response = await fetch(
+      "https://morning-meadow-26583.herokuapp.com/noticias/all/3"
+    );
     let data = await response.json();
     setNoticias(data);
   };

@@ -16,15 +16,15 @@ const Seguro03: React.FC<ISeguro> = ({ seguro }) => {
   let motivos = [
     {
       title: "ASSOCIADOS",
-      description: "+ de 5 mil",
+      description: "mais de 5 mil",
     },
     {
       title: "SINISTROS ATENDIDOS",
-      description: "+ de 4 mil",
+      description: "mais de 4 mil",
     },
     {
       title: "PARCEIROS",
-      description: "+ de 8",
+      description: "mais de 8",
     },
   ];
   return (

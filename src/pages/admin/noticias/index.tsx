@@ -23,7 +23,9 @@ const noticias: React.FC = () => {
   ];
 
   const getData = async () => {
-    let response = await fetch("http://localhost:3001/noticias/all");
+    let response = await fetch(
+      "https://morning-meadow-26583.herokuapp.com/noticias/all"
+    );
     setNoticias(await response.json());
   };
 
@@ -32,9 +34,12 @@ const noticias: React.FC = () => {
   }, []);
 
   const handleDelete = async id => {
-    let response = await fetch(`http://localhost:3001/noticias/${id}`, {
-      method: "DELETE",
-    });
+    let response = await fetch(
+      `https://morning-meadow-26583.herokuapp.com/noticias/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
     let data = await response.json();
 
     if ((await data.errorcode) == "none") {

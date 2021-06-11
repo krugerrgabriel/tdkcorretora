@@ -28,7 +28,9 @@ const Home: React.FC = () => {
   const [logo, setLogo] = useState("white");
 
   const getData = async () => {
-    let response = await fetch("http://localhost:3001/seguros");
+    let response = await fetch(
+      "https://morning-meadow-26583.herokuapp.com/seguros"
+    );
     setSeguros(await response.json());
   };
 
@@ -39,12 +41,12 @@ const Home: React.FC = () => {
   return (
     <>
       <Navbar handlePage={data => setPage(data)} logo={logo} />
-      {/* <Sitemap
+      <Sitemap
         activeTab={tab}
         handlePage={data => setPage(data)}
         // @ts-ignore
         seguros={seguros}
-      /> */}
+      />
       <ReactFullpage
         anchors={[
           "inicio",
