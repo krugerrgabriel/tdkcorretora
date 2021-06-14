@@ -51,7 +51,7 @@ const blog: React.FC = () => {
                       <Item key={index}>
                         <NewLink to={`noticia/?id=${noticia._id}`}>
                           <ItemImage
-                            src={`http://localhost:3001/landing/images/${noticia.image}`}
+                            src={`https://morning-meadow-26583.herokuapp.com/images/${noticia.image}`}
                             alt={`TDK Corretora Notícia ${noticia.name}`}
                           />
                           <div className="info">

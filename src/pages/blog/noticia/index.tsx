@@ -54,7 +54,7 @@ const noticia: React.FC = ({ location }) => {
                   <NewRow>
                     <Col lg={12}>
                       <NoticiaImage
-                        src={`http://localhost:3001/landing/images/${noticia.noticias.image}`}
+                        src={`https://morning-meadow-26583.herokuapp.com/images/${noticia.noticias.image}`}
                         alt={`TDK Corretora ${noticia.noticias.title}`}
                       />
                     </Col>
