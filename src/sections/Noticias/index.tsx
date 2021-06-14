@@ -68,7 +68,7 @@ const Noticias: React.FC = () => {
                   <Col key={index}>
                     <Card to={`noticia?id=${noticia._id}`}>
                       <CardImage
-                        src={`http://localhost:3001/landing/images/${noticia.image}`}
+                        src={`https://morning-meadow-26583.herokuapp.com/images/${noticia.image}`}
                         alt={`TDK Corretora Notícia ${noticia.name}`}
                       />
                       <CardInfo>
