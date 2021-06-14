@@ -31,7 +31,7 @@ const Sitemap: React.FC<ISitemap> = props => {
             onClick={() => props.handlePage("seguros")}
           >
             <Image
-              src="tdkcorretora_sitemap-inicio.svg"
+              src="tdkcorretora_sitemap-seguros.svg"
               className="image"
               alt="TDK Corretora Ícone Inicio"
             />

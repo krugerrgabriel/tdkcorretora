@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { navigate } from "gatsby";
 import { Row, Col } from "react-bootstrap";
-// import JoditEditor from "jodit-react";
+import { Editor } from "@tinymce/tinymce-react";
 
 import BreadcrumbBox from "../../../../components/admin/BreadcrumbBox";
 import Navbar from "../../../../components/admin/Navbar";
@@ -30,7 +30,12 @@ const cadastro: React.FC = () => {
   const [alertMessage, setAlertMessage] = useState("");
   const [alertActive, setAlertActive] = useState(false);
 
-  const editor = useRef(null);
+  const editorRef = useRef(null);
+  const log = () => {
+    if (editorRef.current) {
+      console.log(editorRef.current.getContent());
+    }
+  };
 
   const handleRegister = async () => {
     const formData = new FormData();
@@ -124,6 +129,26 @@ const cadastro: React.FC = () => {
           </Row>
           <Row>
             <Col>
+              <Editor
+                onInit={(evt, editor) => (editorRef.current = editor)}
+                initialValue="<p>This is the initial content of the editor.</p>"
+                init={{
+                  height: 400,
+                  menubar: true,
+                  plugins: [
+                    "advlist autolink lists link image charmap print preview anchor",
+                    "searchreplace visualblocks code fullscreen",
+                    "insertdatetime media table paste code help wordcount",
+                  ],
+                  toolbar:
+                    "undo redo | formatselect | " +
+                    "bold italic backcolor | alignleft aligncenter " +
+                    "alignright alignjustify | bullist numlist outdent indent | " +
+                    "removeformat | help",
+                  content_style:
+                    "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+                }}
+              />
               {/* <JoditEditor
                 ref={editor}
                 value={content}

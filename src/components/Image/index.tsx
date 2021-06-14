@@ -35,7 +35,7 @@ const Image = ({ src, ...rest }) => {
   const { node: { childImageSharp, publicURL, extension } = {} } = match;
 
   if (extension === "svg" || !childImageSharp) {
-    return <img srcSet={publicURL} loading="eager" {...rest} />;
+    return <img srcSet={publicURL} {...rest} />;
   }
 
   return <Img fluid={childImageSharp.fluid} {...rest} />;
