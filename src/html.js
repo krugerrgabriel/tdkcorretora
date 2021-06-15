@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import LoaderSVG from "./assets/img/tdkcorretora_loader.svg";
+import LoaderSVG from "./assets/img/tdkcorretora_seguros_loader.svg";
 
 export default function HTML(props) {
   return (
@@ -35,7 +35,12 @@ export default function HTML(props) {
             transition: 1,
           }}
         >
-          <img src={LoaderSVG} alt="loading spinner" width="150" height="150" />
+          <img
+            src={LoaderSVG}
+            alt="TDK Corretora de Seguros loading spinner"
+            width="150"
+            height="150"
+          />
         </div>
         <div
           key={`body`}
