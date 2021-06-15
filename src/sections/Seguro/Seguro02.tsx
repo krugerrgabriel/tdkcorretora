@@ -14,7 +14,7 @@ import { ISeguro } from "../../interfaces";
 
 const Seguro02: React.FC<ISeguro> = ({ seguro }) => {
   return (
-    <Body>
+    <Body id={`${seguro.title}`}>
       <NewContainer className="seguro">
         <Row>
           <Col>
@@ -35,7 +35,7 @@ const Seguro02: React.FC<ISeguro> = ({ seguro }) => {
                 <Badge>
                   <BadgeImage
                     src={item.icon}
-                    alt={`TDK Corretora Cobertura ${seguro.title}`}
+                    alt={`TDK Corretora de Seguros Cobertura ${seguro.title}`}
                   />
                   <div>
                     <p> TITULO SERVIÇO </p>

@@ -9,7 +9,7 @@ import { NewContainer } from "../styles";
 const Sobre03: React.FC = () => {
   return (
     <>
-      <Body>
+      <Body id="TDK Corretora de Seguros">
         <NewContainer className="seguro">
           <Row>
             <Col>

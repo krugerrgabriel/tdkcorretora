@@ -28,7 +28,7 @@ const Seguro03: React.FC<ISeguro> = ({ seguro }) => {
     },
   ];
   return (
-    <Body>
+    <Body id={`${seguro.title}`}>
       <NewContainer className="seguro">
         <Row>
           <Col>
@@ -44,13 +44,13 @@ const Seguro03: React.FC<ISeguro> = ({ seguro }) => {
         </Row>
         <Row>
           {motivos.map((motivo, index) => {
-            let itemImage = `tdkcorretora_motivo-${index}.png`;
+            let itemImage = `tdkcorretora_seguros_motivo-${index}.png`;
             return (
               <Col lg={4} key={index}>
                 <Item>
                   <ItemImage
                     src={itemImage}
-                    alt="TDK Corretora Motivo Seguro Transporte"
+                    alt={`TDK Corretora de Seguros Motivo ${seguro.title}`}
                   />
                   <p> {motivo.description} </p>
                   <span> {motivo.title} </span>

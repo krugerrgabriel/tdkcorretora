@@ -6,6 +6,7 @@ import { Col } from "react-bootstrap";
 import "../../../styles/blog.css";
 
 import Navbar from "../../../components/Navbar";
+import Seo from "../../../components/Seo";
 
 import {
   NoticiaImage,
@@ -41,7 +42,8 @@ const noticia: React.FC = ({ location }) => {
     let finalDate = dia + "/" + mes + "/" + ano;
     return (
       <>
-        <Body className="noticiasBox">
+        <Seo />
+        <Body id="TDK Corretora de Seguros" className="noticiasBox">
           <Navbar
             handlePage={() => navigate("../#noticias")}
             logo="white"
@@ -55,7 +57,7 @@ const noticia: React.FC = ({ location }) => {
                     <Col lg={12}>
                       <NoticiaImage
                         src={`https://morning-meadow-26583.herokuapp.com/images/${noticia.noticias.image}`}
-                        alt={`TDK Corretora ${noticia.noticias.title}`}
+                        alt={`TDK Corretora de Seguros ${noticia.noticias.title}`}
                       />
                     </Col>
                   </NewRow>

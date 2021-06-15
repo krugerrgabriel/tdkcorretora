@@ -17,7 +17,7 @@ import { ISeguro } from "../../interfaces";
 
 const Seguro04: React.FC<ISeguro> = ({ seguro }) => {
   return (
-    <Body>
+    <Body id={`${seguro.title}`}>
       <NewContainer className="seguro">
         <Row>
           <Col>

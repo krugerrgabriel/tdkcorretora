@@ -39,8 +39,8 @@ const Noticias: React.FC = () => {
     return (
       <Body>
         <FullImage
-          src="tdkcorretora_noticias-background.png"
-          alt="TDK Corretora Notícias Background"
+          src="tdkcorretora_seguros_noticias-background.png"
+          alt="TDK Corretora de Seguros Notícias Background"
         />
         <NewContainer className="seguro">
           <Box>
@@ -69,7 +69,7 @@ const Noticias: React.FC = () => {
                     <Card to={`noticia?id=${noticia._id}`}>
                       <CardImage
                         src={`https://morning-meadow-26583.herokuapp.com/images/${noticia.image}`}
-                        alt={`TDK Corretora Notícia ${noticia.name}`}
+                        alt={`TDK Corretora de Seguros Notícia ${noticia.name}`}
                       />
                       <CardInfo>
                         <p>{noticia.title}</p>

@@ -13,7 +13,7 @@ import { NewContainer } from "../styles";
 
 const Part02: React.FC = () => {
   return (
-    <Body>
+    <Body id="TDK Corretora de Seguros">
       <NewContainer className="seguro">
         <Row>
           <Col>
@@ -32,8 +32,8 @@ const Part02: React.FC = () => {
             <div className="space">
               <p>
                 <TextIcon
-                  src="tdkcorretora_missao-icon.svg"
-                  alt="TDK Corretora Ícone de Missão"
+                  src="tdkcorretora_seguros_missao-icon.svg"
+                  alt="TDK Corretora de Seguros Ícone de Missão"
                 />
                 MISSÃO
               </p>
@@ -48,8 +48,8 @@ const Part02: React.FC = () => {
             <div className="space">
               <p>
                 <TextIcon
-                  src="tdkcorretora_visao-icon.svg"
-                  alt="TDK Corretora Ícone de Missão"
+                  src="tdkcorretora_seguros_visao-icon.svg"
+                  alt="TDK Corretora de Seguros Ícone de Missão"
                 />
                 VISÃO
               </p>
@@ -62,9 +62,9 @@ const Part02: React.FC = () => {
             <div className="space">
               <p>
                 <TextIcon
-                  src="tdkcorretora_valores-icon.svg"
+                  src="tdkcorretora_seguros_valores-icon.svg"
                   className="valores"
-                  alt="TDK Corretora Ícone de Missão"
+                  alt="TDK Corretora de Seguros Ícone de Missão"
                 />
                 VALORES
               </p>

@@ -1,6 +1,5 @@
 import React from "react";
 import { Col } from "react-bootstrap";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import { Body, Button } from "../../styles/elements";
 import { NewContainer, NewRow, Card, ImageIcon } from "./styles";
@@ -21,7 +20,7 @@ const Seguros: React.FC<ISeguros> = ({ seguros, fullpageApi }) => {
                         <ImageIcon
                           src={item.icon}
                           className={`${item.pageName}`}
-                          alt="TDK Corretora Seguro Transporte"
+                          alt={`TDK Corretora de Seguros ${item.title}`}
                         />
                         <p> {item.title} </p>
                       </div>

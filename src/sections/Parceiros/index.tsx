@@ -13,15 +13,19 @@ import {
 
 const Parceiros: React.FC = () => {
   return (
-    <Body>
+    <Body id="TDK Corretora de Seguros">
       <FullImage
-        src="tdkcorretora_parceiros-background.png"
+        src="tdkcorretora_seguros_parceiros-background.png"
         alt="TDK Corretora Parceiros Background"
         zIndex
       />
-      <Element src="tdkcorretora_element-left.svg" left="true" top="true" />
       <Element
-        src="tdkcorretora_element-right.svg"
+        src="tdkcorretora_seguros_element-left-white.svg"
+        left="true"
+        top="true"
+      />
+      <Element
+        src="tdkcorretora_seguros_element-right-white.svg"
         right="true"
         bottom="true"
       />
@@ -43,8 +47,8 @@ const Parceiros: React.FC = () => {
             <a href="https://www.libertyseguros.com.br/" target="_blank">
               <ImageBox>
                 <CompanyImage
-                  src="tdkcorretora_libertyseguros-logo.png"
-                  alt="TDK Corretora Liberty Seguros Logo"
+                  src="tdkcorretora_seguros_libertyseguros-logo.png"
+                  alt="TDK Corretora de Seguros Liberty Seguros Logo"
                 />
               </ImageBox>
             </a>
@@ -53,8 +57,8 @@ const Parceiros: React.FC = () => {
             <a href="https://www.tokiomarine.com.br/" target="_blank">
               <ImageBox>
                 <CompanyImage
-                  src="tdkcorretora_tokiomarine-logo.png"
-                  alt="TDK Corretora Tokio Marine Logo"
+                  src="tdkcorretora_seguros_tokiomarine-logo.png"
+                  alt="TDK Corretora de Seguros Tokio Marine Logo"
                 />
               </ImageBox>
             </a>
@@ -63,8 +67,8 @@ const Parceiros: React.FC = () => {
             <a href="https://sompo.com.br/" target="_blank">
               <ImageBox>
                 <CompanyImage
-                  src="tdkcorretora_somposeguros-logo.png"
-                  alt="TDK Corretora Sompo Seguros Logo"
+                  src="tdkcorretora_seguros_somposeguros-logo.png"
+                  alt="TDK Corretora de Seguros Sompo Seguros Logo"
                 />
               </ImageBox>
             </a>

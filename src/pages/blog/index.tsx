@@ -5,6 +5,7 @@ import { Col } from "react-bootstrap";
 import "../../styles/blog.css";
 
 import Navbar from "../../components/Navbar";
+import Seo from "../../components/Seo";
 
 import { NewRow, Box, Item, ItemImage, NewLink, NewContainer } from "./styles";
 import { Body, Title } from "../../styles/elements";
@@ -24,7 +25,8 @@ const blog: React.FC = () => {
   }, []);
   return (
     <>
-      <Body className="noticiasBox">
+      <Seo />
+      <Body id="TDK Corretora de Seguros" className="noticiasBox">
         <Navbar
           handlePage={() => navigate("../#noticias")}
           logo="white"
@@ -52,7 +54,7 @@ const blog: React.FC = () => {
                         <NewLink to={`noticia/?id=${noticia._id}`}>
                           <ItemImage
                             src={`https://morning-meadow-26583.herokuapp.com/images/${noticia.image}`}
-                            alt={`TDK Corretora Notícia ${noticia.name}`}
+                            alt={`TDK Corretora de Seguros Notícia ${noticia.name}`}
                           />
                           <div className="info">
                             <span>{noticia.type ? noticia.type : "TAG"}</span>

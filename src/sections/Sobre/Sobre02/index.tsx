@@ -45,7 +45,7 @@ const Sobre02: React.FC = () => {
     },
   ];
   return (
-    <Body>
+    <Body id="TDK Corretora de Seguros">
       <NewContainer className="seguro">
         <Row>
           <Col>
@@ -71,8 +71,8 @@ const Sobre02: React.FC = () => {
                 >
                   <Employee>
                     <EmployeeImage
-                      src={`tdkcorretora_funcionario-${item.id}.png`}
-                      alt={`TDK Corretora ${item.name}`}
+                      src={`tdkcorretora_seguros_funcionario-${item.id}.png`}
+                      alt={`TDK Corretora de Seguros ${item.name}`}
                     />
                     <div className="reveal">
                       <div>

@@ -46,26 +46,26 @@ const Sobre04: React.FC = () => {
 
   return (
     <>
-      <Body>
+      <Body id="TDK Corretora de Seguros">
         <NewContainer className="seguro">
           <Box>
             <div className="layer">
               <LayerMap
-                src="tdkcorretora_map.svg"
-                alt="TDK Corretora Mapa de Abrangência"
+                src="tdkcorretora_seguros_map.svg"
+                alt="TDK Corretora de Seguros Mapa de Abrangência"
               />
               {MapPins.map((pin, index) => {
                 return (
                   <a href="#!" className={pin.identify} key={index}>
                     <MapPin
-                      src="tdkcorretora_map-pin.svg"
-                      alt={`TDK Corretora Pin ${pin.name}`}
+                      src="tdkcorretora_seguros_map-pin.svg"
+                      alt={`TDK Corretora de Seguros Pin ${pin.name}`}
                     />
                     <div className="bubble">
                       <p>{pin.name}</p>
                       <BubbleImage
-                        src="tdkcorretora_bubble.svg"
-                        alt="TDK Corretora Bubble"
+                        src="tdkcorretora_seguros_bubble.svg"
+                        alt="TDK Corretora de Seguros Bubble"
                       />
                     </div>
                   </a>

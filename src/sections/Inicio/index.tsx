@@ -8,19 +8,19 @@ const Inicio: React.FC = () => {
     <NewBody>
       <FullImage
         className="fullImageWrapper"
-        src="tdkcorretora_background.png"
-        alt="TDK Corretora Background Image"
+        src="tdkcorretora_seguros_background.png"
+        alt="TDK Corretora de Seguros Background Image"
       />
       <Element
-        src="tdkcorretora_element-left-white.svg"
-        alt="TDK Corretora Element"
+        src="tdkcorretora_seguros_element-left-white.svg"
+        alt="TDK Corretora de Seguros Element"
         left="true"
         top="true"
         key={0}
       />
       <Element
-        src="tdkcorretora_element-right-white.svg"
-        alt="TDK Corretora Element"
+        src="tdkcorretora_seguros_element-right-white.svg"
+        alt="TDK Corretora de Seguros Element"
         right="true"
         bottom="true"
         key={1}

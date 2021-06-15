@@ -73,16 +73,16 @@ const Contato: React.FC = () => {
   return (
     <Body>
       <FullImage
-        src="tdkcorretora_contato-background.png"
+        src="tdkcorretora_seguros_contato-background.png"
         alt="TDK Corretora Sobre Nós Background"
       />
       <Element
-        src="tdkcorretora_element-left-white.svg"
+        src="tdkcorretora_seguros_element-left-white.svg"
         left="true"
         bottom="true"
       />
       <Element
-        src="tdkcorretora_element-right-white.svg"
+        src="tdkcorretora_seguros_element-right-white.svg"
         right="true"
         top="true"
       />
@@ -108,7 +108,7 @@ const Contato: React.FC = () => {
                   type="text"
                   name="NOME"
                   color="white"
-                  icon="tdkcorretora_user-icon.svg"
+                  icon="tdkcorretora_seguros_user-icon.svg"
                   handleChange={data => setNome(data)}
                   value={nome}
                   maxChar="100"
@@ -120,7 +120,7 @@ const Contato: React.FC = () => {
                   type="email"
                   name="E-MAIL"
                   color="white"
-                  icon="tdkcorretora_email-icon.svg"
+                  icon="tdkcorretora_seguros_email-icon.svg"
                   handleChange={data => setEmail(data)}
                   value={email}
                   maxChar="100"
@@ -134,7 +134,7 @@ const Contato: React.FC = () => {
                   type="phone"
                   name="TELEFONE"
                   color="white"
-                  icon="tdkcorretora_phone-icon.svg"
+                  icon="tdkcorretora_seguros_phone-icon.svg"
                   handleChange={data => setTelefone(data)}
                   value={telefone}
                   contact
@@ -143,7 +143,7 @@ const Contato: React.FC = () => {
               <Col>
                 <Select
                   name="MOTIVO"
-                  icon="tdkcorretora_info-icon.svg" // @ts-ignore
+                  icon="tdkcorretora_seguros_info-icon.svg" // @ts-ignore
                   options={["contato", "associar"]}
                   handleChange={data => setMotivo(data)}
                   contact
@@ -154,7 +154,7 @@ const Contato: React.FC = () => {
               <Col>
                 <Textarea
                   name="MENSAGEM"
-                  icon="tdkcorretora_message-icon.svg"
+                  icon="tdkcorretora_seguros_message-icon.svg"
                   handleChange={data => setMensagem(data)}
                   contact
                 />
