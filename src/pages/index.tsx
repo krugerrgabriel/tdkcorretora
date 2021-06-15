@@ -3,6 +3,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 
 import Navbar from "../components/Navbar";
 import Sitemap from "../components/Sitemap";
+import Seo from "../components/Seo";
 
 import Inicio from "../sections/Inicio";
 import Seguros from "../sections/Seguros";
@@ -40,6 +41,7 @@ const Home: React.FC = () => {
 
   return (
     <>
+      <Seo />
       <Navbar handlePage={data => setPage(data)} logo={logo} />
       <Sitemap
         activeTab={tab}
