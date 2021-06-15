@@ -66,7 +66,7 @@ const Noticias: React.FC = () => {
                 let finalDate = dia + "/" + mes + "/" + ano;
                 return (
                   <Col key={index}>
-                    <Card to={`noticia?id=${noticia._id}`}>
+                    <Card to={`blog/noticia?id=${noticia._id}`}>
                       <CardImage
                         src={`https://morning-meadow-26583.herokuapp.com/images/${noticia.image}`}
                         alt={`TDK Corretora de Seguros Notícia ${noticia.name}`}
