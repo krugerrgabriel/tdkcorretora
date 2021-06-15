@@ -1,13 +1,8 @@
 import React from "react";
 import { Col } from "react-bootstrap";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import {
-  Body,
-  Button,
-  PageTitle,
-  PageSubtitle,
-  Line,
-} from "../../styles/elements";
+import { Body, Button } from "../../styles/elements";
 import { NewContainer, NewRow, Card, ImageIcon } from "./styles";
 
 import { ISeguros } from "./interfaces";

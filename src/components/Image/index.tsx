@@ -38,7 +38,7 @@ const Image = ({ src, ...rest }) => {
     return <img srcSet={publicURL} {...rest} />;
   }
 
-  return <Img fluid={childImageSharp.fluid} {...rest} />;
+  return <Img fluid={childImageSharp.fluid} {...rest} loading="eager" />;
 };
 
 Image.propTypes = {
