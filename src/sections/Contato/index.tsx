@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
+import { navigate } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 
 import {
   Body,
   Element,
-  Title,
   Button,
   FullImage,
   PageTitle,
   PageSubtitle,
   Line,
 } from "../../styles/elements";
-import { Inputs, NewContainer, Form } from "./styles";
+import { NewContainer, Form } from "./styles";
 
 import { Input, Select, Textarea } from "../../components/Form";
+import Alert from "../../components/Alert";
 
 const Contato: React.FC = () => {
   const [nome, setNome] = useState("");
@@ -23,33 +24,61 @@ const Contato: React.FC = () => {
   const [mensagem, setMensagem] = useState("");
   const [status, setStatus] = useState({});
 
+  const [alertStatus, setAlertStatus] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
+  const [alertActive, setAlertActive] = useState(false);
+
+  const hideAlert = () => {
+    setAlertActive(false);
+  };
+
   const handleValidate = async () => {
+    setAlertStatus(true);
     if (nome == "" || nome == " ") {
-      alert("nome error");
+      setAlertMessage("O nome precisa ser preenchido!");
+      setTimeout(() => {
+        setAlertActive(true);
+      }, 500);
       return null;
     }
     if (email == "" || email == " " || email.indexOf("@") == -1) {
-      alert("email error");
+      setAlertMessage("E-mail não preenchido ou com erro de preenchimento!");
+      setTimeout(() => {
+        setAlertActive(true);
+      }, 500);
       return null;
     }
     if (telefone == "" || telefone == " " || telefone.indexOf("_") != -1) {
-      alert("telefone error");
+      setAlertMessage("O telefone precisa ser preenchido!");
+      setTimeout(() => {
+        setAlertActive(true);
+      }, 500);
       return null;
     }
     if (motivo == "" || motivo == " ") {
-      alert("motivo error");
+      setAlertMessage("O motivo precisa ser preenchido!");
+      setTimeout(() => {
+        setAlertActive(true);
+      }, 500);
       return null;
     }
     if (mensagem == "" || mensagem == " ") {
-      alert("mensagem error");
+      setAlertMessage("A mensagem precisa ser preenchida!");
+      setTimeout(() => {
+        setAlertActive(true);
+      }, 500);
       return null;
     }
+    setAlertMessage("O contato está sendo enviado. Por favor aguarde....");
+    setTimeout(() => {
+      setAlertActive(true);
+    }, 500);
     let response = await fetch(
       "https://morning-meadow-26583.herokuapp.com/mail",
       {
         method: "POST",
         headers: new Headers({
-          "Content-Type": "application/x-www-form-urlencoded", // <-- Specifying the Content-Type
+          "Content-type": "application/json; charset=UTF-8",
         }),
         body: JSON.stringify({
           nome,
@@ -64,14 +93,40 @@ const Contato: React.FC = () => {
   };
 
   useEffect(() => {
+    console.log(status);
     // @ts-ignore
-    if (status.errorcode == "none") {
-      setNome("");
+    if (alertStatus) {
+      if (status.errorcode == "none") {
+        setAlertActive(false);
+        setAlertMessage("");
+        setTimeout(() => {
+          setAlertMessage("Contato enviado com êxito :)");
+          setTimeout(() => {
+            setAlertActive(true);
+          }, 150);
+        }, 250);
+      } else {
+        setAlertActive(false);
+        setAlertMessage("");
+        setTimeout(() => {
+          setAlertMessage("Erro ao enviar contato :(");
+          setTimeout(() => {
+            setAlertActive(true);
+          }, 150);
+        }, 250);
+      }
     }
   }, [status]);
 
   return (
     <Body>
+      <Alert
+        message={alertMessage}
+        active={alertActive}
+        handleCallback={() => hideAlert()}
+        handleClose={() => hideAlert()}
+        options={false}
+      />
       <FullImage
         src="tdkcorretora_seguros_contato-background.png"
         alt="TDK Corretora Sobre Nós Background"
