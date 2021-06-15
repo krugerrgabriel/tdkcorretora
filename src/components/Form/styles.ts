@@ -49,7 +49,7 @@ export const Corpse = styled.div<{ color?: String; halfWidth?: Boolean; }>`
         -moz-appearance: none;
 
         background: transparent;
-        background-image: url("http://www.tdkcorretora.com.br/assets/img/tdkcorretora_down-icon.svg");
+        background-image: url("https://www.tdkcorretora.com.br/assets/img/tdkcorretora_seguros_down-icon.svg");
         background-repeat: no-repeat;
         background-position-x: 95%;
         background-position-y: 5px;
