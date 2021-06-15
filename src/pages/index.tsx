@@ -36,7 +36,15 @@ const Home: React.FC = () => {
   };
 
   useEffect(() => {
-    getData();
+    getData().then(async () => {
+      setTimeout(() => {
+        document.getElementById("___loader").style.transition = "all 1s";
+        document.getElementById("___loader").style.opacity = 0;
+        setTimeout(() => {
+          document.getElementById("___loader").style.display = "none";
+        }, 150);
+      }, 50);
+    });
   }, []);
 
   return (
