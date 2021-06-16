@@ -52,7 +52,10 @@ export const Input: React.FC<IInput> = props => {
       >
         {props.name}
       </InputText>
-      <InputIcon src={props.icon} alt={`TDK Corretora ${props.type} Icon`} />
+      <InputIcon
+        src={props.icon}
+        alt={`TDK Corretora de Seguros ${props.type} Icon`}
+      />
       <InputMask
         type={inputType}
         value={props.value}
@@ -87,7 +90,7 @@ export const Select: React.FC<ISelect> = props => {
       <InputText active={active} contact={contactSection}>
         {props.name}
       </InputText>
-      <InputIcon src={props.icon} />
+      <InputIcon src={props.icon} alt="TDK Corretora de Seguros" />
       <select
         onChange={event => props.handleChange(event.target.value)}
         onFocus={() => setActive(true)}
@@ -129,7 +132,7 @@ export const Textarea: React.FC<ITextarea> = props => {
       <InputText active={active} contact={contactSection}>
         {props.name}
       </InputText>
-      <InputIcon src={props.icon} />
+      <InputIcon src={props.icon} alt="TDK Corretora de Seguros" />
       <textarea // @ts-ignore
         onKeyUp={event => props.handleChange(event.target.value)}
         onFocus={() => setActive(true)}

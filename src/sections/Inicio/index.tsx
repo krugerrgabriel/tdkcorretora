@@ -5,7 +5,7 @@ import { NewContainer, NewBody } from "./styles";
 
 const Inicio: React.FC = () => {
   return (
-    <NewBody>
+    <NewBody id="TDK Corretora de Seguros">
       <FullImage
         className="fullImageWrapper"
         src="tdkcorretora_seguros_background.png"

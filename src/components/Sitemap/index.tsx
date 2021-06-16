@@ -22,7 +22,7 @@ const Sitemap: React.FC<ISitemap> = props => {
             <Image
               src="tdkcorretora_seguros_sitemap-inicio.svg"
               className="image"
-              alt="TDK Corretora Ícone Inicio"
+              alt="TDK Corretora de Seguros Ícone Inicio"
             />
             <span>INICIO</span>
           </Option>
@@ -33,7 +33,7 @@ const Sitemap: React.FC<ISitemap> = props => {
             <Image
               src="tdkcorretora_seguros_sitemap-seguros.svg"
               className="image"
-              alt="TDK Corretora Ícone Inicio"
+              alt="TDK Corretora de Seguros Ícone Inicio"
             />
             <span>SEGUROS</span>
           </Option>
@@ -48,7 +48,7 @@ const Sitemap: React.FC<ISitemap> = props => {
                 <Image
                   src={`tdkcorretora_seguros_sitemap-${item.pageName}.svg`}
                   className="image"
-                  alt={`TDK Corretora Ícone ${item.title}`}
+                  alt={`TDK Corretora de Seguros Ícone ${item.title}`}
                 />
                 <span>{item.title.replaceAll("Seguro", "")}</span>
               </Option>
@@ -61,7 +61,7 @@ const Sitemap: React.FC<ISitemap> = props => {
             <Image
               src="tdkcorretora_seguros_sitemap-sobre.svg"
               className="image"
-              alt="TDK Corretora Ícone Sobre"
+              alt="TDK Corretora de Seguros Ícone Sobre"
             />
             <span>SOBRE NÓS</span>
           </Option>
@@ -72,7 +72,7 @@ const Sitemap: React.FC<ISitemap> = props => {
             <Image
               src="tdkcorretora_seguros_sitemap-contato.svg"
               className="image"
-              alt="TDK Corretora Ícone Contato"
+              alt="TDK Corretora de Seguros Ícone Contato"
             />
             <span>CONTATO</span>
           </Option>
@@ -83,7 +83,7 @@ const Sitemap: React.FC<ISitemap> = props => {
             <Image
               src="tdkcorretora_seguros_sitemap-noticias.svg"
               className="image"
-              alt="TDK Corretora Ícone Notícias"
+              alt="TDK Corretora de Seguros Ícone Notícias"
             />
             <span>NOTÍCIAS</span>
           </Option>
@@ -94,7 +94,7 @@ const Sitemap: React.FC<ISitemap> = props => {
             <Image
               src="tdkcorretora_seguros_sitemap-parceiros.svg"
               className="image"
-              alt="TDK Corretora Ícone Parceiros"
+              alt="TDK Corretora de Seguros Ícone Parceiros"
             />
             <span>PARCEIROS</span>
           </Option>

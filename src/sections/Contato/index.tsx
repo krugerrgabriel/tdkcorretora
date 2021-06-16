@@ -119,7 +119,7 @@ const Contato: React.FC = () => {
   }, [status]);
 
   return (
-    <Body>
+    <Body id="TDK Corretora de Seguros">
       <Alert
         message={alertMessage}
         active={alertActive}
@@ -129,17 +129,19 @@ const Contato: React.FC = () => {
       />
       <FullImage
         src="tdkcorretora_seguros_contato-background.png"
-        alt="TDK Corretora Sobre Nós Background"
+        alt="TDK Corretora de Seguros Sobre Nós Background"
       />
       <Element
         src="tdkcorretora_seguros_element-left-white.svg"
         left="true"
         bottom="true"
+        alt="TDK Corretora de Seguros Elemento Branco"
       />
       <Element
         src="tdkcorretora_seguros_element-right-white.svg"
         right="true"
         top="true"
+        alt="TDK Corretora de Seguros Elemento Branco"
       />
 
       <NewContainer>

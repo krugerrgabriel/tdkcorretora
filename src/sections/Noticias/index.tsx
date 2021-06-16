@@ -37,7 +37,7 @@ const Noticias: React.FC = () => {
   /* @ts-ignore */
   if (noticias.errorcode == "none") {
     return (
-      <Body>
+      <Body id="TDK Corretora de Seguros">
         <FullImage
           src="tdkcorretora_seguros_noticias-background.png"
           alt="TDK Corretora de Seguros Notícias Background"

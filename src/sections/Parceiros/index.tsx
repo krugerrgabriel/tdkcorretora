@@ -16,18 +16,20 @@ const Parceiros: React.FC = () => {
     <Body id="TDK Corretora de Seguros">
       <FullImage
         src="tdkcorretora_seguros_parceiros-background.png"
-        alt="TDK Corretora Parceiros Background"
+        alt="TDK Corretora de Seguros Parceiros Background"
         zIndex
       />
       <Element
         src="tdkcorretora_seguros_element-left-white.svg"
         left="true"
         top="true"
+        alt="TDK Corretora de Seguros Elemento Branco"
       />
       <Element
         src="tdkcorretora_seguros_element-right-white.svg"
         right="true"
         bottom="true"
+        alt="TDK Corretora de Seguros Elemento Branco"
       />
       <NewContainer className="seguro">
         <Row>

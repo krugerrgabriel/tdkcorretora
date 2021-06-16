@@ -170,7 +170,7 @@ const Home: React.FC = () => {
                 <FullImage
                   className="fullImageWrapper"
                   src="tdkcorretora_seguros-wallpaper.png"
-                  alt="TDK Corretora Seguros Background Image"
+                  alt="TDK Corretora de Seguros Background Image"
                 />
                 <div className="slide">
                   <Seguros /* @ts-ignore */
@@ -191,10 +191,10 @@ const Home: React.FC = () => {
                         <Element
                           src={
                             index % 2
-                              ? "tdkcorretora_element-left-white.svg"
-                              : "tdkcorretora_element-left-yellow.svg"
+                              ? "tdkcorretora_seguros_element-left-white.svg"
+                              : "tdkcorretora_seguros_element-left-yellow.svg"
                           }
-                          alt="TDK Corretora Element"
+                          alt="TDK Corretora de Seguros Element"
                           left="true"
                           top="true"
                           key={0}
@@ -202,10 +202,10 @@ const Home: React.FC = () => {
                         <Element
                           src={
                             index % 2
-                              ? "tdkcorretora_element-right-white.svg"
-                              : "tdkcorretora_element-right-yellow.svg"
+                              ? "tdkcorretora_seguros_element-right-white.svg"
+                              : "tdkcorretora_seguros_element-right-yellow.svg"
                           }
-                          alt="TDK Corretora Element"
+                          alt="TDK Corretora de Seguros Element"
                           right="true"
                           bottom="true"
                           key={1}
@@ -213,7 +213,7 @@ const Home: React.FC = () => {
 
                         <FullImage
                           src={`tdkcorretora_${seguro.pageName}-background.png`}
-                          alt={`TDK Corretora ${seguro.title} Background`}
+                          alt={`TDK Corretora de Seguros ${seguro.title} Background`}
                         />
                         <div className="slide">
                           <Seguro01 seguro={seguro} />
@@ -234,8 +234,8 @@ const Home: React.FC = () => {
 
               <div className="section sobre">
                 <FullImage
-                  src="tdkcorretora_sobrenos-background.png"
-                  alt="TDK Corretora Sobre Nós Background"
+                  src="tdkcorretora_seguros_sobrenos-background.png"
+                  alt="TDK Corretora de Seguros Sobre Nós Background"
                 />
                 <div className="slide">
                   <Sobre01 />

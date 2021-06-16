@@ -8,7 +8,7 @@ import { ISeguros } from "./interfaces";
 
 const Seguros: React.FC<ISeguros> = ({ seguros, fullpageApi }) => {
   return (
-    <Body>
+    <Body id="TDK Corretora de Seguros">
       <NewContainer className="seguro">
         <NewRow className="justify-content-center">
           {seguros.errorcode == "none"
