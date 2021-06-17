@@ -26,6 +26,7 @@ export default function HTML(props) {
             backgroundColor: "#7C7C7B",
             display: "flex",
             justifyContent: "center",
+            flexDirection: "column",
             position: "absolute",
             left: 0,
             top: 0,
@@ -73,6 +74,23 @@ export default function HTML(props) {
               />
             </g>
           </svg>
+          <p
+            style={{
+              marginTop: "36px",
+              lineHeight: "32px",
+              textAlign: "center",
+              color: "#FFFFFF",
+              fontSize: "28px",
+              fontWeight: "500",
+              zIndex: 999,
+              transition: 1,
+            }}
+          >
+            {" "}
+            Carregando...
+            <br />
+            Por favor aguarde :)
+          </p>
         </div>
         <div
           key={`body`}
