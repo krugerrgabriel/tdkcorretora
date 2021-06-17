@@ -90,15 +90,15 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     // ID do Google Analytics
-    //     trackingId: "UA-codigo",
-    //     // Delay em milisegundos do mínimo que precisa ficar na página para contar como impressão
-    //     pageTransitionDelay: 0,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // ID do Google Analytics
+        trackingId: "UA-178042353-3",
+        // Delay em milisegundos do mínimo que precisa ficar na página para contar como impressão
+        pageTransitionDelay: 0,
+      },
+    },
     {
       resolve: `gatsby-plugin-offline`,
       options: {
