@@ -46,7 +46,7 @@ export default function HTML(props) {
             <animate
               attributeName="fill"
               values="#FFCC00;#FFFFFF;#FFCC00;#FFFFFF;#FFCC00;#FFFFFF;#FFCC00;#FFFFFF;#FFCC00;#FFFFFF;#FFCC00;#FFFFFF;#FFCC00;#FFFFFF;#FFCC00;#FFFFFF;#FFCC00;#FFFFFF;#FFCC00;#FFFFFF;#FFCC00;#FFFFFF"
-              dur="1s"
+              dur="22s"
               repeatCount="indefinite"
             />
             <g
