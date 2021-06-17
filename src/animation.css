@@ -1,0 +1,30 @@
+svg{
+    fill: red;
+    transition: 0.9s;
+    
+    z-index: 999;
+
+    -webkit-animation-name: colorChange;
+    animation-name: colorChange;
+    -webkit-animation-timing-function: infinite;
+    animation-timing-function: infinite;
+    animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+svg *{
+    fill: red;
+}
+
+@keyframes colorChange{
+    0%{
+        fill: #FFCC00;
+    }
+    50%{
+        fill: #ffffff;
+    }
+    100%{
+        fill: #FFCC00;
+    }
+}
