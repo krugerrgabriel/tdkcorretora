@@ -125,3 +125,38 @@ div.top64px{
 .container.seguro{
     max-width: 886px !important;
 }
+
+.rsc{
+    position: absolute;
+    bottom: 24px;
+    right: 76px;
+}
+
+.rsc-float-button{
+    background-color: #FFCC00;
+
+    right: 76px !important;
+
+    z-index: 997 !important;
+}
+
+.rsc-container{
+    right: 76px !important;
+}
+
+.rsc .rsc-header{
+    background-color: #FFCC00;
+}
+
+.rsc .rsc-content{
+    background-color: rgb(230, 230, 230);
+    margin-top: 0 !important;
+}
+
+.rsc .rsc-footer{
+    background-color: rgb(255, 255, 255);
+}
+
+.rsc .rsc-ts-bubble{
+    background-color: #FFCC00;
+}

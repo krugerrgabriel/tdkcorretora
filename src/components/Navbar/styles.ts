@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Image from '../Image';
 
 import { Container } from 'react-bootstrap';
-// import { Container } from "../../styles/elements";
 
 export const NewContainer = styled(Container)<{ positionRelative: Boolean; }>`
     display: flex;

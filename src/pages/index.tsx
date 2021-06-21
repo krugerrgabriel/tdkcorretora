@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ChatBot from "react-simple-chatbot";
 import ReactFullpage from "@fullpage/react-fullpage";
 
 import Navbar from "../components/Navbar";
@@ -56,6 +57,39 @@ const Home: React.FC = () => {
         handlePage={data => setPage(data)}
         // @ts-ignore
         seguros={seguros}
+      />
+      <ChatBot
+        floating={true}
+        steps={[
+          {
+            id: "1",
+            message: "Olá :D Como posso te ajudar?",
+            trigger: "2",
+          },
+          {
+            id: "2",
+            options: [
+              { value: 1, label: "Quero sei lá o que", trigger: "3" },
+              { value: 2, label: "Quero tal coisa", trigger: "4" },
+              { value: 3, label: "Quero quero", trigger: "5" },
+            ],
+          },
+          {
+            id: "3",
+            message: "Você quer sei lá o que?",
+            trigger: "2",
+          },
+          {
+            id: "4",
+            message: "Você quer tal coisa?",
+            trigger: "2",
+          },
+          {
+            id: "5",
+            message: "Quero quero!",
+            trigger: "2",
+          },
+        ]}
       />
       <ReactFullpage
         licenseKey={"GPLv3"}
