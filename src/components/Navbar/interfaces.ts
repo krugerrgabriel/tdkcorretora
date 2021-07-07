@@ -1,5 +1,5 @@
 export interface INavbar{
     logo?: any;
-    positionRelative?: Boolean;
+    positionrelative?: Boolean;
     handlePage: Function;
 }

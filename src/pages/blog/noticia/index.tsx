@@ -47,7 +47,7 @@ const noticia: React.FC = ({ location }) => {
           <Navbar
             handlePage={() => navigate("../#noticias")}
             logo="white"
-            positionRelative
+            positionrelative
           />
           <NewContainer className="seguro">
             <Box>

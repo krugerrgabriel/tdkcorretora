@@ -7,9 +7,9 @@ import { INavbar } from "./interfaces";
 import Image from "../Image";
 
 const Navbar: React.FC<INavbar> = props => {
-  const positionRelative = props.positionRelative ? true : false;
+  const positionrelative = props.positionrelative ? "true" : undefined;
   return (
-    <NewContainer positionRelative={positionRelative}>
+    <NewContainer positionrelative={positionrelative}>
       <NewImage
         src={`tdkcorretora_seguros_logo-${props.logo}.svg`}
         alt="TDK Corretora de Seguros Logo Branca"

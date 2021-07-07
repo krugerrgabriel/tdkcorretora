@@ -92,6 +92,7 @@ export const Select: React.FC<ISelect> = props => {
       </InputText>
       <InputIcon src={props.icon} alt="TDK Corretora de Seguros" />
       <select
+        value=""
         onChange={event => props.handleChange(event.target.value)}
         onFocus={() => setActive(true)}
         onBlur={event => {
@@ -109,7 +110,7 @@ export const Select: React.FC<ISelect> = props => {
         }}
       >
         {/* @ts-ignore */}
-        <option value="" selected disabled></option>
+        <option value="" disabled></option>
         {props.options.map((option, index) => {
           return (
             <option value={option} key={index}>

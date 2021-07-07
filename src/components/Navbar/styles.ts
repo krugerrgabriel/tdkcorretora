@@ -4,13 +4,13 @@ import Image from '../Image';
 
 import { Container } from 'react-bootstrap';
 
-export const NewContainer = styled(Container)<{ positionRelative: Boolean; }>`
+export const NewContainer = styled(Container)<{ positionrelative: Boolean; }>`
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
 
-    position: ${(props) => props.positionRelative ? 'relative' : 'fixed'};
+    position: ${(props) => props.positionrelative ? 'relative' : 'fixed'};
     top: 24px;
     left: 0;
     right: 0;

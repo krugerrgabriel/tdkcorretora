@@ -30,7 +30,7 @@ const blog: React.FC = () => {
         <Navbar
           handlePage={() => navigate("../#noticias")}
           logo="white"
-          positionRelative
+          positionrelative
         />
         <NewContainer className="seguro">
           <Box>
