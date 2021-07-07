@@ -1,0 +1,593 @@
+{
+  "errorcode": "none",
+  "seguros": [
+    {
+      "_id": "60a6a4cfa69c032a348513ac",
+      "title": "Seguro Transporte",
+      "description": "Seguro relativo a bens e mercadorias transportadas. Compreendendo, assim, seguros que visam cobrir os riscos relacionados às viagens nacionais, internacionais, por quaisquer meios de transporte, e também, os Seguros de Responsabilidade Civil dos Transportadores de Cargas.",
+      "salesPhrase": "Nosso seguro transporte é daora cobre uns bagulho ai e dale e também blablablabla só troço maluco.",
+      "pageName": "seguro-transporte",
+      "pins": [
+        {
+          "_id": "60e5f221005b95417c3047f8",
+          "name": "Ponto 1"
+        },
+        {
+          "_id": "60e5f221005b95417c3047f9",
+          "name": "Ponto 2"
+        },
+        {
+          "_id": "60e5f221005b95417c3047fa",
+          "name": "Ponto 3"
+        },
+        {
+          "_id": "60e5f221005b95417c3047fb",
+          "name": "Ponto 4"
+        },
+        {
+          "_id": "60e5f221005b95417c3047fc",
+          "name": "Ponto 5"
+        }
+      ],
+      "coverage": [
+        {
+          "_id": "60e5f221005b95417c3047fd",
+          "image": "tdkcorretora_image-box.svg",
+          "title": "TITULO",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam."
+        },
+        {
+          "_id": "60e5f221005b95417c3047fe",
+          "image": "tdkcorretora_image-box.svg",
+          "title": "TITULO",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam."
+        },
+        {
+          "_id": "60e5f221005b95417c3047ff",
+          "image": "tdkcorretora_image-box.svg",
+          "title": "TITULO",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam."
+        }
+      ],
+      "assistance": [
+        {
+          "_id": "60e5f221005b95417c304800",
+          "description": "Colisão e/ou capotagem e/ou abalroamento e/ou tombamento do veículo transportador;"
+        },
+        {
+          "_id": "60e5f221005b95417c304801",
+          "description": "Incêndio ou explosão no veículo transportador."
+        },
+        {
+          "_id": "60e5f221005b95417c304802",
+          "title": "Cobertura para Desaparecimento de Carga",
+          "description": "Roubo e Apropriação indébita."
+        },
+        {
+          "_id": "60e5f221005b95417c304803",
+          "title": "Coberturas Adicionais",
+          "description": "Avarias de cargas, Limpeza de Pista, Container, e outros."
+        }
+      ],
+      "questions": [
+        {
+          "_id": "60e5f221005b95417c304806",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60e5f221005b95417c304807",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60e5f221005b95417c304808",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60e5f221005b95417c304809",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60e5f221005b95417c30480a",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60e5f221005b95417c30480b",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        }
+      ],
+      "icon": "tdkcorretora_seguro-transporte.svg",
+      "createdAt": "2021-05-20T18:05:03.049Z",
+      "__v": 0
+    },
+    {
+      "_id": "60a6a4e4a69c032a348513c3",
+      "title": "Seguro de Vida",
+      "description": "Não é possível prever, mas é possível planejar uma estabilidade financeira caso algum incidente ou acidente ocorra. Contratar um seguro de vida é uma importante proteção financeira.",
+      "pageName": "seguro-vida",
+      "pins": [
+        {
+          "_id": "60a6a4e4a69c032a348513c4",
+          "name": "Ponto 1"
+        },
+        {
+          "_id": "60a6a4e4a69c032a348513c5",
+          "name": "Ponto 2"
+        },
+        {
+          "_id": "60a6a4e4a69c032a348513c6",
+          "name": "Ponto 3"
+        },
+        {
+          "_id": "60a6a4e4a69c032a348513c7",
+          "name": "Ponto 4"
+        },
+        {
+          "_id": "60a6a4e4a69c032a348513c8",
+          "name": "Ponto 5"
+        }
+      ],
+      "coverage": [
+        {
+          "_id": "60a6a4e4a69c032a348513c9",
+          "image": "tdkcorretora_image-box.svg",
+          "title": "TITULO",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam."
+        },
+        {
+          "_id": "60a6a4e4a69c032a348513ca",
+          "image": "tdkcorretora_image-box.svg",
+          "title": "TITULO",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam."
+        },
+        {
+          "_id": "60a6a4e4a69c032a348513cb",
+          "image": "tdkcorretora_image-box.svg",
+          "title": "TITULO",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam."
+        }
+      ],
+      "assistance": [
+        {
+          "_id": "60a6a4e4a69c032a348513cc",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 01",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a4e4a69c032a348513cd",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 02",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a4e4a69c032a348513ce",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 03",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a4e4a69c032a348513cf",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 04",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a4e4a69c032a348513d0",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 05",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a4e4a69c032a348513d1",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 06",
+          "description": "Descrição Serviço"
+        }
+      ],
+      "questions": [
+        {
+          "_id": "60a6a4e4a69c032a348513d4",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a4e4a69c032a348513d5",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a4e4a69c032a348513d6",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a4e4a69c032a348513d7",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a4e4a69c032a348513d8",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a4e4a69c032a348513d9",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        }
+      ],
+      "icon": "tdkcorretora_seguro-vida.svg",
+      "createdAt": "2021-05-20T18:05:24.505Z",
+      "__v": 0
+    },
+    {
+      "_id": "60a6a4f7a69c032a348513da",
+      "title": "Seguro Residencial",
+      "description": "O seguro residencial é a proteção do seu patrimônio, seu lar e sua família. Sua casa guarda a sua história, as suas conquistas e  tudo o que tem valor pra você.",
+      "pageName": "seguro-residencial",
+      "pins": [
+        {
+          "_id": "60a6a4f7a69c032a348513db",
+          "name": "Ponto 1"
+        },
+        {
+          "_id": "60a6a4f7a69c032a348513dc",
+          "name": "Ponto 2"
+        },
+        {
+          "_id": "60a6a4f7a69c032a348513dd",
+          "name": "Ponto 3"
+        },
+        {
+          "_id": "60a6a4f7a69c032a348513de",
+          "name": "Ponto 4"
+        },
+        {
+          "_id": "60a6a4f7a69c032a348513df",
+          "name": "Ponto 5"
+        }
+      ],
+      "coverage": [
+        {
+          "_id": "60a6a4f7a69c032a348513e0",
+          "image": "tdkcorretora_image-box.svg",
+          "title": "TITULO",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam."
+        },
+        {
+          "_id": "60a6a4f7a69c032a348513e1",
+          "image": "tdkcorretora_image-box.svg",
+          "title": "TITULO",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam."
+        },
+        {
+          "_id": "60a6a4f7a69c032a348513e2",
+          "image": "tdkcorretora_image-box.svg",
+          "title": "TITULO",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam."
+        }
+      ],
+      "assistance": [
+        {
+          "_id": "60a6a4f7a69c032a348513e3",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 01",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a4f7a69c032a348513e4",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 02",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a4f7a69c032a348513e5",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 03",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a4f7a69c032a348513e6",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 04",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a4f7a69c032a348513e7",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 05",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a4f7a69c032a348513e8",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 06",
+          "description": "Descrição Serviço"
+        }
+      ],
+      "questions": [
+        {
+          "_id": "60a6a4f7a69c032a348513eb",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a4f7a69c032a348513ec",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a4f7a69c032a348513ed",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a4f7a69c032a348513ee",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a4f7a69c032a348513ef",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a4f7a69c032a348513f0",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        }
+      ],
+      "icon": "tdkcorretora_seguro-residencial.svg",
+      "createdAt": "2021-05-20T18:05:43.869Z",
+      "__v": 0
+    },
+    {
+      "_id": "60a6a51aa69c032a348513f1",
+      "title": "Seguro Ambiental",
+      "description": "Destina-se exclusivamente aos transportadores de mercadorias e fabricantes que transportam no meio rodoviário, produtos perigosos.  Coberturas que poderão ser contratadas.<br>Contaminação ou poluição consequente de vazamento de produtos perigosos - natureza súbita e acidental;<br>Depesas com serviços de limpeza e de remediação de impacto ambiental, desde que determinada por órgão competente;<br>Lucros cessantes ou perdas financeiras incorridas pelos terceiros reclamantes;<br>Custas judiciais e honorárias de advogados nomeados pelo segurado, para defesa judicial de seus direito no foro civil.",
+      "pageName": "seguro-ambiental",
+      "pins": [
+        {
+          "_id": "60a6a51aa69c032a348513f2",
+          "name": "Ponto 1"
+        },
+        {
+          "_id": "60a6a51aa69c032a348513f3",
+          "name": "Ponto 2"
+        },
+        {
+          "_id": "60a6a51aa69c032a348513f4",
+          "name": "Ponto 3"
+        },
+        {
+          "_id": "60a6a51aa69c032a348513f5",
+          "name": "Ponto 4"
+        },
+        {
+          "_id": "60a6a51aa69c032a348513f6",
+          "name": "Ponto 5"
+        }
+      ],
+      "coverage": [
+        {
+          "_id": "60a6a51aa69c032a348513f7",
+          "image": "tdkcorretora_image-box.svg",
+          "title": "TITULO",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam."
+        },
+        {
+          "_id": "60a6a51aa69c032a348513f8",
+          "image": "tdkcorretora_image-box.svg",
+          "title": "TITULO",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam."
+        },
+        {
+          "_id": "60a6a51aa69c032a348513f9",
+          "image": "tdkcorretora_image-box.svg",
+          "title": "TITULO",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam."
+        }
+      ],
+      "assistance": [
+        {
+          "_id": "60a6a51aa69c032a348513fa",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 01",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a51aa69c032a348513fb",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 02",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a51aa69c032a348513fc",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 03",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a51aa69c032a348513fd",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 04",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a51aa69c032a348513fe",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 05",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a51aa69c032a348513ff",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 06",
+          "description": "Descrição Serviço"
+        }
+      ],
+      "questions": [
+        {
+          "_id": "60a6a51aa69c032a34851402",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a51aa69c032a34851403",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a51aa69c032a34851404",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a51aa69c032a34851405",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a51aa69c032a34851406",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a51aa69c032a34851407",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        }
+      ],
+      "icon": "tdkcorretora_seguro-ambiental.svg",
+      "createdAt": "2021-05-20T18:06:18.231Z",
+      "__v": 0
+    },
+    {
+      "_id": "60a6a52ba69c032a34851408",
+      "title": "Seguro Patrimonial",
+      "description": "Toda a proteção e segurança que seu patrimônio precisa.Seguros para pequenas e médias empresas: comércios, indústrias, prestadores de serviços e profissionais liberais.",
+      "pageName": "seguro-patrimonial",
+      "pins": [
+        {
+          "_id": "60a6a52ba69c032a34851409",
+          "name": "Ponto 1"
+        },
+        {
+          "_id": "60a6a52ba69c032a3485140a",
+          "name": "Ponto 2"
+        },
+        {
+          "_id": "60a6a52ba69c032a3485140b",
+          "name": "Ponto 3"
+        },
+        {
+          "_id": "60a6a52ba69c032a3485140c",
+          "name": "Ponto 4"
+        },
+        {
+          "_id": "60a6a52ba69c032a3485140d",
+          "name": "Ponto 5"
+        }
+      ],
+      "coverage": [
+        {
+          "_id": "60a6a52ba69c032a3485140e",
+          "image": "tdkcorretora_image-box.svg",
+          "title": "TITULO",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam."
+        },
+        {
+          "_id": "60a6a52ba69c032a3485140f",
+          "image": "tdkcorretora_image-box.svg",
+          "title": "TITULO",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam."
+        },
+        {
+          "_id": "60a6a52ba69c032a34851410",
+          "image": "tdkcorretora_image-box.svg",
+          "title": "TITULO",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam."
+        }
+      ],
+      "assistance": [
+        {
+          "_id": "60a6a52ba69c032a34851411",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 01",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a52ba69c032a34851412",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 02",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a52ba69c032a34851413",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 03",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a52ba69c032a34851414",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 04",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a52ba69c032a34851415",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 05",
+          "description": "Descrição Serviço"
+        },
+        {
+          "_id": "60a6a52ba69c032a34851416",
+          "icon": "tdkcorretora_image-box.svg",
+          "title": "TITULO SERVIÇO 06",
+          "description": "Descrição Serviço"
+        }
+      ],
+      "questions": [
+        {
+          "_id": "60a6a52ba69c032a34851419",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a52ba69c032a3485141a",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a52ba69c032a3485141b",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a52ba69c032a3485141c",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a52ba69c032a3485141d",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        },
+        {
+          "_id": "60a6a52ba69c032a3485141e",
+          "question": "Como eu faço pra fazer o bagulho",
+          "answer": "Você pega o bagulho e pau"
+        }
+      ],
+      "icon": "tdkcorretora_seguro-patrimonial.svg",
+      "createdAt": "2021-05-20T18:06:35.425Z",
+      "__v": 0
+    }
+  ]
+}

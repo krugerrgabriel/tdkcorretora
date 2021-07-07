@@ -160,3 +160,7 @@ div.top64px{
 .rsc .rsc-ts-bubble{
     background-color: #FFCC00;
 }
+
+.rsc svg{
+    fill: #7C7C7B;
+}

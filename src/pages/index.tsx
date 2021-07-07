@@ -21,6 +21,8 @@ import Contato from "../sections/Contato";
 import Noticias from "../sections/Noticias";
 import Parceiros from "../sections/Parceiros";
 
+import segurosJSON from "../assets/json/seguros.json";
+
 import { Element, FullImage } from "../styles/elements";
 
 const Home: React.FC = () => {
@@ -30,22 +32,15 @@ const Home: React.FC = () => {
   const [logo, setLogo] = useState("white");
 
   const getData = async () => {
-    let response = await fetch(
-      "https://morning-meadow-26583.herokuapp.com/seguros"
-    );
+    let response = await fetch("../assets/json/seguros.json");
     setSeguros(await response.json());
   };
 
   useEffect(() => {
-    getData().then(async () => {
-      setTimeout(() => {
-        document.getElementById("___loader").style.transition = "all 1s";
-        document.getElementById("___loader").style.opacity = 0;
-        setTimeout(() => {
-          document.getElementById("___loader").style.display = "none";
-        }, 150);
-      }, 50);
-    });
+    setSeguros(segurosJSON);
+    document.getElementById("___loader").style.transition = "all 1s";
+    document.getElementById("___loader").style.opacity = 0;
+    document.getElementById("___loader").style.display = "none";
   }, []);
 
   return (

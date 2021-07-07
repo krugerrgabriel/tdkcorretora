@@ -146,13 +146,12 @@ export const Item = styled.div`
 
     p{
         color: ${(props) => props.theme.white};
-        font-size: 22px;
-        font-weight: 500;
+        font-size: 18px;
+        font-weight: 400;
 
-        margin: 0;
-        margin-top: 24px;
+        margin: 24px 12px 12px 12px;
 
-        text-transform: uppercase;
+        text-align: center;
     }
 
     span{

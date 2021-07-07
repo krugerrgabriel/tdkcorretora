@@ -33,12 +33,7 @@ const Seguro02: React.FC<ISeguro> = ({ seguro }) => {
             return (
               <Col key={index} lg={4}>
                 <Badge>
-                  <BadgeImage
-                    src={item.icon}
-                    alt={`TDK Corretora de Seguros Cobertura ${seguro.title}`}
-                  />
                   <div>
-                    <p> TITULO SERVIÇO </p>
                     <span>{item.description}</span>
                   </div>
                 </Badge>

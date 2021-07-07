@@ -15,16 +15,15 @@ import { ISeguro } from "../../interfaces";
 const Seguro03: React.FC<ISeguro> = ({ seguro }) => {
   let motivos = [
     {
-      title: "ASSOCIADOS",
-      description: "mais de 5 mil",
+      description:
+        "Somos ESPECIALISTAS em Seguro Transporte, Seguro de Pessoas, Condomínios e Outros Ramos que atuamos. Contamos com Corretores Especialistas e Equipe capacitada.",
     },
     {
-      title: "SINISTROS ATENDIDOS",
-      description: "mais de 4 mil",
+      description: "Atendimento Comercial em Todo o Brasil.",
     },
     {
-      title: "PARCEIROS",
-      description: "mais de 8",
+      description:
+        "Em caso de Sinistro, acompanhamos todo o processo de regulação junto à reguladora e companhia de seguro.",
     },
   ];
   return (
