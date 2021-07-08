@@ -96,7 +96,7 @@ export const Badge = styled.div`
 
     margin: 12px 0;
 
-    padding: 10px 16px;
+    padding: 10px 8px;
 
     border-radius: 2px;
 
@@ -106,17 +106,14 @@ export const Badge = styled.div`
         margin-left: 12px;
 
         p{
-            font-size: 20px;
-            font-weight: 500;
-
-            text-transform: uppercase;
-
-            margin: 0;
-        }
-
-        span{
             font-size: 16px;
             font-weight: 400;
+
+            text-align: center;
+
+            line-height: 22px;
+
+            margin: 0;
         }
     }
 `;
@@ -243,7 +240,7 @@ export const QuestionBox = styled.div`
     .faq-content {
         color: ${(props) => props.theme.white};
 
-        font-size: 18px;
+        font-size: 19px;
 
         line-height: 26px;
 

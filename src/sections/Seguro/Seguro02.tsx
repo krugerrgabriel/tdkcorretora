@@ -28,13 +28,13 @@ const Seguro02: React.FC<ISeguro> = ({ seguro }) => {
             </PageSubtitle>
           </Col>
         </Row>
-        <Row>
+        <Row className="justify-content-center">
           {seguro.assistance.map((item, index) => {
             return (
               <Col key={index} lg={4}>
                 <Badge>
                   <div>
-                    <span>{item.description}</span>
+                    <p>{item.description}</p>
                   </div>
                 </Badge>
               </Col>
