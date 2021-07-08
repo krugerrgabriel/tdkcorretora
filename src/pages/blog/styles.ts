@@ -11,9 +11,9 @@ export const NewLink = styled(Link)`
     }
 `;
 
-export const NewContainer = styled(Container)<{ alignItems?: Boolean; }>`
+export const NewContainer = styled(Container)<{ alignitems?: Boolean; }>`
     display: flex;
-    ${(props) => props.alignItems ? 'align-items: center;' : null};
+    ${(props) => props.alignitems ? 'align-items: center;' : null};
     justify-content: center;
     flex-direction: column;
 

@@ -9,7 +9,7 @@ import { ISeguro } from "../../interfaces";
 const Seguro01: React.FC<ISeguro> = ({ seguro }) => {
   return (
     <Body id={`${seguro.title}`}>
-      <NewContainer alignItems className="seguro">
+      <NewContainer alignitems="true" className="seguro">
         <Row>
           <Col>
             <PageTitle>{seguro.title}</PageTitle>
