@@ -9,4 +9,4 @@
 
 Repositório para o site da <a href="http://www.tdkcorretora.com.br">TDK Corretora</a> desenvolvido com Javascript através da biblioteca Gatsby.
 
-Site desenvolvido por <a href="http://www.linkedin.com/in/gabriel-sabara-krüger-a4871518b">Gabriel Sabara Krüger</a>, Web Designer do Marketing da Transdesk.
+Site desenvolvido por <a href="https://www.linkedin.com/in/gabriel-sabara-krüger-a4871518b">Gabriel Sabara Krüger</a>, Web Designer do Marketing da Transdesk.
