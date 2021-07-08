@@ -87,7 +87,7 @@ const Home: React.FC = () => {
         ]}
       />
       <ReactFullpage
-        licenseKey={"GPLv3"}
+        licenseKey="GPLv3"
         anchors={[
           "inicio",
           "seguros",
