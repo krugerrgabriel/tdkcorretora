@@ -7,6 +7,6 @@
   TDK Corretora
 </h1>
 
-Repositório para o site da TDK Corretora desenvolvido com Javascript através da biblioteca Gatsby.
+Repositório para o site da <a href="http://www.tdkcorretora.com.br">TDK Corretora</a> desenvolvido com Javascript através da biblioteca Gatsby.
 
 Site desenvolvido por Gabriel Sabara Krüger, Web Designer do Marketing da Transdesk.
