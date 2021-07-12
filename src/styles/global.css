@@ -181,9 +181,7 @@ div.top64px{
     opacity: 0;
 }
 .smoothed{
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-name: smooth;
+    animation: smooth 1s linear infinite alternate;
 }
 @keyframes smooth{
     0%{
