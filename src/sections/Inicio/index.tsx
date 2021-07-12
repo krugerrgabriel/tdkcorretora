@@ -31,6 +31,7 @@ const Inicio: React.FC = () => {
         <span> EM SEGURO </span>
 
         <div className="icon-scroll"></div>
+        <div className="scroll-text"> Role para baixo</div>
       </NewContainer>
     </NewBody>
   );

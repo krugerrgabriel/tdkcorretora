@@ -15,6 +15,18 @@ a{
     text-decoration: unset;
 }
 
+.scroll-text{
+    position: absolute;
+    bottom: calc(20% - 48px);
+
+    font-size: 22px;
+    font-weight: 300;
+
+    text-transform: uppercase;
+    
+    letter-spacing: 0.5px;
+}
+
 .icon-scroll,
 .icon-scroll:before{
     position: absolute;
@@ -163,4 +175,21 @@ div.top64px{
 
 .rsc svg{
     fill: #7C7C7B;
+}
+
+.noneDisplay{
+    opacity: 0;
+}
+.smoothed{
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: smooth;
+}
+@keyframes smooth{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.2;
+    }
 }

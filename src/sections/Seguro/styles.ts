@@ -30,7 +30,7 @@ export const NewContainer = styled(Container)<{ alignitems?: Boolean; }>`
         font-size: 22px;
         font-weight: 500;
 
-        line-height: 38px;
+        line-height: 32px;
 
         text-align: center;
     }

@@ -39,6 +39,10 @@ const Sitemap: React.FC<ISitemap> = props => {
           </Option>
           {props.seguros.seguros.map((item, index) => {
             activePage++;
+            let pageName =
+              item.title == "Seguro de Vida"
+                ? "VIDA"
+                : item.title.replaceAll("Seguro", "");
             return (
               <Option
                 active={activeTab == activePage ? true : false}
@@ -50,7 +54,7 @@ const Sitemap: React.FC<ISitemap> = props => {
                   className="image"
                   alt={`TDK Corretora de Seguros Ícone ${item.title}`}
                 />
-                <span>{item.title.replaceAll("Seguro", "")}</span>
+                <span>{pageName}</span>
               </Option>
             );
           })}

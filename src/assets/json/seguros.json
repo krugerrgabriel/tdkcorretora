@@ -4,7 +4,7 @@
     {
       "_id": "1",
       "title": "Seguro Transporte",
-      "description": "Seguro relativo a bens e mercadorias transportadas. Compreendendo, assim, seguros que visam cobrir os riscos relacionados às viagens nacionais, internacionais, por quaisquer meios de transporte, e também, os Seguros de Responsabilidade Civil dos Transportadores de Cargas.",
+      "description": "Seguro Transporte é a modalidade relativa a bens e mercadorias transportadas. De maneira geral, visam cobrir os riscos relacionados às viagens nacionais e internacionais, por quaisquer meios de transporte nos modais rodoviários, aéreos e navais. Contemplam esta modalidade os Seguros RCTR-C, o famoso Seguro Responsabilidade Civil dos Transportadores de Cargas, por exemplo.",
       "salesPhrase": "Nosso seguro transporte é daora cobre uns bagulho ai e dale e também blablablabla só troço maluco.",
       "pageName": "seguro-transporte",
       "pins": [
@@ -97,7 +97,7 @@
     {
       "_id": "2",
       "title": "Seguro de Vida",
-      "description": "Não é possível prever, mas é possível planejar uma estabilidade financeira caso algum incidente ou acidente ocorra. Contratar um seguro de vida é uma importante proteção financeira.",
+      "description": "Não é possível prever, mas é possível planejar uma estabilidade financeira caso algum incidente ou acidente ocorra. Contratar um seguro de vida é uma importante proteção financeira. A TDK Corretora oferece coberturas que garantem o amparo financeiro para você e para sua família em casos de falecimento, acidentes, doenças ou outros imprevistos. Escolha coberturas conforme suas necessidades e garanta mais tranquilidade para seu dia-a-dia.",
       "pageName": "seguro-vida",
       "pins": [
         {

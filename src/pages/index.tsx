@@ -4,6 +4,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 
 import Navbar from "../components/Navbar";
 import Sitemap from "../components/Sitemap";
+import MapArrows from "../components/MapArrows";
 import Seo from "../components/Seo";
 
 import Inicio from "../sections/Inicio";
@@ -28,6 +29,8 @@ import { Element, FullImage } from "../styles/elements";
 const Home: React.FC = () => {
   const [tab, setTab] = useState(0);
   const [page, setPage] = useState("nothing");
+  const [numberPage, setNumberPage] = useState(0);
+  const [move, setMove] = useState("");
   const [seguros, setSeguros] = useState([]);
   const [logo, setLogo] = useState("white");
 
@@ -52,6 +55,11 @@ const Home: React.FC = () => {
         handlePage={data => setPage(data)}
         // @ts-ignore
         seguros={seguros}
+      />
+      <MapArrows
+        handlePage={data => setMove(data)}
+        logo={logo}
+        page={numberPage}
       />
       <ChatBot
         floating={true}
@@ -104,6 +112,7 @@ const Home: React.FC = () => {
         scrollingSpeed={750}
         onLeave={(origin, destination, direction) => {
           setTab(destination.index);
+          setNumberPage(destination.index);
           switch (destination.index) {
             case 0:
               setLogo("white");
@@ -188,6 +197,16 @@ const Home: React.FC = () => {
               break;
             default:
               setPage("nothing");
+              break;
+          }
+          switch (move) {
+            case "up":
+              fullpageApi.moveSectionUp();
+              setMove("");
+              break;
+            case "down":
+              fullpageApi.moveSectionDown();
+              setMove("");
               break;
           }
           return (
