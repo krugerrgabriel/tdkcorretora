@@ -78,7 +78,7 @@ const Sobre04: React.FC = () => {
               </Title>
               <span>
                 Nossos atendimentos, acompanhamentos e prospecções são
-                realizadas pelos consultores das
+                realizadas pelos consultores das{" "}
                 <strong>Unidades Transdesk do Brasil</strong>.
                 <br />
                 <br />A <strong>TDK</strong> realiza as cotações e a

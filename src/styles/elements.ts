@@ -76,6 +76,12 @@ export const PageTitle = styled.p`
 
     text-align: center;
     text-transform: uppercase;
+
+    @media(max-width: 1280px) {
+        &{
+            font-size: 42px;
+        }
+    }
 `;
 export const PageSubtitle = styled.p`
     color: ${(props) => props.theme.white};
@@ -89,6 +95,12 @@ export const PageSubtitle = styled.p`
 
     text-align: center;
     text-transform: uppercase;
+
+    @media(max-width: 1280px) {
+        &{
+            font-size: 32px;
+        }
+    }
 `;
 
 export const SecondLayer = styled.div`

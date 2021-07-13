@@ -194,3 +194,12 @@ div.top64px{
         transform: translateY(12px);
     }
 }
+
+@media(max-width: 1280px) {
+    .fp-controlArrow.fp-prev{
+        left: 8% !important;
+    }
+    .fp-controlArrow.fp-next{
+        right: 6% !important;
+    }
+}

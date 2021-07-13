@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import { Body, Container } from '../../styles/elements';
-import Image from '../../components/Image';
 
 export const NewBody = styled(Body)`
     color: ${(props) => props.theme.white};
@@ -24,6 +23,27 @@ export const NewBody = styled(Body)`
         line-height: 155px;
 
         margin-bottom: 0;
+    }
+
+    @media(max-width: 1920px) {
+        span {
+            font-size: 71px;
+        }
+        p{
+            font-size: 148px;
+        }
+    }
+
+    @media(max-width: 1280px) {
+        span {
+            font-size: 52px;
+        }
+
+        p{
+            font-size: 118px;
+
+            line-height: 102px;
+        }
     }
 `;
 

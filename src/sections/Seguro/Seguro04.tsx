@@ -3,14 +3,7 @@ import React from "react";
 import Collapsible from "react-collapsible";
 import { Row, Col } from "react-bootstrap";
 
-import {
-  Title,
-  Body,
-  FullImage,
-  PageTitle,
-  PageSubtitle,
-  Line,
-} from "../../styles/elements";
+import { Body, PageTitle, PageSubtitle, Line } from "../../styles/elements";
 import { NewContainer, QuestionBox } from "./styles";
 
 import { ISeguro } from "../../interfaces";

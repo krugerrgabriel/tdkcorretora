@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Container, Row } from 'react-bootstrap';
 
 import Image from "../../components/Image";
+import { Button } from "../../styles/elements";
 
 export const NewRow = styled(Row)`
     z-index: 4;
@@ -27,6 +28,20 @@ export const Box = styled.div`
     flex-direction: row;
 `;
 
+export const NewButton = styled(Button)`
+    @media(max-width: 1920px) {
+        &{
+            padding: 6px 0;
+        }
+    }
+
+    @media(max-width: 1280px) {
+        &{
+            padding: 16px 0;
+        }
+    }
+`;
+
 export const Card = styled.div`
     display: flex;
     align-items: center;
@@ -49,6 +64,20 @@ export const Card = styled.div`
 
     z-index: 4;
 
+    @media(max-width: 1920px) {
+        &{
+            height: 300px;
+            width: 100%;
+        }
+    }
+
+    @media(max-width: 1280px) {
+        &{
+            height: 200px;
+            width: 95%;
+        }
+    }
+
     div.front{
         display: flex;
         align-items: center;
@@ -70,6 +99,18 @@ export const Card = styled.div`
 
             margin: 0;
             margin-top: 36px;
+
+            @media(max-width: 1920px) {
+                &{
+                    font-size: 28px;
+                }
+            }
+
+            @media(max-width: 1280px) {
+                &{
+                    font-size: 20px;
+                }
+            }
         }
     }
 
@@ -97,6 +138,24 @@ export const Card = styled.div`
         text-align: center;
 
         line-height: 20px;
+
+        @media(max-width: 1920px) {
+            &{
+                font-size: 18px;
+
+                line-height: 20px;
+            }
+        }
+
+        @media(max-width: 1280px) {
+            &{
+                top: 20px;
+
+                font-size: 16px;
+
+                line-height: 0;
+            }
+        }
 
         div.point{
             strong{
@@ -136,14 +195,37 @@ export const Card = styled.div`
 `;
 
 export const ImageIcon = styled(Image)`
-    height: 96px;
     width: auto;
 
     margin-bottom: 6px;
+
+    @media(max-width: 1920px) {
+        &{
+            height: 96px;
+        }
+    }
+
+    @media(max-width: 1280px) {
+        &{
+            height: 72px;
+        }
+    }
 
     &.seguro-transporte{
         height: 88px;
 
         padding: 12px 0;
+
+        @media(max-width: 1920px) {
+            &{
+                height: 88px;
+            }
+        }
+
+        @media(max-width: 1280px) {
+            &{
+                height: 72px;
+            }
+        }
     }
 `;

@@ -52,6 +52,26 @@ export const Box = styled.div`
         &.space{
             margin-top: 36px;
         }
+
+        @media(max-width: 1280px) {
+            p{
+                font-size: 22px;
+            }
+        }
+    }
+
+    @media(max-width: 1280px) {
+        div{
+            span{
+                font-size: 16px;
+
+                line-height: 24px;
+            }
+
+            &.space{
+                margin-top: 18px;
+            }
+        }
     }
 `;
 
@@ -65,6 +85,12 @@ export const TextIcon = styled(Image)`
 
     &.valores{
         bottom: 3px;
+    }
+
+    @media(max-width: 1280px) {
+        &{
+            height: 28px;
+        }
     }
 `;
 

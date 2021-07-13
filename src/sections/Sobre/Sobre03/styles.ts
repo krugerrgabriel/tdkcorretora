@@ -30,4 +30,16 @@ export const Box = styled.div`
             text-align: center;
         }
     }
+
+    @media(max-width: 1280px) {
+        div{
+            p{
+                font-size: 68px;
+            }
+
+            span{
+                font-size: 16px;
+            }
+        }
+    }
 `;

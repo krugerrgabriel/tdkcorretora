@@ -20,7 +20,7 @@ export const NewContainer = styled(Container)`
 
 export const Employee = styled.div`
     height: 100%;
-    width: 165px;
+    width: 124px;
 
     position: relative;
 
@@ -52,7 +52,7 @@ export const Employee = styled.div`
             justify-content: center;
             flex-direction: column;
 
-            padding: 12px;
+            padding: 8px;
 
             width: 100%;
             height: 100%;
@@ -62,19 +62,19 @@ export const Employee = styled.div`
             p{
                 color: ${(props) => props.theme.gray};
 
-                font-size: 20px;
-                font-weight: 900;
+                font-size: 15px;
+                font-weight: 800;
 
-                line-height: 20px;
+                line-height: 17px;
             }
 
             span{
                 color: ${(props) => props.theme.gray};
                 
-                font-size: 14px;
+                font-size: 12px;
                 font-weight: 500;
 
-                line-height: 16px;
+                line-height: 14px;
 
                 letter-spacing: 0.1px;
 
@@ -86,6 +86,12 @@ export const Employee = styled.div`
     &:hover{
         div.reveal{
             opacity: 1;
+        }
+    }
+
+    @media(max-width: 1280px) {
+        &{
+            width: 124px;
         }
     }
 `;

@@ -79,26 +79,19 @@ const Sobre02: React.FC = () => {
         <Row>
           {funcionarios.map((item, index) => {
             return (
-              <NewCol lg={3} key={index}>
-                <a
-                  href={`https://wa.me/${
-                    item.phone ? item.phone : "554588088752"
-                  }`}
-                  target="_blank"
-                >
-                  <Employee>
-                    <EmployeeImage
-                      src={`tdkcorretora_seguros_funcionario-${item.id}.jpg`}
-                      alt={`TDK Corretora de Seguros ${item.name}`}
-                    />
-                    <div className="reveal">
-                      <div>
-                        <p>{item.name}</p>
-                        <span>{item.role}</span>
-                      </div>
+              <NewCol lg={2} key={index}>
+                <Employee>
+                  <EmployeeImage
+                    src={`tdkcorretora_seguros_funcionario-${item.id}.jpg`}
+                    alt={`TDK Corretora de Seguros ${item.name}`}
+                  />
+                  <div className="reveal">
+                    <div>
+                      <p>{item.name}</p>
+                      <span>{item.role}</span>
                     </div>
-                  </Employee>
-                </a>
+                  </div>
+                </Employee>
               </NewCol>
             );
           })}

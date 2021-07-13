@@ -34,6 +34,14 @@ export const NewContainer = styled(Container)<{ alignitems?: Boolean; }>`
 
         text-align: center;
     }
+
+    @media(max-width: 1280px) {
+        h2{
+            font-size: 18px;
+
+            line-height: 28px;
+        }
+    }
 `;
 
 export const Box = styled.div`
@@ -116,6 +124,24 @@ export const Badge = styled.div`
             margin: 0;
         }
     }
+
+    @media(max-width: 1280px) {
+        &{
+            height: 86px;
+
+            margin: 10px 0;
+
+            padding: 8px 6px;
+        }
+
+        div{
+            p{
+                font-size: 15px;
+
+                line-height: 21px;
+            }
+        }
+    }
 `;
 export const BadgeImage = styled(Image)`
     height: 42px;
@@ -151,15 +177,15 @@ export const Item = styled.div`
         text-align: center;
     }
 
-    span{
-        color: ${(props) => props.theme.white};
-        
-        font-size: 22px;
-        font-weight: 500;
+    @media(max-width: 1280px) {
+        & {
+            width: 95%;
+        }
+        p{
+            font-size: 14px;
 
-        text-transform: uppercase;
-
-        margin-bottom: 18px;
+            margin: 16px 8px 8px 8px;
+        }
     }
 `;
 export const ItemImage = styled(Image)`
@@ -245,5 +271,17 @@ export const QuestionBox = styled.div`
         line-height: 26px;
 
         padding: 0 24px 24px 24px;
+    }
+
+    @media(max-width: 1280px) {
+        .faq-title {
+            font-size: 18px;
+        }
+
+        .faq-content {
+            font-size: 17px;
+
+            line-height: 22px;
+        }
     }
 `;

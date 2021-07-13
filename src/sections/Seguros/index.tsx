@@ -2,7 +2,7 @@ import React from "react";
 import { Col } from "react-bootstrap";
 
 import { Body, Button } from "../../styles/elements";
-import { NewContainer, NewRow, Card, ImageIcon } from "./styles";
+import { NewContainer, NewRow, Card, ImageIcon, NewButton } from "./styles";
 
 import { ISeguros } from "./interfaces";
 
@@ -37,7 +37,7 @@ const Seguros: React.FC<ISeguros> = ({ seguros, fullpageApi }) => {
                             }
                           })}
                         </div>
-                        <Button
+                        <NewButton
                           width={100}
                           color="yellow"
                           onClick={() => {
@@ -45,7 +45,7 @@ const Seguros: React.FC<ISeguros> = ({ seguros, fullpageApi }) => {
                           }}
                         >
                           VER MAIS
-                        </Button>
+                        </NewButton>
                       </div>
                     </Card>
                   </Col>
