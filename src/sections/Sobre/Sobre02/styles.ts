@@ -24,7 +24,7 @@ export const Employee = styled.div`
 
     position: relative;
 
-    border: 3px solid var(--white);
+    border: 3px solid ${(props) => props.theme.white};
     border-radius: 2px;
 
     div.reveal{
