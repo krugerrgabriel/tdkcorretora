@@ -14,34 +14,51 @@ const Sobre02: React.FC = () => {
   const funcionarios = [
     {
       id: 0,
-      name: "Juliano Teixeira",
-      phone: "554588096277",
-      role: "Corretor de Seguros",
-    },
-    {
-      id: 1,
-      name: "Simone Ulatoski",
-      phone: "554598228801",
-      role: "Supervisora Comercial",
-    },
-    {
-      id: 2,
       name: "Sandra Brendler",
-      phone: "",
+      phone: "-",
       role: "Supervisora Administrativa",
     },
     {
-      id: 3,
-      name: "Juliana Pereira Chagas",
+      id: 1,
+      name: "-----",
+      phone: "",
+      role: "-----",
+    },
+    {
+      id: 2,
+      name: "Diego Oliveira",
       phone: "",
       role: "Assistente Comercial",
     },
-    { id: 4, name: "Diego Oliveira", phone: "", role: "Assistente Comercial" },
+    {
+      id: 3,
+      name: "Simone Ulatoski",
+      phone: "",
+      role: "Supervisora Comercial Externo Júnior",
+    },
+    {
+      id: 4,
+      name: "Juliana Pereira Chagas",
+      phone: "",
+      role: "Assistente Comercial de Seguros Júnior",
+    },
     {
       id: 5,
-      name: "Eliana de Fatima Magri Zanella",
+      name: "Francieli Moretti",
       phone: "",
-      role: "Analista Comercial",
+      role: "Supervisora Comercial Júnior",
+    },
+    {
+      id: 6,
+      name: "Giselle de Lourdes da Silva Rezende",
+      phone: "",
+      role: "Supervisora Administrativa Júnior",
+    },
+    {
+      id: 7,
+      name: "-",
+      phone: "",
+      role: "-",
     },
   ];
   return (

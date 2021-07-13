@@ -24,6 +24,9 @@ export const Employee = styled.div`
 
     position: relative;
 
+    border: 3px solid var(--white);
+    border-radius: 2px;
+
     div.reveal{
         display: flex;
         align-items: center;

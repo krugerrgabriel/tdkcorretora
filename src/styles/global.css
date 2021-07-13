@@ -178,16 +178,19 @@ div.top64px{
 }
 
 .noneDisplay{
-    opacity: 0;
+    display: none;
 }
 .smoothed{
-    animation: smooth 1s linear infinite alternate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: smooth;
 }
 @keyframes smooth{
     0%{
         opacity: 1;
     }
     100%{
-        opacity: 0.2;
+        opacity: 0;
+        transform: translateY(12px);
     }
 }
