@@ -8,7 +8,13 @@ import {
   PageSubtitle,
   Line,
 } from "../../../styles/elements";
-import { NewContainer, NewCol, Employee, EmployeeImage } from "./styles";
+import {
+  NewContainer,
+  NewCol,
+  Employee,
+  EmployeeImage,
+  EmployeeDiv,
+} from "./styles";
 
 const Sobre02: React.FC = () => {
   const funcionarios = [
@@ -79,7 +85,7 @@ const Sobre02: React.FC = () => {
         <Row>
           {funcionarios.map((item, index) => {
             return (
-              <NewCol lg={2} key={index}>
+              <EmployeeDiv key={index}>
                 <Employee>
                   <EmployeeImage
                     src={`tdkcorretora_seguros_funcionario-${item.id}.jpg`}
@@ -92,7 +98,7 @@ const Sobre02: React.FC = () => {
                     </div>
                   </div>
                 </Employee>
-              </NewCol>
+              </EmployeeDiv>
             );
           })}
           ;

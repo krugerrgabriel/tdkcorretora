@@ -45,7 +45,7 @@ const Parceiros: React.FC = () => {
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col lg={4}>
             <a href="https://www.libertyseguros.com.br/" target="_blank">
               <ImageBox>
                 <CompanyImage
@@ -55,7 +55,7 @@ const Parceiros: React.FC = () => {
               </ImageBox>
             </a>
           </Col>
-          <Col>
+          <Col lg={4}>
             <a href="https://www.tokiomarine.com.br/" target="_blank">
               <ImageBox>
                 <CompanyImage
@@ -65,7 +65,7 @@ const Parceiros: React.FC = () => {
               </ImageBox>
             </a>
           </Col>
-          <Col>
+          <Col lg={4}>
             <a href="https://sompo.com.br/" target="_blank">
               <ImageBox>
                 <CompanyImage

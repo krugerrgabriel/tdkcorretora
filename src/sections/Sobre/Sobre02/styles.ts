@@ -18,14 +18,17 @@ export const NewContainer = styled(Container)`
     }
 `;
 
+export const EmployeeDiv = styled.div`
+  flex: 0 1 calc(20%);
+`;
+
 export const Employee = styled.div`
     height: 100%;
-    width: 124px;
+    width: 152px;
 
     position: relative;
 
-    border: 3px solid ${(props) => props.theme.white};
-    border-radius: 2px;
+    margin: 12px 0;
 
     div.reveal{
         display: flex;
@@ -33,14 +36,16 @@ export const Employee = styled.div`
         justify-content: center;
         flex-direction: column;
 
-        background-color: rgba(255, 255, 255, 0.85);
+        background-color: rgba(124, 124, 123, 0.65);
+
+        backdrop-filter: blur(3px);
 
         position: absolute;
         top: 0;
         left: 0;
 
         width: 100%;
-        height: 100%;
+        height: 177.69px;
 
         transition: 0.2s;
 
@@ -60,7 +65,7 @@ export const Employee = styled.div`
             text-align: center;
 
             p{
-                color: ${(props) => props.theme.gray};
+                color: ${(props) => props.theme.yellow};
 
                 font-size: 15px;
                 font-weight: 800;
@@ -69,7 +74,7 @@ export const Employee = styled.div`
             }
 
             span{
-                color: ${(props) => props.theme.gray};
+                color: ${(props) => props.theme.white};
                 
                 font-size: 12px;
                 font-weight: 500;
@@ -99,4 +104,7 @@ export const Employee = styled.div`
 export const EmployeeImage = styled(Image)`
     width: 100%;
     height: auto;
+
+    border: 3px solid ${(props) => props.theme.gray};
+    border-radius: 2px;
 `;

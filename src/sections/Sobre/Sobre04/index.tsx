@@ -61,13 +61,13 @@ const Sobre04: React.FC = () => {
                       src="tdkcorretora_seguros_map-pin.svg"
                       alt={`TDK Corretora de Seguros Pin ${pin.name}`}
                     />
-                    <div className="bubble">
+                    {/* <div className="bubble">
                       <p>{pin.name}</p>
                       <BubbleImage
                         src="tdkcorretora_seguros_bubble.svg"
                         alt="TDK Corretora de Seguros Bubble"
                       />
-                    </div>
+                    </div> */}
                   </a>
                 );
               })}

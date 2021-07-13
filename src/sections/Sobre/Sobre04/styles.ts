@@ -23,15 +23,6 @@ export const MapPin = styled(Image)`
     position: absolute;
 `;
 
-export const BubbleImage = styled(Image)`
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    z-index: 10;
-`;
-
 export const Info = styled.div`
     position: absolute;
 
@@ -95,65 +86,6 @@ export const Box = styled.div<{ left?: Boolean; }>`
 
                     z-index: 5;
                 }
-
-                &:hover + div.bubble{
-                    width: 100px;
-                    height: 50px;
-
-                    opacity: 1;
-
-                    p{
-                        font-size: 11px;
-
-                        opacity: 1;
-                    }
-
-                    ${BubbleImage}{
-                        width: 125px;
-                        height: 64px;
-                    }
-                }
-            }
-
-            div.bubble{
-                position: absolute;
-
-                top: -68px;
-                left: -53px;
-                right: 0;
-
-                width: 0;
-                height: 0;
-
-                opacity: 0;
-
-                p{
-                    font-size: 0;
-                    font-weight: 600;
-
-                    text-align: center;
-
-                    width: 100%;
-
-                    position: absolute;
-                    left: 12px;
-                    top: 6px;
-
-                    opacity: 0;
-
-                    transition: 0;
-
-                    z-index: 11;
-                }
-
-                ${BubbleImage}{
-                    width: 0;
-                    height: 0;
-                }
-
-                transition: 0.1s;
-
-                z-index: 10;
             }
 
             &.aracaju{

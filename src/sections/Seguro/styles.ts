@@ -30,9 +30,9 @@ export const NewContainer = styled(Container)<{ alignitems?: Boolean; }>`
         font-size: 22px;
         font-weight: 400;
 
-        line-height: 32px;
+        line-height: 36px;
 
-        text-align: center;
+        text-align: left;
     }
 
     @media(max-width: 1280px) {
@@ -167,14 +167,35 @@ export const Item = styled.div`
 
     box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1);
 
-    p{
+    p.content{
         color: ${(props) => props.theme.white};
+
         font-size: 18px;
         font-weight: 400;
 
-        margin: 24px 12px 12px 12px;
+        height: 196px;
 
-        text-align: center;
+        line-height: 28px;
+
+        margin: 24px 18px 18px 18px;
+    }
+    div.content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+
+        height: 196px;
+
+        margin: 24px 18px 18px 18px;
+    }
+    div.content p{
+        color: ${(props) => props.theme.white};
+
+        font-size: 18px;
+        font-weight: 400;
+
+        line-height: 28px;
     }
 
     @media(max-width: 1280px) {
@@ -213,7 +234,7 @@ export const QuestionBox = styled.div`
     }
 
     .faq {
-        border-bottom: 2px solid ${(props) => props.theme.white};
+        border-bottom: 2px solid ${(props) => props.theme.yellow};
     }
 
     .faq-title {
@@ -223,19 +244,21 @@ export const QuestionBox = styled.div`
         width: 100%;
 
         font-size: 22px;
-        font-weight: 500;
+        font-weight: 400;
 
         text-align: left;
 
-        padding: 18px 12px;
+        padding: 18px 72px 18px 12px;
         position: relative;
 
-        transition: 0.2s;
-        
+        border-radius: 2px;
+
         cursor: pointer;
 
+        transition: 0.2s;
+
         &:hover {
-            background-color: rgba(0, 0, 0, 0.05);
+            background-color: rgba(0, 0, 0, 0.15);
         }
 
         &::after {
@@ -245,8 +268,8 @@ export const QuestionBox = styled.div`
             width: 10px;
             height: 10px;
 
-            border-left: 2px solid ${(props) => props.theme.white};
-            border-bottom: 2px solid ${(props) => props.theme.white};
+            border-left: 2px solid ${(props) => props.theme.yellow};
+            border-bottom: 2px solid ${(props) => props.theme.yellow};
 
             position: absolute;
             top: 24px;
@@ -257,6 +280,8 @@ export const QuestionBox = styled.div`
         }
 
         &.active {
+            background-color: rgba(0, 0, 0, 0.3);
+            
             &::after {
                 transform: rotate(135deg);
             }
@@ -265,8 +290,10 @@ export const QuestionBox = styled.div`
 
     .faq-content {
         color: ${(props) => props.theme.white};
+        background-color: rgba(0, 0, 0, 0.3);
 
         font-size: 19px;
+        font-weight: 300;
 
         line-height: 26px;
 

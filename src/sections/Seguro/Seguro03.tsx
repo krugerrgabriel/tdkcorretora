@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 
 import {
-  Title,
+  Button,
   Body,
   PageTitle,
   PageSubtitle,
@@ -12,7 +12,7 @@ import { NewContainer, Item, ItemImage } from "./styles";
 
 import { ISeguro } from "../../interfaces";
 
-const Seguro03: React.FC<ISeguro> = ({ seguro }) => {
+const Seguro03: React.FC<ISeguro> = ({ seguro, fullpageApi }) => {
   let motivos = [
     {
       description:
@@ -51,8 +51,22 @@ const Seguro03: React.FC<ISeguro> = ({ seguro }) => {
                     src={itemImage}
                     alt={`TDK Corretora de Seguros Motivo ${seguro.title}`}
                   />
-                  <p> {motivo.description} </p>
-                  <span> {motivo.title} </span>
+                  {index != 1 ? (
+                    <p className="content"> {motivo.description} </p>
+                  ) : (
+                    <>
+                      <div className="content">
+                        <p> {motivo.description} </p>
+                        <Button
+                          width={100}
+                          color="yellow"
+                          onClick={() => fullpageApi.moveTo("contato")}
+                        >
+                          FAÇA UMA COTAÇÃO
+                        </Button>
+                      </div>
+                    </>
+                  )}
                 </Item>
               </Col>
             );
