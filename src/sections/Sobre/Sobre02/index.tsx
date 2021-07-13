@@ -88,7 +88,7 @@ const Sobre02: React.FC = () => {
                 >
                   <Employee>
                     <EmployeeImage
-                      src={`tdkcorretora_seguros_funcionario-${item.id}.png`}
+                      src={`tdkcorretora_seguros_funcionario-${item.id}.jpg`}
                       alt={`TDK Corretora de Seguros ${item.name}`}
                     />
                     <div className="reveal">
