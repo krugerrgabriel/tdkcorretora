@@ -31,7 +31,7 @@ const Parceiros: React.FC = () => {
         bottom="true"
         alt="TDK Corretora de Seguros Elemento Branco"
       />
-      <NewContainer className="seguro">
+      <NewContainer>
         <Row>
           <Col>
             <PageTitle> PARCEIROS TDK </PageTitle>
