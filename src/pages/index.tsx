@@ -129,12 +129,12 @@ const Home: React.FC = () => {
             case 4:
               setLogo("white");
               break;
-            case 5:
-              setLogo("colorized");
-              break;
             case 6:
               setLogo("white");
               break;
+            // case 6:
+            //   setLogo("white");
+            //   break;
             // case 3:
             //   setLogo("white");
             //   break;
@@ -187,10 +187,10 @@ const Home: React.FC = () => {
               fullpageApi.moveTo("contato");
               setPage("nothing");
               break;
-            case "noticias":
-              fullpageApi.moveTo("noticias");
-              setPage("nothing");
-              break;
+            // case "noticias":
+            //   fullpageApi.moveTo("noticias");
+            //   setPage("nothing");
+            //   break;
             case "parceiros":
               fullpageApi.moveTo("parceiros");
               setPage("nothing");
@@ -306,10 +306,10 @@ const Home: React.FC = () => {
               <div className="section">
                 <Contato />
               </div>
-
+              {/* 
               <div className="section">
                 <Noticias />
-              </div>
+              </div> */}
 
               <div className="section">
                 <Parceiros />
