@@ -15,7 +15,11 @@ const Seguros: React.FC<ISeguros> = ({ seguros, fullpageApi }) => {
             ? seguros.seguros.map((item, index) => {
                 return (
                   <Col lg={4} key={index}>
-                    <Card className="card">
+                    <Card
+                      className="card"
+                      onClick={() => {
+                        fullpageApi.moveTo(item.pageName);
+                    }}>
                       <div className="front">
                         <ImageIcon
                           src={item.icon}

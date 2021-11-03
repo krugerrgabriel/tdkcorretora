@@ -5,6 +5,8 @@ import Image from "../../components/Image";
 import { Button } from "../../styles/elements";
 
 export const NewRow = styled(Row)`
+    width: 100%;
+
     z-index: 4;
 `;
 
@@ -61,6 +63,8 @@ export const Card = styled.div`
     box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1);
 
     position: relative;
+
+    cursor: pointer;
 
     z-index: 4;
 
@@ -182,7 +186,7 @@ export const Card = styled.div`
 
     }
 
-    &:hover div.front{
+    /* &:hover div.front{
         opacity: 0;
     }
     &:hover div.back{
@@ -191,7 +195,7 @@ export const Card = styled.div`
     }
     &:hover div.back div.reveal{
         opacity: 1;
-    }
+    } */
 `;
 
 export const ImageIcon = styled(Image)`

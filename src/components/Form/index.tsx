@@ -92,7 +92,7 @@ export const Select: React.FC<ISelect> = props => {
       </InputText>
       <InputIcon src={props.icon} alt="TDK Corretora de Seguros" />
       <select
-        value=""
+        value={props.value}
         onChange={event => props.handleChange(event.target.value)}
         onFocus={() => setActive(true)}
         onBlur={event => {

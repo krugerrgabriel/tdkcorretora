@@ -61,7 +61,7 @@ const Home: React.FC = () => {
         logo={logo}
         page={numberPage}
       />
-      <ChatBot
+      {/* <ChatBot
         floating={true}
         steps={[
           {
@@ -93,17 +93,17 @@ const Home: React.FC = () => {
             trigger: "2",
           },
         ]}
-      />
+      /> */}
       <ReactFullpage
         licenseKey="GPLv3"
         anchors={[
           "inicio",
           "seguros",
           "seguro-transporte",
-          "seguro-vida",
-          "seguro-residencial",
-          "seguro-ambiental",
-          "seguro-patrimonial",
+          // "seguro-vida",
+          // "seguro-residencial",
+          // "seguro-ambiental",
+          // "seguro-patrimonial",
           "sobre",
           "contato",
           "noticias",
@@ -124,29 +124,29 @@ const Home: React.FC = () => {
               setLogo("colorized");
               break;
             case 3:
-              setLogo("white");
+              setLogo("colorized");
               break;
             case 4:
-              setLogo("colorized");
+              setLogo("white");
               break;
             case 5:
-              setLogo("white");
+              setLogo("colorized");
               break;
             case 6:
-              setLogo("colorized");
-              break;
-            case 7:
-              setLogo("colorized");
-              break;
-            case 8:
               setLogo("white");
               break;
-            case 9:
-              setLogo("colorized");
-              break;
-            case 10:
-              setLogo("white");
-              break;
+            // case 3:
+            //   setLogo("white");
+            //   break;
+            // case 4:
+            //   setLogo("colorized");
+            //   break;
+            // case 5:
+            //   setLogo("white");
+            //   break;
+            // case 6:
+            //   setLogo("colorized");
+            //   break;
           }
         }}
         render={({ state, fullpageApi }) => {
@@ -163,22 +163,22 @@ const Home: React.FC = () => {
               fullpageApi.moveTo("seguro-transporte");
               setPage("nothing");
               break;
-            case "seguro-vida":
-              fullpageApi.moveTo("seguro-vida");
-              setPage("nothing");
-              break;
-            case "seguro-residencial":
-              fullpageApi.moveTo("seguro-residencial");
-              setPage("nothing");
-              break;
-            case "seguro-ambiental":
-              fullpageApi.moveTo("seguro-ambiental");
-              setPage("nothing");
-              break;
-            case "seguro-patrimonial":
-              fullpageApi.moveTo("seguro-patrimonial");
-              setPage("nothing");
-              break;
+            // case "seguro-vida":
+            //   fullpageApi.moveTo("seguro-vida");
+            //   setPage("nothing");
+            //   break;
+            // case "seguro-residencial":
+            //   fullpageApi.moveTo("seguro-residencial");
+            //   setPage("nothing");
+            //   break;
+            // case "seguro-ambiental":
+            //   fullpageApi.moveTo("seguro-ambiental");
+            //   setPage("nothing");
+            //   break;
+            // case "seguro-patrimonial":
+            //   fullpageApi.moveTo("seguro-patrimonial");
+            //   setPage("nothing");
+            //   break;
             case "sobre":
               fullpageApi.moveTo("sobre");
               setPage("nothing");

@@ -203,6 +203,7 @@ const Contato: React.FC = () => {
                   icon="tdkcorretora_seguros_info-icon.svg" // @ts-ignore
                   options={["contato", "associar"]}
                   handleChange={data => setMotivo(data)}
+                  value={motivo}
                   contact
                 />
               </Col>

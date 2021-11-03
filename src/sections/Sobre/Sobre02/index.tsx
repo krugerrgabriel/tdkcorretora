@@ -43,12 +43,6 @@ const Sobre02: React.FC = () => {
       role: "Supervisora Comercial Externo Júnior",
     },
     {
-      id: 4,
-      name: "Juliana Pereira Chagas",
-      phone: "",
-      role: "Assistente Comercial de Seguros Júnior",
-    },
-    {
       id: 5,
       name: "Francieli Moretti",
       phone: "",
