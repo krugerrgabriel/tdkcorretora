@@ -106,7 +106,7 @@ const Home: React.FC = () => {
           // "seguro-patrimonial",
           "sobre",
           "contato",
-          "noticias",
+          // "noticias",
           "parceiros",
         ]}
         scrollingSpeed={750}

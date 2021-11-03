@@ -80,7 +80,7 @@ const Sitemap: React.FC<ISitemap> = props => {
             />
             <span>CONTATO</span>
           </Option>
-          <Option
+          {/* <Option
             active={activeTab == activePage + 3 ? true : false}
             onClick={() => props.handlePage("noticias")}
           >
@@ -90,9 +90,9 @@ const Sitemap: React.FC<ISitemap> = props => {
               alt="TDK Corretora de Seguros Ícone Notícias"
             />
             <span>NOTÍCIAS</span>
-          </Option>
+          </Option> */}
           <Option
-            active={activeTab == activePage + 4 ? true : false}
+            active={activeTab == activePage + 3 ? true : false}
             onClick={() => props.handlePage("parceiros")}
           >
             <Image
