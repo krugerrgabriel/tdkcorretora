@@ -46,7 +46,7 @@ const Sobre02: React.FC = () => {
       id: 5,
       name: "Francieli Moretti",
       phone: "",
-      role: "Supervisora Comercial Júnior",
+      role: "Analista Comercial",
     },
     {
       id: 6,
