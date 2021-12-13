@@ -17,22 +17,35 @@ const Navbar: React.FC<INavbar> = props => {
       />
 
       <Links>
+        <a
+          href="https://www.transdesk.com.br/plataforma-templates"
+          target="_blank"
+        >
+          <Image
+            src="tdkcorretora_login.svg"
+            alt="TDK Corretora de Seguros Login"
+            height={28}
+          />
+        </a>
         <a href="https://www.facebook.com/tdkcorretora/" target="_blank">
           <Image
             src="tdkcorretora_seguros_icon-facebook.svg"
             alt="TDK Corretora de Seguros Facebook Ícone"
+            height={24}
           />
         </a>
         <a href="https://www.instagram.com/tdkcorretora/" target="_blank">
           <Image
             src="tdkcorretora_seguros_icon-instagram.svg"
             alt="TDK Corretora de Seguros Instagram Ícone"
+            height={24}
           />
         </a>
         <a href="#contato">
           <Image
             src="tdkcorretora_seguros_icon-phone.svg"
             alt="TDK Corretora de Seguros Telefone Ícone"
+            height={24}
           />
         </a>
       </Links>

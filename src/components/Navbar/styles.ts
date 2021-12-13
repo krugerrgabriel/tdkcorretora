@@ -32,5 +32,8 @@ export const NewImage = styled(Image)`
 export const Links = styled.div`
     a{
         margin: 0 14px;
+
+        height: 24px;
+        width: auto;
     }
 `;

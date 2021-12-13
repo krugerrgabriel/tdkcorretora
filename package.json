@@ -24,6 +24,8 @@
     "gatsby": "^3.7.0",
     "gatsby-image": "^3.4.0",
     "gatsby-plugin-canonical-urls": "^3.4.0",
+    "gatsby-plugin-client-side-redirect": "^1.1.0",
+    "gatsby-plugin-gatsby-cloud": "^4.3.0",
     "gatsby-plugin-google-analytics": "^3.4.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^1.7.0",

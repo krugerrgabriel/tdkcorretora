@@ -9,6 +9,7 @@ const siteMetadata = require("./config/metadata");
 module.exports = {
   siteMetadata,
   plugins: [
+    `gatsby-plugin-client-side-redirect`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
