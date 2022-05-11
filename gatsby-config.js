@@ -95,7 +95,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // ID do Google Analytics
-        trackingId: "G-991CH8QBER",
+        trackingId: "UA-178042353-3",
         // Delay em milisegundos do mínimo que precisa ficar na página para contar como impressão
         pageTransitionDelay: 0,
       },
