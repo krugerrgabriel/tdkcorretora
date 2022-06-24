@@ -22,6 +22,8 @@ export const NewBody = styled(Body)`
 
         line-height: 155px;
 
+        text-align: center;
+
         margin-bottom: 0;
     }
 
@@ -30,7 +32,7 @@ export const NewBody = styled(Body)`
             font-size: 71px;
         }
         p{
-            font-size: 148px;
+            font-size: 124px;
         }
     }
 

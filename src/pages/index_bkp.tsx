@@ -41,9 +41,9 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     // setSeguros(segurosJSON);
-    document.getElementById("___loader").style.transition = "all 1s";
-    document.getElementById("___loader").style.opacity = 0;
-    document.getElementById("___loader").style.display = "none";
+    // document.getElementById("___loader").style.transition = "all 1s";
+    // document.getElementById("___loader").style.opacity = 0;
+    // document.getElementById("___loader").style.display = "none";
   }, []);
 
   return (
@@ -213,6 +213,106 @@ const Home: React.FC = () => {
             <ReactFullpage.Wrapper>
               <div className="section">
                 <Inicio />
+              </div>
+
+              <div className="section" id="absolute">
+                <FullImage
+                  className="fullImageWrapper"
+                  src="tdkcorretora_seguros-wallpaper.png"
+                  alt="TDK Corretora de Seguros Background Image"
+                />
+                <div className="slide">
+                  <Seguros /* @ts-ignore */
+                    seguros={seguros}
+                    fullpageApi={fullpageApi}
+                  />
+                </div>
+              </div>
+
+              {/* @ts-ignore */}
+              {seguros.errorcode == "none" /* @ts-ignore */
+                ? seguros.seguros.map((seguro, index) => {
+                    return (
+                      <div
+                        className={`section ${index % 2 ? "white" : "yellow"}`}
+                        key={index}
+                      >
+                        <Element
+                          src={
+                            index % 2
+                              ? "tdkcorretora_seguros_element-left-white.svg"
+                              : "tdkcorretora_seguros_element-left-yellow.svg"
+                          }
+                          alt="TDK Corretora de Seguros Element"
+                          left="true"
+                          top="true"
+                          key={0}
+                        />
+                        <Element
+                          src={
+                            index % 2
+                              ? "tdkcorretora_seguros_element-right-white.svg"
+                              : "tdkcorretora_seguros_element-right-yellow.svg"
+                          }
+                          alt="TDK Corretora de Seguros Element"
+                          right="true"
+                          bottom="true"
+                          key={1}
+                        />
+
+                        <FullImage
+                          src={`tdkcorretora_${seguro.pageName}-background.png`}
+                          alt={`TDK Corretora de Seguros ${seguro.title} Background`}
+                        />
+                        <div className="slide">
+                          <Seguro01 seguro={seguro} />
+                        </div>
+                        <div className="slide">
+                          <Seguro02 seguro={seguro} />
+                        </div>
+                        <div className="slide">
+                          <Seguro03 seguro={seguro} fullpageApi={fullpageApi} />
+                        </div>
+                        <div className="slide">
+                          <Seguro04 seguro={seguro} />
+                        </div>
+                      </div>
+                    );
+                  })
+                : null}
+
+              <div className="section sobre">
+                <FullImage
+                  src="tdkcorretora_seguros_sobrenos-background.png"
+                  alt="TDK Corretora de Seguros Sobre Nós Background"
+                />
+                <div className="slide">
+                  <Sobre01 />
+                </div>
+                <div className="slide">
+                  <Part02 />
+                </div>
+                <div className="slide">
+                  <Sobre02 />
+                </div>
+                <div className="slide">
+                  <Sobre03 />
+                </div>
+                <div className="slide">
+                  <Sobre04 />
+                </div>
+              </div>
+
+              <div className="section">
+                <Contato />
+              </div>
+              {/* 
+              <div className="section">
+                <Noticias />
+              </div> */}
+
+              <div className="section">
+                <Parceiros />
               </div>
             </ReactFullpage.Wrapper>
           );

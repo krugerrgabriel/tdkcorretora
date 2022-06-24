@@ -26,9 +26,8 @@ const Inicio: React.FC = () => {
         key={1}
       />
       <NewContainer>
-        <span> SOMOS </span>
-        <p> ESPECIALISTAS </p>
-        <span> EM SEGURO </span>
+        <span> SITE </span>
+        <p> EM MANUTENÇÃO </p>
 
         <div className="icon-scroll"></div>
         <div className="scroll-text"> Role para baixo</div>
