@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://www.tdkcorretora.com.br">
-    <img alt="TDK Corretora" src="http://www.tdkcorretora.com.br/assets/img/tdk_favicon.png" width="60" />
+    <img alt="TDK Corretora" src="https://tdkcorretora.com.br/icons/icon-256x256.png" width="60" />
   </a>
 </p>
 <h1 align="center">
