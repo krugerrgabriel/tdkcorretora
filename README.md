@@ -1,12 +1,18 @@
-<p align="center">
-  <a href="http://www.tdkcorretora.com.br">
-    <img alt="TDK Corretora" src="https://tdkcorretora.com.br/icons/icon-256x256.png" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  TDK Corretora
-</h1>
+# TDK Corretora
 
-Repositório para o site da <a href="http://www.tdkcorretora.com.br">TDK Corretora</a> desenvolvido com Javascript através da biblioteca Gatsby.
+Institutional website for TDK Corretora, an insurance brokerage.
 
-Site desenvolvido por <a href="https://www.linkedin.com/in/gabriel-sabara-krüger-a4871518b">Gabriel Sabara Krüger</a>, Web Designer do Marketing da <a href="https://www.transdesk.com.br">Transdesk</a>.
+**Built with:** Gatsby.js · TypeScript
+
+## About
+
+A responsive institutional site presenting the brokerage's services and contact channels, built with Gatsby for fast static delivery.
+
+## Running locally
+
+```bash
+npm install
+npm run develop
+```
+
+Then open http://localhost:8000
